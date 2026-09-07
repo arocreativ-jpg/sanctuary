@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sub Sanctuary | Premium Woodworking</title>
+    <link rel="icon" href="/global/site_logo.png" type="image/png" />
+    <meta name="author" content="Sub Sanctuary" />
+
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/interactive-grid.css" />
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+  </head>
+  <body>
+    <div class="preloader-overlay">
+      <div class="preloader-grid"></div>
+
+      <div class="preloader-animation-wrapper">
+        <p class="preloader-text">Preparing Gallery</p>
+        <div class="preloader-ring-frame"></div>
+        <div class="preloader-disc-frame"></div>
+      </div>
+    </div>
+
+    <svg
+      style="visibility: hidden; position: absolute"
+      width="0"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+    >
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="goo"
+          />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="interactive-grid"></div>
+
+    <div class="transition-grid"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="nav-bg"></div>
+      </div>
+
+      <div class="nav-mobile-header">
+        <p class="nav-logo">Sub Sanctuary</p>
+        <p class="nav-menu-toggle">Menu</p>
+      </div>
+
+      <div class="nav-overlay">
+        <div class="nav-items">
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
+          <div class="nav-item"><a href="/shop">Shop</a></div>
+          <div class="nav-item"><a href="/engraving">Engraving</a></div>
+          <div class="nav-item"><a href="/contact">Custom Orders</a></div>
+          
+          <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
+            <span class="mode-icon">☼</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-img-container">
+          <div class="hero-img">
+            <img src="/index/hero.png" alt="Sub Sanctuary Hero Image" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+
+          <div class="hero-img-overlay"></div>
+
+          <div class="hero-img-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="container">
+            <div class="hero-content-nav">
+              <div class="hero-timer">
+                <p>SUB SANCTUARY — PITTSBURGH, PA</p>
+              </div>
+            </div>
+
+            <div class="hero-content-header">
+              <h1 data-animate-variant="slide" data-animate-delay="0.6">
+                <span class="hero-line-position">Functional art from hand to machine:</span><span class="hero-line-proof">Cut, engraved,<br class="hero-mobile-break" /> inlaid in wood.</span>
+              </h1>
+            </div>
+
+            <div class="hero-content-footer">
+              <div class="hero-footer-copy">
+                <p
+                  class="bodyCopy"
+                  data-animate-variant="slide"
+                  data-animate-delay="0.75"
+                >
+                  We make functional laser-engraved artwork and products, with a focus in sustainably sourced wood.
+                </p>
+              </div>
+
+              <div class="hero-callout">
+                <a href="/shop.html" class="hero-btn hero-btn-primary" data-animate-variant="flicker" data-animate-delay="0.85">
+                  SHOP READY TO SHIP
+                </a>
+                <a href="/contact.html" class="hero-btn hero-btn-secondary" data-animate-variant="flicker" data-animate-delay="1">
+                  CUSTOM ENGRAVING
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <div class="stats-container">
+          <div class="stat">
+            <div class="stat-copy">
+              <div class="stats-copy-label"><p>Wood Species Used</p></div>
+              <div class="stats-copy-count"><h3>12</h3></div>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-copy">
+              <div class="stats-copy-label"><p>Pieces Crafted</p></div>
+              <div class="stats-copy-count"><h3>64</h3></div>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-copy">
+              <div class="stats-copy-label"><p>Gallery Shows</p></div>
+              <div class="stats-copy-count"><h3>23</h3></div>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-copy">
+              <div class="stats-copy-label"><p>Current Projects</p></div>
+              <div class="stats-copy-count"><h3>09</h3></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="intro-header">
+          <h1 data-animate-variant="slide" data-animate-on-scroll="true">
+            The Technique
+          </h1>
+        </div>
+
+        <div class="intro-copy">
+          <div class="intro-copy-wrapper">
+            <h3>
+              Parquetry. Everything locks together.<br/><br/>
+              Parquetry is when everything fits together within a space or a setting — every piece locking itself into the next. Marquetry is closer to painting with wood. Ancient inlay techniques, melding hand, heart and machine.<br/><br/>
+              The work follows the unseen forces that decide wood grain can appear as rock, and that water can sculpt either in near-perfect symmetry. What sets it apart from other laser-cut art is the depth and detail of the design itself. People comment on the precision before they comment on anything else.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="three-doors">
+      <div class="container">
+        <div class="doors-grid">
+          <div class="door-card">
+            <div class="door-eyebrow">DOOR 1</div>
+            <h3 class="door-title">Ready to ship</h3>
+            <p class="door-desc bodyCopy">Grinders, coasters, lamps, wallets, trays. Pick a design, pick a tone, it goes out the door.</p>
+          </div>
+          <div class="door-card">
+            <div class="door-eyebrow">DOOR 2</div>
+            <h3 class="door-title">Custom engraving</h3>
+            <p class="door-desc bodyCopy">Send us a file and a product — or let us source the product. Magnets, dog tags, keychains, band merch. Almost anything laser-engravable is fair game.</p>
+          </div>
+          <div class="door-card">
+            <div class="door-eyebrow">DOOR 3</div>
+            <h3 class="door-title">Commission a piece</h3>
+            <p class="door-desc bodyCopy">Wall art and one-of-a-kind work, built to your size, your space, your wood tone. 7-15 days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-missions-header">
+      <h1 data-animate-variant="slide" data-animate-on-scroll="true">
+        Selected <br />
+        Work
+      </h1>
+    </section>
+
+    <section class="featured-missions">
+      <div class="featured-missions-list">
+        <a href="/portfolio" class="featured-missions-item">
+          <p>01 / 05</p>
+          <h3>Ready to ship</h3>
+          <div class="featured-mission-item-img">
+            <img src="/index/highlight_img_01.jpg" alt="" />
+          </div>
+          <p>[ View Details ]</p>
+        </a>
+
+        <a href="/engraving" class="featured-missions-item">
+          <p>02 / 05</p>
+          <h3>Custom engraving</h3>
+          <div class="featured-mission-item-img">
+            <img src="/index/highlight_img_02.jpg" alt="" />
+          </div>
+          <p>[ View Details ]</p>
+        </a>
+
+        <a href="/contact" class="featured-missions-item">
+          <p>03 / 05</p>
+          <h3>Commission a piece</h3>
+          <div class="featured-mission-item-img">
+            <img src="/index/highlight_img_03.jpg" alt="" />
+          </div>
+          <p>[ View Details ]</p>
+        </a>
+
+        <a href="/about" class="featured-missions-item">
+          <p>04 / 05</p>
+          <h3>A little loop of reuse</h3>
+          <div class="featured-mission-item-img">
+            <img src="/index/highlight_img_04.jpg" alt="" />
+          </div>
+          <p>[ View Details ]</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="intro" style="padding-top: 10rem;">
+      <div class="container">
+        <div class="intro-header">
+          <h1 data-animate-variant="slide" data-animate-on-scroll="true">
+            A little loop<br/>of reuse.
+          </h1>
+        </div>
+
+        <div class="intro-copy">
+          <div class="intro-copy-wrapper">
+            <p class="bodyCopy md" style="color: var(--base-200); margin-bottom: 2rem;" data-animate-variant="slide" data-animate-on-scroll="true">
+              Everything is sourced locally &mdash; regionally, within a two-and-a-half-hour radius. Whether it's a restaurant table or a piece of hardwood for coasters.<br><br>
+              The wood for the coasters and all the smaller products is reclaimed from the bigger ones. We don't go buy a piece of maple to turn into coasters &mdash; it's always offcuts or scrap from a shelf job or a table job. It's part of a little loop of reuse. Even the curved triangle cut out of a round coaster becomes a pendant inlay, or an earring. There's a little fractal of reuses.<br><br>
+              Crystals are sourced locally as well &mdash; cut and cabochoned by local people.
+            </p>
+            
+            <div class="reuse-loop-quote" style="border-left: 2px solid var(--base-500); padding-left: 2rem; margin-top: 4rem;">
+              <p class="bodyCopy lg" style="font-style: italic; color: var(--base-100);" data-animate-variant="slide" data-animate-on-scroll="true">
+                "That word has lost a lot of meaning over the years, but there's no reason not to use it. Now is the time more than ever to redefine it. Sustainable here means it's regionally purchased, and it always has a second use."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-content">
+        <div class="cta-logo">
+          <img src="/index/logo_cta.png" alt="" />
+        </div>
+
+        <div class="cta-copy" style="width: 50%; max-width: 800px; text-align: center;">
+          <h3 style="color: var(--base-100); margin-bottom: 1rem;">Start a custom commission</h3>
+          <p class="bodyCopy lg">
+            Tell us the space and the tone and we'll take it from there. Or take the current portfolio with you — everything available right now, with sizes and prices.
+          </p>
+        </div>
+
+        <div class="cta-buttons" style="display: flex; gap: 1rem;">
+          <a href="/contact" class="hero-btn hero-btn-primary">
+            Request a Quote
+          </a>
+          <a href="/portfolio" class="hero-btn hero-btn-secondary">
+            Download the Portfolio
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <div class="cta-card cta-card-left">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_01.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+
+        <div class="cta-card cta-card-right">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_02.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <div class="cta-card cta-card-left">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_03.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+
+        <div class="cta-card cta-card-right">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_04.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <div class="cta-card cta-card-left">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_05.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+
+        <div class="cta-card cta-card-right">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_06.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-bg-container"></div>
+
+        <div class="footer-content">
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <h3>Start a Custom Commission</h3>
+
+              <div class="footer-form">
+                <input type="email" placeholder="Email Address" />
+
+                <div class="btn">
+                  <a href="/contact" class="btn"
+                    ><span class="btn-line"></span>Request a Quote</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-content-col">
+              <p class="bodyCopy">
+                Sub Sanctuary is a premium handcrafted woodworking brand. We build pieces that blend artistry with functional design, operating as a digital gallery where craftsmanship is the point.
+              </p>
+
+              <div style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">
+                <p class="bodyCopy">Learn about our shipping, returns, and care guidelines.</p>
+                <a href="/policies" style="color: white; text-decoration: underline; margin-top: 0.5rem; display: inline-block;">View Policies</a>
+              </div>
+
+              <div class="footer-socials">
+                <div class="footer-social">
+                  <a href="/contact">[ Instagram ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Process Videos ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Studio ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/policies">[ Policies ]</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <p>[ Constructed by Sub Sanctuary ]</p>
+              <p>[ Sub Sanctuary / 2026 ]</p>
+            </div>
+
+            <div class="footer-content-col">
+              <h1>Sub Sanctuary&copy;</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        if (sessionStorage.getItem("pageTransition") === "true") {
+          let s = document.createElement("style");
+          s.setAttribute("data-transition", "");
+          s.textContent =
+            ".transition-grid{background-color:var(--base-400);pointer-events:auto;}";
+          (document.head || document.documentElement).appendChild(s);
+        }
+      })();
+    </script>
+
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/preloader.js"></script>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/interactive-grid.js"></script>
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/js/home.js"></script>
+    <script type="module" src="/js/cta.js"></script>
+    <script type="module" src="/js/animated-copy.js"></script>
+  </body>
+</html>

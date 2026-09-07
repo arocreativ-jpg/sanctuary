@@ -1,0 +1,447 @@
+/* engraving - hero section */
+.hero.engraving-hero {
+  height: 60svh;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.hero.engraving-hero .hero-container .hero-img-container {
+  background-color: var(--base-500);
+}
+
+.hero.engraving-hero .hero-container .hero-content .container {
+  justify-content: flex-end;
+}
+
+.hero.engraving-hero .hero-content-header h1 {
+  color: var(--base-400);
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  text-transform: uppercase;
+  line-height: 0.85;
+}
+
+.hero.engraving-hero .hero-callout p {
+  color: var(--base-400);
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+/* engraving - main sections wrapper */
+.engraving-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.engraving-wrapper .container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+  background-color: var(--base-300);
+  clip-path: polygon(
+    4rem 0%,
+    calc(100% - 4rem) 0%,
+    100% 4rem,
+    100% calc(100% - 4rem),
+    calc(100% - 4rem) 100%,
+    4rem 100%,
+    0% calc(100% - 4rem),
+    0% 4rem
+  );
+}
+
+/* Sub-sections */
+.engraving-section {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+}
+
+.engraving-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.engraving-section:first-child {
+  padding-top: 0;
+}
+
+/* Section Header Tags */
+.engraving-tags {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.engraving-tags p {
+  color: var(--base-100);
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Typography Overrides */
+.engraving-inquiry h1 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  text-transform: uppercase;
+  color: var(--base-100);
+  line-height: 0.85;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.engraving-inquiry p.bodyCopy {
+  color: var(--base-100);
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  line-height: 1.4;
+  font-family: 'Host Grotesk', sans-serif;
+  max-width: 1200px;
+  font-weight: 300;
+}
+
+/* Engraving List Grid */
+.engraving-list-grid {
+  position: relative;
+  width: 100%;
+  background-color: var(--base-400);
+  color: var(--base-100);
+  border-top: 1px solid rgba(242, 238, 218, 0.15);
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  overflow: hidden;
+}
+
+.engraving-list-grid .grid-container {
+  max-width: 2000px;
+  margin: 0 auto;
+  border-left: 1px solid rgba(242, 238, 218, 0.15);
+  border-right: 1px solid rgba(242, 238, 218, 0.15);
+}
+
+.engraving-list-grid .grid-header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+}
+
+.engraving-list-grid .grid-header p {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--base-200);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.engraving-list-grid .grid-header p .line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--base-200);
+}
+
+.engraving-list-grid .grid-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+}
+
+.engraving-list-grid .grid-col {
+  padding: 3rem 2rem;
+  border-right: 1px solid rgba(242, 238, 218, 0.15);
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+}
+.engraving-list-grid .grid-col:nth-child(4n) {
+  border-right: none;
+}
+.engraving-list-grid .grid-main > .grid-col:nth-last-child(-n+3) {
+  border-bottom: none;
+}
+
+.engraving-list-grid .title-col {
+  grid-column: 1 / span 2;
+  border-bottom: none;
+}
+.engraving-list-grid .title-col h1 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  text-transform: uppercase;
+  color: var(--base-100);
+  line-height: 0.85;
+}
+
+.engraving-list-grid .desc-col {
+  grid-column: 3 / span 1;
+  border-bottom: none;
+}
+.engraving-list-grid .desc-col p:first-child {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--base-100);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.engraving-list-grid .desc-col p.bodyCopy {
+  color: var(--base-200);
+}
+
+.engraving-list-grid .image-col {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 2;
+  padding: 0;
+  position: relative;
+  display: flex;
+}
+.engraving-list-grid .vertical-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.engraving-list-grid .vertical-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+.engraving-list-grid .side-text {
+  position: absolute;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--base-100);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+.engraving-list-grid .side-text.top-text {
+  top: 2rem;
+  right: 2rem;
+  text-align: right;
+}
+.engraving-list-grid .side-text.bottom-text {
+  bottom: 2rem;
+  left: -12rem;
+  text-align: left;
+}
+.engraving-list-grid .side-text .slashes {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.engraving-list-grid .item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.engraving-list-grid .item-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: var(--base-100);
+}
+.engraving-list-grid .item-list li:hover {
+  color: var(--base-500);
+}
+
+.engraving-list-grid .grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  border-top: 1px solid rgba(242, 238, 218, 0.15);
+}
+.engraving-list-grid .grid-gallery img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-right: 1px solid rgba(242, 238, 218, 0.15);
+}
+.engraving-list-grid .grid-gallery img:last-child {
+  border-right: none;
+}
+
+.engraving-list-grid .grid-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--base-200);
+}
+
+/* Promise Section */
+.engraving-promise h3 {
+  font-family: 'WDXL Lubrifont SC', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--base-100);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.engraving-promise p {
+  color: var(--base-100);
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  line-height: 1.4;
+  font-family: 'Host Grotesk', sans-serif;
+  max-width: 1200px;
+  font-weight: 300;
+}
+
+/* Steps Section */
+.engraving-steps .step {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+}
+
+.engraving-steps .step:last-child {
+  border-bottom: none;
+}
+
+.engraving-steps .step .step-number {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--base-100);
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.engraving-steps .step p {
+  color: var(--base-100);
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  line-height: 1.4;
+  font-family: 'Host Grotesk', sans-serif;
+  max-width: 1200px;
+  font-weight: 300;
+}
+
+.engraving-steps .step p strong {
+  font-weight: 600;
+}
+
+/* Addon Sections */
+.engraving-addon h3 {
+  font-family: 'WDXL Lubrifont SC', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--base-100);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.engraving-addon p {
+  color: var(--base-100);
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  line-height: 1.4;
+  font-family: 'Host Grotesk', sans-serif;
+  max-width: 1200px;
+  font-weight: 300;
+}
+
+.engraving-addon .btn {
+  margin-top: 2rem;
+}
+
+/* Forms */
+.engraving-form {
+  margin-top: 3rem;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.engraving-form .form-item input[type="text"],
+.engraving-form .form-item input[type="email"],
+.engraving-form .form-item textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: #3a3a3a; /* Dark background like contact page */
+  color: var(--base-100);
+  font-family: "Geist Mono", monospace;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.engraving-form .form-item input:focus,
+.engraving-form .form-item textarea:focus {
+  background-color: #444; /* Slightly lighter on focus */
+}
+
+.engraving-form .form-item input::placeholder,
+.engraving-form .form-item textarea::placeholder {
+  color: rgba(242, 238, 218, 0.5); /* Faint beige text */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .engraving-wrapper .container {
+    padding: 3rem 1.5rem;
+    clip-path: polygon(
+      2rem 0%,
+      calc(100% - 2rem) 0%,
+      100% 2rem,
+      100% calc(100% - 2rem),
+      calc(100% - 2rem) 100%,
+      2rem 100%,
+      0% calc(100% - 2rem),
+      0% 2rem
+    );
+  }
+  
+  .engraving-list-grid .grid-main {
+    grid-template-columns: 1fr;
+  }
+  .engraving-list-grid .title-col, 
+  .engraving-list-grid .desc-col, 
+  .engraving-list-grid .image-col {
+    grid-column: 1 / -1;
+  }
+  .engraving-list-grid .image-col {
+    grid-row: auto;
+    height: 50svh;
+  }
+  .engraving-list-grid .side-text.bottom-text {
+    left: 2rem;
+  }
+  .engraving-list-grid .grid-col {
+    border-right: none;
+    border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  }
+  .engraving-list-grid .grid-main > .grid-col:nth-last-child(-n+3) {
+    border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  }
+  .engraving-list-grid .grid-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .engraving-list-grid .grid-gallery img:nth-child(3n) {
+    border-right: none;
+  }
+}

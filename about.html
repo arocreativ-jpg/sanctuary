@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Sub Sanctuary | Premium Woodworking</title>
+    <link rel="icon" href="/global/site_logo.png" type="image/png" />
+    <meta name="author" content="Sub Sanctuary" />
+
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/interactive-grid.css" />
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/observatory.css" />
+  </head>
+  <body>
+    <div class="preloader-overlay">
+      <div class="preloader-grid"></div>
+
+      <div class="preloader-animation-wrapper">
+        <p class="preloader-text">Preparing Gallery</p>
+        <div class="preloader-ring-frame"></div>
+        <div class="preloader-disc-frame"></div>
+      </div>
+    </div>
+
+    <svg
+      style="visibility: hidden; position: absolute"
+      width="0"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+    >
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="goo"
+          />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="interactive-grid"></div>
+
+    <div class="transition-grid"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="nav-bg"></div>
+      </div>
+
+      <div class="nav-mobile-header">
+        <p class="nav-logo">Sub Sanctuary</p>
+        <p class="nav-menu-toggle">Menu</p>
+      </div>
+
+      <div class="nav-overlay">
+        <div class="nav-items">
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
+          <div class="nav-item"><a href="/shop">Shop</a></div>
+          <div class="nav-item"><a href="/engraving">Engraving</a></div>
+          <div class="nav-item"><a href="/contact">Custom Orders</a></div>
+          
+          <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
+            <span class="mode-icon">☼</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero hero-observatory">
+      <div class="hero-container">
+        <div class="hero-img-container">
+          <div class="hero-img">
+            <img src="/index/about_hero.png" alt="About Hero Image" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+
+          <div class="hero-img-overlay"></div>
+
+          <div class="hero-img-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="container">
+            <div class="hero-content-nav">
+              <div class="hero-timer">
+                <p>SUB SANCTUARY — PITTSBURGH, PA</p>
+              </div>
+            </div>
+
+            <div class="hero-content-header">
+              <h1 data-animate-variant="slide" data-animate-delay="0.6">
+                The<br />Studio
+              </h1>
+            </div>
+
+            <div class="hero-content-footer">
+              <div class="hero-footer-copy">
+                <p
+                  class="bodyCopy"
+                  data-animate-variant="slide"
+                  data-animate-delay="0.75"
+                >
+                  Shane Martin<br/>aka Sub Sanctuary
+                </p>
+              </div>
+
+              <div class="hero-callout">
+                <p data-animate-variant="flicker" data-animate-delay="0.85">
+                  Handcrafted Goods / Est. 2016
+                </p>
+                <p data-animate-variant="flicker" data-animate-delay="1">
+                  Design Studio Verified
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro intro-observatory">
+      <div class="container">
+        <div class="intro-copy">
+          <div class="intro-header">
+            <div class="maker-quote" style="border-left: 4px solid #c48b71; padding-left: 1rem; margin-bottom: 2rem; max-width: 250px;">
+              <p style="font-style: italic; color: var(--base-500); font-family: 'Editorial New', serif; font-size: 1.25rem; line-height: 1.4;">
+                "Large or small, from palm of hand to living space wall, bringing life and light to your world will always be his goal."
+              </p>
+            </div>
+            <p data-animate-variant="flicker" data-animate-on-scroll="true">
+              [ Maker's Mark ]
+            </p>
+          </div>
+
+          <div class="intro-copy-wrapper">
+            <h3 style="line-height: 1.1; font-size: clamp(1.875rem, 4.875vw, 3.75rem);">
+              Sub Sanctuary isn't just a brand and Shane Martin isn't just the artist behind it. He's a designer, fabricator, student and curator; all interwoven and intrinsically connected. He denotes the landmarks of his journey through this world with a diverse and kinetic array of inspired artifacts — melding hand, heart and machine to create items that speak their meaning through medium, movement and utility.
+              <br/><br/>
+              Driven by the unseen forces that decide wood grain can appear as rock and water can sculpt either in near perfect symmetry — met with a daily devotion to the act of creating itself — his motives and inspiration change day by day and minute by minute. Yet one thing remains: an unwavering desire to bring himself and his fellow man all that much closer to the land and its textures that hold our sincerest meaning and memories in this living world.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="process" style="padding: 10rem 0;">
+      <div class="container">
+        <div class="process-header" style="margin-bottom: 4rem;">
+          <p style="color: var(--base-200); text-transform: uppercase; font-weight: 600; letter-spacing: 0.1em; border-bottom: 1px solid rgba(242, 238, 218, 0.2); padding-bottom: 1rem; width: 100%;">Process</p>
+        </div>
+        
+        <div class="process-list">
+          <div class="process-step" style="border-bottom: 1px solid rgba(242, 238, 218, 0.2); padding: 3rem 0; display: flex; flex-direction: column; gap: 1rem;">
+            <div class="step-num" style="color: var(--base-200); font-family: monospace; font-size: 0.85rem; letter-spacing: 0.1em;">01 DESIGN</div>
+            <h3 data-animate-variant="slide" data-animate-on-scroll="true" style="font-size: 1.75rem; line-height: 1.4; color: var(--base-500); font-weight: 400; font-family: 'Editorial New', serif;">Every piece starts as a vector. Around a hundred designs in the library, drawn over a decade.</h3>
+          </div>
+          
+          <div class="process-step" style="border-bottom: 1px solid rgba(242, 238, 218, 0.2); padding: 3rem 0; display: flex; flex-direction: column; gap: 1rem;">
+            <div class="step-num" style="color: var(--base-200); font-family: monospace; font-size: 0.85rem; letter-spacing: 0.1em;">02 LASER</div>
+            <h3 data-animate-variant="slide" data-animate-on-scroll="true" style="font-size: 1.75rem; line-height: 1.4; color: var(--base-500); font-weight: 400; font-family: 'Editorial New', serif;">Cut and engraved. The depth and the detail happen here.</h3>
+          </div>
+          
+          <div class="process-step" style="border-bottom: 1px solid rgba(242, 238, 218, 0.2); padding: 3rem 0; display: flex; flex-direction: column; gap: 1rem;">
+            <div class="step-num" style="color: var(--base-200); font-family: monospace; font-size: 0.85rem; letter-spacing: 0.1em;">03 INLAY</div>
+            <h3 data-animate-variant="slide" data-animate-on-scroll="true" style="font-size: 1.75rem; line-height: 1.4; color: var(--base-500); font-weight: 400; font-family: 'Editorial New', serif;">Pieces set into the surface, glued up, locked together — parquetry.</h3>
+          </div>
+          
+          <div class="process-step" style="border-bottom: 1px solid rgba(242, 238, 218, 0.2); padding: 3rem 0; display: flex; flex-direction: column; gap: 1rem;">
+            <div class="step-num" style="color: var(--base-200); font-family: monospace; font-size: 0.85rem; letter-spacing: 0.1em;">04 FINISH</div>
+            <h3 data-animate-variant="slide" data-animate-on-scroll="true" style="font-size: 1.75rem; line-height: 1.4; color: var(--base-500); font-weight: 400; font-family: 'Editorial New', serif;">Sanded smooth, then coated. Soft, smooth and long-lasting — a microscopic layer that fills the grain and holds up for years.</h3>
+          </div>
+          
+          <div class="process-step" style="border-bottom: 1px solid rgba(242, 238, 218, 0.2); padding: 3rem 0; display: flex; flex-direction: column; gap: 1rem;">
+            <div class="step-num" style="color: var(--base-200); font-family: monospace; font-size: 0.85rem; letter-spacing: 0.1em;">05 SIGN</div>
+            <h3 data-animate-variant="slide" data-animate-on-scroll="true" style="font-size: 1.75rem; line-height: 1.4; color: var(--base-500); font-weight: 400; font-family: 'Editorial New', serif;">Hand signed. Numbered if it's a limited edition. Maker’s mark engraved on the back.</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="materials" style="padding: 10rem 0 0 0;">
+      <div class="container">
+        <div class="materials-header" style="margin-bottom: 4rem;">
+          <p style="color: var(--base-200); text-transform: uppercase; font-weight: 600; letter-spacing: 0.1em; border-bottom: 1px solid rgba(242, 238, 218, 0.2); padding-bottom: 1rem; width: 100%;">Materials + Sourcing</p>
+        </div>
+        
+        <div class="materials-content" style="max-width: 800px;">
+          <h2 data-animate-variant="slide" data-animate-on-scroll="true" style="font-size: 3rem; color: var(--base-500); margin-bottom: 2rem; font-family: 'Editorial New', serif; font-weight: 400;">Three woods, picked for a reason.</h2>
+          
+          <h3 data-animate-variant="slide" data-animate-on-scroll="true" style="font-size: 1.5rem; line-height: 1.5; color: var(--base-100); font-family: 'Editorial New', serif; font-weight: 400; margin-bottom: 4rem;">
+            Maple, cherry and walnut. All three are always in stock, always abundant, and the most sustainable options available to us. We don't work in oak — it isn't a good engraving surface. Mahogany is beautiful, but once you put oil on it, it goes extremely dark and the contrast is gone. Exotic woods on request.
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro intro-observatory">
+      <div class="container">
+        <div class="intro-copy">
+          <div class="intro-header">
+            <p data-animate-variant="flicker" data-animate-on-scroll="true">
+              [ A little loop of reuse ]
+            </p>
+          </div>
+
+          <div class="intro-copy-wrapper">
+            <p class="bodyCopy md" style="color: var(--base-200); max-width: 85%;">
+              Everything is sourced locally — regionally, within a two-and-a-half-hour radius. Whether it's a restaurant table or a piece of hardwood for coasters.<br><br>
+              The wood for the coasters and all the smaller products is reclaimed from the bigger ones. We don't go buy a piece of maple to turn into coasters — it's always offcuts or scrap from a shelf job or a table job. It's part of a little loop of reuse. Even the curved triangle cut out of a round coaster becomes a pendant inlay, or an earring. There's a little fractal of reuses.<br><br>
+              Crystals are sourced locally as well — cut and cabochoned by local people.
+            </p>
+            
+            <div class="reuse-loop-quote" style="border-left: 2px solid var(--base-500); padding-left: 2rem; margin-top: 4rem; max-width: 90%;">
+              <p class="bodyCopy lg" style="font-style: italic; color: var(--base-100);">
+                "That word has lost a lot of meaning over the years, but there's no reason not to use it. Now is the time more than ever to redefine it. Sustainable here means it's regionally purchased, and it always has a second use."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-content">
+        <div class="cta-logo">
+          <img src="/index/logo_cta.png" alt="" />
+        </div>
+
+        <div class="cta-copy">
+          <p class="bodyCopy lg">
+            Start a thread on our custom order page to discuss a bespoke piece. We review all requests and respond directly to start the collaborative process.
+          </p>
+        </div>
+
+        <div class="btn">
+          <a href="/contact" class="btn"
+            ><span class="btn-line"></span>Request Commission</a
+          >
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <div class="cta-card cta-card-left">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_01.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+
+        <div class="cta-card cta-card-right">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_02.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <div class="cta-card cta-card-left">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_03.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+
+        <div class="cta-card cta-card-right">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_04.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <div class="cta-card cta-card-left">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_05.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+
+        <div class="cta-card cta-card-right">
+          <div class="cta-card-frame">
+            <div class="cta-card-img">
+              <img src="/index/cta_img_06.jpg" alt="" />
+            </div>
+            <div class="cta-card-gradient"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-bg-container"></div>
+
+        <div class="footer-content">
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <h3>Start a Custom Commission</h3>
+
+              <div class="footer-form">
+                <input type="email" placeholder="Email Address" />
+
+                <div class="btn">
+                  <a href="/contact" class="btn"
+                    ><span class="btn-line"></span>Request a Quote</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-content-col">
+              <p class="bodyCopy">
+                Sub Sanctuary is a premium handcrafted woodworking brand. We build pieces that blend artistry with functional design, operating as a digital gallery where craftsmanship is the point.
+              </p>
+
+              <div class="footer-socials">
+                <div class="footer-social">
+                  <a href="/contact">[ Instagram ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Process Videos ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Studio ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/policies">[ Policies ]</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <p>[ Constructed by Sub Sanctuary ]</p>
+              <p>[ Sub Sanctuary / 2026 ]</p>
+            </div>
+
+            <div class="footer-content-col">
+              <h1>Sub Sanctuary&copy;</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        if (sessionStorage.getItem("pageTransition") === "true") {
+          let s = document.createElement("style");
+          s.setAttribute("data-transition", "");
+          s.textContent =
+            ".transition-grid{background-color:var(--base-400);pointer-events:auto;}";
+          (document.head || document.documentElement).appendChild(s);
+        }
+      })();
+    </script>
+
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/preloader.js"></script>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/interactive-grid.js"></script>
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/js/home.js"></script>
+    <script type="module" src="/js/observatory.js"></script>
+    <script type="module" src="/js/cta.js"></script>
+    <script type="module" src="/js/animated-copy.js"></script>
+  </body>
+</html>

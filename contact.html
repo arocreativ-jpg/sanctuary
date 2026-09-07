@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Sub Sanctuary | Premium Woodworking</title>
+    <link rel="icon" href="/global/site_logo.png" type="image/png" />
+    <meta name="author" content="Sub Sanctuary" />
+
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/interactive-grid.css" />
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+  </head>
+  <body>
+    <div class="preloader-overlay">
+      <div class="preloader-grid"></div>
+
+      <div class="preloader-animation-wrapper">
+        <p class="preloader-text">Preparing Gallery</p>
+        <div class="preloader-ring-frame"></div>
+        <div class="preloader-disc-frame"></div>
+      </div>
+    </div>
+
+    <svg
+      style="visibility: hidden; position: absolute"
+      width="0"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+    >
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="goo"
+          />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="interactive-grid"></div>
+
+    <div class="transition-grid"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="nav-bg"></div>
+      </div>
+
+      <div class="nav-mobile-header">
+        <p class="nav-logo">Sub Sanctuary</p>
+        <p class="nav-menu-toggle">Menu</p>
+      </div>
+
+      <div class="nav-overlay">
+        <div class="nav-items">
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
+          <div class="nav-item"><a href="/shop">Shop</a></div>
+          <div class="nav-item"><a href="/engraving">Engraving</a></div>
+          <div class="nav-item"><a href="/contact">Custom Orders</a></div>
+          
+          <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
+            <span class="mode-icon">☼</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="custom-commissions-page">
+      <!-- 02. CUSTOM HERO -->
+      <section class="custom-hero">
+        <div class="container custom-grid-2col">
+          <div class="hero-left">
+            <div class="section-marker">
+              <p>06 &mdash; CUSTOM COMMISSIONS</p>
+            </div>
+            <h1 class="hero-title">CUSTOM</h1>
+            <p class="hero-subtitle">
+              This page's real job is answering every question up front so the client doesn't have to ask a single one. Half of current inquiries die in DMs.
+            </p>
+          </div>
+          <div class="hero-right">
+            <div class="hero-img-wrapper">
+              <img src="/contact/custom_hero.jpg" alt="Sub Sanctuary Workshop" />
+              <div class="img-badge">
+                <p>YOUR IDEAS.<br>OUR HANDS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. COMMISSION A PIECE -->
+      <section class="commission-intro">
+        <div class="container custom-grid-2col">
+          <div class="intro-left panel">
+            <div class="panel-header">
+              <p>01 &mdash; COMMISSION A PIECE</p>
+              <p>SHAPED</p>
+            </div>
+            <h2>Commission a piece</h2>
+            <p class="bodyCopy">
+              Most people don't arrive knowing exactly what they want — they know the wall, the room, the feeling. Tell us the space and the tone, and we'll take it from there. Fill this out and you'll hear back directly, not from a form robot.
+            </p>
+            <p class="quote">
+              "PEOPLE DON't KNOW WHAT THEY WANT NECESSARILY, THEY WANT YOU TO MAKE SOMETHING BEAUTIFUL", BRIDGING AVAILABLE WORK AND THE CUSTOMER'S SPACE."<br>
+              &mdash; MAY &bull; AUG 14
+            </p>
+          </div>
+          <div class="intro-right">
+            <div class="intro-img-wrapper">
+              <img src="/contact/commission_detail.jpg" alt="Laser Engraving Detail" />
+              <div class="img-side-text">
+                <p>ANY MATERIAL.<br>ANY IDEA.<br>BUILT TO LAST.</p>
+                <div class="divider"></div>
+                <p class="small-text">FROM A SKETCH, A THOUGHT, OR A CONVERSATION TO A FINISHED PIECE.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04. PROJECT FORM & RIGHT PANELS -->
+      <section class="commission-form-section">
+        <div class="container custom-grid-2col-asym">
+          <div class="form-left panel">
+            <div class="panel-header">
+              <p>02 &mdash; TELL US ABOUT YOUR PROJECT</p>
+              <p>VERBATIM FIELD SET</p>
+            </div>
+            
+            <form action="#" class="custom-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>REQUIRED</label>
+                  <span>Name - Email</span>
+                  <div class="input-row">
+                    <input type="text" placeholder="Your name" required />
+                    <input type="email" placeholder="Your email" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>REQUIRED - FREE TEXT, NOT A DROPDOWN</label>
+                  <span>What do you want made?</span>
+                  <textarea rows="3" placeholder="Wall art, a lamp, a pendant, a large-scale install — or your grandfather's compass. Tell us." required></textarea>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>REQUIRED - THREE OPTIONS ONLY</label>
+                  <span>Wood tone</span>
+                  <div class="wood-tone-options">
+                    <button type="button" class="tone-btn active">Light</button>
+                    <button type="button" class="tone-btn">Medium</button>
+                    <button type="button" class="tone-btn">Dark</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>REQUIRED</label>
+                  <span>Size &mdash; approximate dimensions</span>
+                  <input type="text" placeholder='e.g. 12" x 8" or "about A3"' required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>REQUIRED</label>
+                  <span>Where is it going?</span>
+                  <input type="text" placeholder="The room, the wall, the space it needs to fit." required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>REQUIRED - YES/NO</label>
+                  <span>Custom etching?</span>
+                  <div class="etching-options">
+                    <button type="button" class="etching-btn active">Yes</button>
+                    <button type="button" class="etching-btn">No</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>OPTIONAL</label>
+                  <span>Anything else we should know</span>
+                  <textarea rows="3" placeholder="Ideas, deadlines, context — anything that helps."></textarea>
+                </div>
+              </div>
+
+              <div class="form-row file-upload-row">
+                <div class="form-group">
+                  <label>OPTIONAL - FILE UPLOAD</label>
+                  <span>Reference or design file &mdash; JPEG, PNG or AI</span>
+                </div>
+                <div class="file-upload-wrapper">
+                  <label for="custom-file" class="file-btn">Choose file</label>
+                  <span class="file-status">No file chosen</span>
+                  <input type="file" id="custom-file" style="display: none;" />
+                </div>
+              </div>
+
+              <button type="submit" class="submit-cta">
+                SEND REQUEST &rarr;
+              </button>
+            </form>
+          </div>
+
+          <div class="form-right">
+            <!-- 05. WHAT HAPPENS NEXT -->
+            <div class="panel happens-next-panel">
+              <div class="panel-header">
+                <p>03 &mdash; WHAT HAPPENS NEXT</p>
+                <p>VERBATIM</p>
+              </div>
+              <ul class="process-list">
+                <li>
+                  <span class="step-num">01</span>
+                  <p>We read every request and reply by email to set up a call or a thread — because pricing custom work needs a conversation, not a calculator.</p>
+                </li>
+                <li>
+                  <span class="step-num">02</span>
+                  <p>Once the design is agreed, a deposit gets it into production.</p>
+                </li>
+                <li>
+                  <span class="step-num">03</span>
+                  <p>Most work ships in 7–15 days.</p>
+                </li>
+              </ul>
+              <div class="on-price">
+                <p class="on-price-title">ON PRICE</p>
+                <p class="on-price-text">Custom work is priced on the piece, the material and the time. We'll tell you what it costs before anything is made — nothing gets built on a surprise.</p>
+                <p class="quote">
+                  "PEOPLE WANT TO TALK TO PEOPLE". QUOTING PROCESS, DEPOSIT, TUNNAROUND. "I DON'T WANT PEOPLE TO BE SURPRISED"<br>
+                  &mdash; MAY TRANSCRIPT
+                </p>
+              </div>
+            </div>
+
+            <!-- 06. HONESTY ABOUT MATERIALS -->
+            <div class="panel materials-panel">
+              <div class="panel-header">
+                <p>04 &mdash; HONESTY ABOUT MATERIALS</p>
+                <p>VERBATIM</p>
+              </div>
+              <p class="bodyCopy">
+                We'll always tell you what a piece is made of — hardwood or plywood — before you commit. Nobody should pick out a beautiful piece and open the box to find a material they weren't expecting.
+              </p>
+              <p class="quote">
+                "I DON'T WANT PEOPLE TO BE SURPRISED... GET IT IN A PLYWOOD THEY WEREN'T READY FOR"<br>
+                &mdash; MAY TRANSCRIPT
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Footer status labels to match the bottom of the reference -->
+      <section class="commissions-footer-status">
+        <div class="container" style="display: flex; justify-content: space-between; border-top: 1px solid rgba(242, 238, 218, 0.1); padding-top: 2rem; margin-bottom: 4rem;">
+          <p class="status-label">INVENTORY SYNCED <span style="color: var(--orange);">●</span></p>
+          <p class="status-label">STOREFRONT ACTIVE <span style="color: var(--orange);">●</span></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-bg-container"></div>
+
+        <div class="footer-content">
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <h3>Start a Custom Commission</h3>
+
+              <div class="footer-form">
+                <input type="email" placeholder="Email Address" />
+
+                <div class="btn">
+                  <a href="/contact" class="btn"
+                    ><span class="btn-line"></span>Request a Quote</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-content-col">
+              <p class="bodyCopy">
+                Sub Sanctuary is a premium handcrafted woodworking brand. We build pieces that blend artistry with functional design, operating as a digital gallery where craftsmanship is the point.
+              </p>
+
+              <div class="footer-socials">
+                <div class="footer-social">
+                  <a href="/contact">[ Instagram ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Process Videos ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Studio ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/policies">[ Policies ]</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <p>[ Constructed by Sub Sanctuary ]</p>
+              <p>[ Sub Sanctuary / 2026 ]</p>
+            </div>
+
+            <div class="footer-content-col">
+              <h1>Sub Sanctuary&copy;</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        if (sessionStorage.getItem("pageTransition") === "true") {
+          let s = document.createElement("style");
+          s.setAttribute("data-transition", "");
+          s.textContent =
+            ".transition-grid{background-color:var(--base-400);pointer-events:auto;}";
+          (document.head || document.documentElement).appendChild(s);
+        }
+      })();
+    </script>
+
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/preloader.js"></script>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/interactive-grid.js"></script>
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/js/home.js"></script>
+    <script type="module" src="/js/faq.js"></script>
+    <script type="module" src="/js/animated-copy.js"></script>
+  </body>
+</html>

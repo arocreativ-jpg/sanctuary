@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product | Sub Sanctuary</title>
+    <link rel="icon" href="/global/site_logo.png" type="image/png" />
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/product.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="nav-bg"></div>
+      </div>
+
+      <div class="nav-mobile-header">
+        <p class="nav-logo">Sub Sanctuary</p>
+        <p class="nav-menu-toggle">Menu</p>
+      </div>
+
+      <div class="nav-overlay">
+        <div class="nav-items">
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
+          <div class="nav-item"><a href="/shop">Shop</a></div>
+          <div class="nav-item"><a href="/engraving">Engraving</a></div>
+          <div class="nav-item"><a href="/contact">Custom Orders</a></div>
+          
+          <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
+            <span class="mode-icon">☼</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="product-pdp">
+      <div class="interactive-grid" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></div>
+
+      <div class="container">
+        
+        <div class="breadcrumbs">
+          <p>SHOP / SMOKERS LOUNGE / TOPOGRAPHIC ZIPPO</p>
+        </div>
+
+        <section class="pdp-hero-grid">
+          
+          <!-- COLUMN 1: THUMBNAILS -->
+          <div class="pdp-thumbnails">
+            <div class="thumbnail active" onclick="document.getElementById('mainImage').src = this.children[0].src; document.querySelectorAll('.thumbnail').forEach(t=>t.classList.remove('active')); this.classList.add('active');">
+              <img src="/collections/collection_smokers.jpg" alt="Thumb 1" />
+            </div>
+            <div class="thumbnail" onclick="document.getElementById('mainImage').src = this.children[0].src; document.querySelectorAll('.thumbnail').forEach(t=>t.classList.remove('active')); this.classList.add('active');">
+              <img src="/contact/commission_detail.jpg" alt="Thumb 2" />
+            </div>
+            <div class="thumbnail" onclick="document.getElementById('mainImage').src = this.children[0].src; document.querySelectorAll('.thumbnail').forEach(t=>t.classList.remove('active')); this.classList.add('active');">
+              <img src="/contact/custom_hero.jpg" alt="Thumb 3" />
+            </div>
+            <div class="thumbnail" onclick="document.getElementById('mainImage').src = this.children[0].src; document.querySelectorAll('.thumbnail').forEach(t=>t.classList.remove('active')); this.classList.add('active');">
+              <img src="/collections/collection_housewares.jpg" alt="Thumb 4" />
+            </div>
+            <div class="thumb-nav">
+              <button class="thumb-nav-btn">&larr;</button>
+              <button class="thumb-nav-btn">&rarr;</button>
+            </div>
+          </div>
+
+          <!-- COLUMN 2: MAIN IMAGE -->
+          <div class="pdp-main-image-col">
+            <div class="pdp-main-image-wrapper">
+              <div class="product-bg-outline"></div>
+              <img src="/collections/collection_smokers.jpg" alt="Topographic Zippo" id="mainImage" />
+            </div>
+            <div class="pdp-main-image-meta">
+              <p>01 / 05</p>
+              <p>TOPOGRAPHIC ZIPPO</p>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: INFO -->
+          <div class="pdp-info-col">
+            <p class="collection-label">SMOKERS LOUNGE &mdash;</p>
+            <h1 class="product-title">Topographic Zippo</h1>
+            <p class="product-price">$100.00</p>
+            
+            <div class="product-reviews">
+              <span class="stars">★★★★★</span>
+              <span class="review-count">(12 REVIEWS)</span>
+            </div>
+            
+            <p class="product-desc">
+              A classic Zippo, reimagined. Laser engraved with a topographic design, each piece is a functional object with a sense of place. Built to be used, carried and kept for years.
+            </p>
+            
+            <form class="product-form" action="#">
+              <div class="product-variants">
+                <label>FINISH / TONE</label>
+                <div class="custom-select-wrapper">
+                  <select class="custom-select">
+                    <option>NATURAL BRASS</option>
+                    <option>ANTIQUE</option>
+                    <option>BLACK</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="button" class="add-to-cart-btn">
+                ADD TO CART &rarr;
+              </button>
+            </form>
+
+            <div class="purchase-microcopy">
+              <div class="micro-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                <p>Ships in 2-3 days</p>
+              </div>
+              <div class="micro-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <p>Free shipping over $150</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: SIDEBAR -->
+          <div class="pdp-sidebar-col">
+            
+            <!-- Specs -->
+            <div class="spec-panel">
+              <div class="panel-header">SPECIFICATIONS</div>
+              <ul class="spec-list">
+                <li><span>PRODUCT</span><span>Zippo Lighter</span></li>
+                <li><span>MATERIAL</span><span>Brass (Genuine Zippo)</span></li>
+                <li><span>ENGRAVING</span><span>Laser engraved</span></li>
+                <li><span>FINISH</span><span>Natural / Antique / Black</span></li>
+                <li><span>SIZE</span><span>Standard Zippo</span></li>
+                <li><span>INCLUDES</span><span>Lighter (empty), box</span></li>
+                <li><span>SKU</span><span>ZP-TOPO-001</span></li>
+              </ul>
+            </div>
+
+            <!-- Shipping -->
+            <div class="spec-panel">
+              <div class="panel-header">SHIPPING & AVAILABILITY <span class="dot-gold">●</span></div>
+              <div class="shipping-info">
+                <p class="strong">In stock · ships in 2-3 days</p>
+                <p class="strong">Made to order · 7-15 days</p>
+                <p class="small-text">This item is stocked in small runs. If out of stock, it will be made to order.</p>
+              </div>
+            </div>
+
+            <!-- Related -->
+            <div class="spec-panel related-collection">
+              <div class="panel-header">RELATED COLLECTION &rarr;</div>
+              <a href="/collection" class="related-content">
+                <img src="/collections/collection_smokers.jpg" alt="Smokers Lounge">
+                <div class="related-text">
+                  <p class="related-title">THE SMOKERS LOUNGE</p>
+                  <p class="small-text">Grinders, Zippos, trays and more.</p>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- LOWER DETAILS SECTION -->
+        <section class="pdp-lower-details">
+          <div class="lower-left">
+            <p class="section-label">DESCRIPTION</p>
+            <div class="desc-content">
+              <p>The Topographic Zippo is part of our Smokers Lounge collection — a series of everyday objects made more meaningful through craftsmanship. Each piece is laser engraved in-house, with a detailed topographic pattern that wraps around the classic Zippo form.</p>
+              <br>
+              <p>Built for daily use. Made to last. Designed for those who appreciate the details.</p>
+            </div>
+          </div>
+          <div class="lower-right">
+            <p class="section-label">DETAILS</p>
+            <ul class="details-list">
+              <li>- Genuine Zippo lighter</li>
+              <li>- Laser engraved topographic design</li>
+              <li>- Multiple finish options</li>
+              <li>- Comes in a Sub Sanctuary box</li>
+              <li>- Lighter fluid not included</li>
+              <li>- Made in small batches</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- FOOTER STATUS -->
+        <section class="pdp-footer-status">
+          <div class="status-left">INVENTORY SYNCED <span class="dot-green">●</span></div>
+          <div class="status-right">STOREFRONT ACTIVE <span class="dot-green">●</span></div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-bg-container"></div>
+        <div class="footer-content">
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <h3>Join the newsletter</h3>
+              <div class="footer-form">
+                <input type="email" placeholder="Email Address" />
+                <div class="btn">
+                  <a href="#" class="btn"><span class="btn-line"></span>Subscribe</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-content-col">
+              <p class="bodyCopy">
+                Sub Sanctuary is a premium handcrafted woodworking brand. We build pieces that blend artistry with functional design, operating as a digital gallery where craftsmanship is the point.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script type="module" src="/js/nav.js"></script>
+    <script>
+      // Simple variant button toggle
+      document.querySelectorAll('.variant-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          let siblings = this.parentElement.querySelectorAll('.variant-btn');
+          siblings.forEach(s => s.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

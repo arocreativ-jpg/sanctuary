@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engraving Services | Sub Sanctuary | Premium Woodworking</title>
+    <link rel="icon" href="/global/site_logo.png" type="image/png" />
+    <meta name="author" content="Sub Sanctuary" />
+
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/interactive-grid.css" />
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/engraving.css" />
+  </head>
+  <body>
+    <div class="preloader-overlay">
+      <div class="preloader-grid"></div>
+
+      <div class="preloader-animation-wrapper">
+        <p class="preloader-text">Preparing Gallery</p>
+        <div class="preloader-ring-frame"></div>
+        <div class="preloader-disc-frame"></div>
+      </div>
+    </div>
+
+    <svg
+      style="visibility: hidden; position: absolute"
+      width="0"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+    >
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="goo"
+          />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="interactive-grid"></div>
+
+    <div class="transition-grid"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="nav-bg"></div>
+      </div>
+
+      <div class="nav-mobile-header">
+        <p class="nav-logo">Sub Sanctuary</p>
+        <p class="nav-menu-toggle">Menu</p>
+      </div>
+
+      <div class="nav-overlay">
+        <div class="nav-items">
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
+          <div class="nav-item"><a href="/shop">Shop</a></div>
+          <div class="nav-item"><a href="/engraving">Engraving</a></div>
+          <div class="nav-item"><a href="/contact">Custom Orders</a></div>
+          
+          <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
+            <span class="mode-icon">☼</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero engraving-hero">
+      <div class="hero-container">
+        <div class="hero-img-container"></div>
+
+        <div class="hero-content">
+          <div class="container">
+            <div class="hero-content-footer">
+              <div class="hero-content-header">
+                <h1 data-animate-variant="slide" data-animate-delay="0.6">
+                  Engraving Services
+                </h1>
+                <p data-animate-variant="slide" data-animate-delay="0.75" style="font-family: 'WDXL Lubrifont SC', serif; font-style: italic; font-size: clamp(1.25rem, 1.5vw, 1.5rem); color: var(--base-400); margin-top: 1rem; max-width: 600px; line-height: 1.4;">
+                  The page that doesn't exist yet, and the one the client called the lowest hanging fruit.
+                  <br/><br/>
+                  It needs no photography and no inventory &mdash; write it once and it earns.
+                </p>
+              </div>
+
+              <div class="hero-callout">
+                <p data-animate-variant="flicker" data-animate-delay="0.75">
+                  Send your file or product
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="engraving-wrapper">
+      <div class="container">
+        
+        <!-- Engraving Inquiry -->
+        <div class="engraving-section engraving-inquiry">
+          <div class="engraving-tags">
+            <p data-animate-variant="flicker" data-animate-delay="0.75">
+              Engraving Inquiry
+            </p>
+            <p data-animate-variant="flicker" data-animate-delay="0.75">
+              "What you want, where you want it."
+            </p>
+          </div>
+          <h1 data-animate-variant="slide" data-animate-on-scroll="true">
+            If you think we can engrave it, tell us about it.
+          </h1>
+          <p class="bodyCopy" data-animate-variant="slide" data-animate-on-scroll="true" data-animate-delay="0.2">
+            The range here is much wider than what's in the shop. Magnets, dog tags, keychains, grinder cards, Zippos, band merch &mdash; almost anything laser-engravable is fair game. We don't stock all of it and never would, but it's all accessible, purchasable and engravable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The List Grid Section -->
+    <section class="engraving-list-grid">
+      <div class="grid-container">
+        
+        <div class="grid-header">
+          <p>03 <span class="line"></span> THE LIST</p>
+        </div>
+
+        <div class="grid-main">
+          
+          <div class="grid-col title-col">
+            <h1 data-animate-variant="slide" data-animate-on-scroll="true">IT GOES<br/>A LOT FURTHER.</h1>
+          </div>
+          
+          <div class="grid-col desc-col">
+            <p data-animate-variant="flicker" data-animate-on-scroll="true">LASER ENGRAVED<br/>OBJECTS FOR PEOPLE,<br/>BRANDS AND IDEAS.</p>
+            <p class="bodyCopy" data-animate-variant="slide" data-animate-on-scroll="true" data-animate-delay="0.2">From everyday essentials to one-off custom pieces, if it can be engraved, we can probably do it.</p>
+          </div>
+
+          <div class="grid-col image-col">
+            <div class="vertical-image-container">
+              <img src="/engraving/vertical_wood_engraved_1788767968986.jpg" alt="Engraved Wood" />
+              <p class="side-text top-text">WOOD.<br/>STONE.<br/>METAL.<br/>IDEAS.<br/>ENGRAVED.</p>
+              <div class="side-text bottom-text">
+                <p>DIFFERENT MATERIALS.<br/>SAME OBSESSION<br/>FOR DETAIL.</p>
+                <p class="slashes">///</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- List columns -->
+          <div class="grid-col list-col">
+            <ul class="item-list">
+              <li>GRINDERS &rarr;</li>
+              <li>ROLLING TRAYS &rarr;</li>
+              <li>ZIPPOS &rarr;</li>
+              <li>STASH BOXES &rarr;</li>
+              <li>GRINDER CARDS &rarr;</li>
+              <li>WALLETS &rarr;</li>
+            </ul>
+          </div>
+          <div class="grid-col list-col">
+            <ul class="item-list">
+              <li>KEYCHAINS &rarr;</li>
+              <li>DOG TAGS &rarr;</li>
+              <li>MAGNETS &rarr;</li>
+              <li>COASTERS &rarr;</li>
+              <li>WOOD STICKERS &rarr;</li>
+              <li>SPATULAS &rarr;</li>
+            </ul>
+          </div>
+          <div class="grid-col list-col">
+            <ul class="item-list">
+              <li>CUTTING BOARDS &rarr;</li>
+              <li>SIGNAGE &rarr;</li>
+              <li>BAND AND EVENT MERCH &rarr;</li>
+              <li>WHOLESALE RUNS &rarr;</li>
+              <li>YOUR OWN PRODUCT SHIPPED IN &rarr;</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="grid-gallery">
+          <img src="/engraving/thumb_zippo_1788767981473.jpg" alt="Gallery Image 1" />
+          <img src="/engraving/thumb_wood1_1788767992866.jpg" alt="Gallery Image 2" />
+          <img src="/engraving/thumb_wallet_1788768005073.jpg" alt="Gallery Image 3" />
+          <img src="/engraving/thumb_compass_1788768017406.jpg" alt="Gallery Image 4" />
+          <img src="/engraving/thumb_dogtag_1788768028752.jpg" alt="Gallery Image 5" />
+          <img src="/engraving/thumb_wood2_1788768040220.jpg" alt="Gallery Image 6" />
+        </div>
+
+        <div class="grid-footer">
+          <p>FUNCTIONAL ART<br/>FOR A MORE MEANINGFUL EVERYDAY.</p>
+          <p>SUB SANCTUARY / EST. 2012</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Rest of Engraving Sections -->
+    <section class="engraving-wrapper">
+      <div class="container">
+        
+        <!-- The Promise -->
+        <div class="engraving-section engraving-promise" style="padding-top: 0;">
+          <div class="engraving-tags">
+            <p data-animate-variant="flicker" data-animate-on-scroll="true">
+              The Promise &mdash; First-person moment 1
+            </p>
+          </div>
+          <h3 data-animate-variant="slide" data-animate-on-scroll="true">
+            "What you want, where you want it."
+          </h3>
+          <p data-animate-variant="slide" data-animate-on-scroll="true" data-animate-delay="0.2">
+            When I'm shopping for something engraved, there's never any interface to tell the maker where the thing goes. So I have to message them and say &mdash; I care about where this sits, what font you're using, how big it is. I'm not going to assume you'll get it right. We'll work with you to put exactly what you want exactly where you want it on the product. And if something looks off, I deal with it personally.
+          </p>
+        </div>
+
+        <!-- How it works -->
+        <div class="engraving-section engraving-steps">
+          <div class="engraving-tags">
+            <p data-animate-variant="flicker" data-animate-on-scroll="true">
+              How it works &mdash; 5 steps
+            </p>
+          </div>
+          <div class="step" data-animate-variant="slide" data-animate-on-scroll="true">
+            <p class="step-number">01</p>
+            <p><strong>Send the file.</strong> Highest-resolution photo, or highest-resolution file of your design &mdash; JPEG, PNG or AI. Those are the three we accept.</p>
+          </div>
+          <div class="step" data-animate-variant="slide" data-animate-on-scroll="true">
+            <p class="step-number">02</p>
+            <p><strong>Get a proof.</strong> We send a preview before anything is cut.</p>
+          </div>
+          <div class="step" data-animate-variant="slide" data-animate-on-scroll="true">
+            <p class="step-number">03</p>
+            <p><strong>Approve it.</strong> Changes are free at this stage. That's what the proof is for.</p>
+          </div>
+          <div class="step" data-animate-variant="slide" data-animate-on-scroll="true">
+            <p class="step-number">04</p>
+            <p><strong>Deposit.</strong> The laser fires as soon as the deposit lands.</p>
+          </div>
+          <div class="step" data-animate-variant="slide" data-animate-on-scroll="true">
+            <p class="step-number">05</p>
+            <p><strong>Ships in 7-15 days.</strong> In recycled packaging.</p>
+          </div>
+        </div>
+
+        <!-- Add-on File Prep -->
+        <div class="engraving-section engraving-addon">
+          <div class="engraving-tags">
+            <p data-animate-variant="flicker" data-animate-on-scroll="true">
+              Add-on &middot; File prep
+            </p>
+          </div>
+          <h3 data-animate-variant="slide" data-animate-on-scroll="true">
+            Got a napkin drawing?
+          </h3>
+          <p data-animate-variant="slide" data-animate-on-scroll="true" data-animate-delay="0.2">
+            If your file isn't ready to cut, we'll format it. Most files take under thirty minutes and it's a flat fee &mdash; no design retainer, no hourly. If you've got a sketch, we can turn it into a sticker.
+          </p>
+        </div>
+
+        <!-- Ship us your product -->
+        <div class="engraving-section engraving-addon">
+          <div class="engraving-tags">
+            <p data-animate-variant="flicker" data-animate-on-scroll="true">
+              Ship us your product
+            </p>
+          </div>
+          <h3 data-animate-variant="slide" data-animate-on-scroll="true">
+            Already have the product?
+          </h3>
+          <p data-animate-variant="slide" data-animate-on-scroll="true" data-animate-delay="0.2">
+            Ship it to us and we'll engrave it. People send everything from grinders to military insignia. You cover shipping in; engraving and return shipping are quoted as one flat rate.
+          </p>
+          
+          <!-- Product Sending Form -->
+          <div class="engraving-form" data-animate-variant="slide" data-animate-on-scroll="true" data-animate-delay="0.4">
+            <div class="form-item">
+              <input type="text" placeholder="Name" />
+            </div>
+            <div class="form-item">
+              <input type="email" placeholder="Email Address" />
+            </div>
+            <div class="form-item">
+              <input type="text" placeholder="What are you sending us? (e.g. Grinder, Zippo, Cutting Board)" />
+            </div>
+            <div class="form-item">
+              <input type="text" placeholder="Material (Wood, Metal, Leather, etc.)" />
+            </div>
+            <div class="form-item">
+              <input type="text" placeholder="Approximate Dimensions" />
+            </div>
+            <div class="form-item">
+              <textarea rows="4" placeholder="What do you want engraved on it?"></textarea>
+            </div>
+            <div class="form-item">
+              <label for="product-file-upload" class="bodyCopy" style="display:block; margin-bottom: 0.5rem; color: rgba(255,255,255,0.6);">Design file or reference photo (optional)</label>
+              <input type="file" id="product-file-upload" style="background: none; border: none; padding: 0; color: white; width: auto;" />
+            </div>
+            <div class="form-item">
+              <div class="btn">
+                <a href="/contact" class="btn" style="width: 100%; justify-content: center; background-color: var(--base-400);">
+                  <span class="btn-line"></span>Request Shipping Label &amp; Quote
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reorder -->
+        <div class="engraving-section engraving-addon" style="border-bottom: none;">
+          <div class="engraving-tags">
+            <p data-animate-variant="flicker" data-animate-on-scroll="true">
+              Reorder
+            </p>
+          </div>
+          <h3 data-animate-variant="slide" data-animate-on-scroll="true">
+            Ordered before?
+          </h3>
+          <p data-animate-variant="slide" data-animate-on-scroll="true" data-animate-delay="0.2">
+            Your file's already here and already formatted. Same spec, same design, buy again &mdash; no formatting necessary.
+          </p>
+          <div class="btn" style="margin-top: 2rem;">
+            <a href="/contact" class="btn"><span class="btn-line"></span>Reorder</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-bg-container"></div>
+
+        <div class="footer-content">
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <h3>Start a Custom Commission</h3>
+
+              <div class="footer-form">
+                <input type="email" placeholder="Email Address" />
+
+                <div class="btn">
+                  <a href="/contact" class="btn"
+                    ><span class="btn-line"></span>Request a Quote</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-content-col">
+              <p class="bodyCopy">
+                Sub Sanctuary is a premium handcrafted woodworking brand. We build pieces that blend artistry with functional design, operating as a digital gallery where craftsmanship is the point.
+              </p>
+
+              <div class="footer-socials">
+                <div class="footer-social">
+                  <a href="/contact">[ Instagram ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Process Videos ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Studio ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/policies">[ Policies ]</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <p>[ Constructed by Sub Sanctuary ]</p>
+              <p>[ Sub Sanctuary / 2026 ]</p>
+            </div>
+
+            <div class="footer-content-col">
+              <h1>Sub Sanctuary&copy;</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        if (sessionStorage.getItem("pageTransition") === "true") {
+          let s = document.createElement("style");
+          s.setAttribute("data-transition", "");
+          s.textContent =
+            ".transition-grid{background-color:var(--base-400);pointer-events:auto;}";
+          (document.head || document.documentElement).appendChild(s);
+        }
+      })();
+    </script>
+
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/preloader.js"></script>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/interactive-grid.js"></script>
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/js/home.js"></script>
+    <script type="module" src="/js/faq.js"></script>
+    <script type="module" src="/js/animated-copy.js"></script>
+  </body>
+</html>

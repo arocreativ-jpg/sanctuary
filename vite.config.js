@@ -10,6 +10,10 @@ export default defineConfig({
         portfolio: resolve(__dirname, "portfolio.html"),
         shop: resolve(__dirname, "shop.html"),
         contact: resolve(__dirname, "contact.html"),
+        engraving: resolve(__dirname, "engraving.html"),
+        collection: resolve(__dirname, "collection.html"),
+        product: resolve(__dirname, "product.html"),
+        policies: resolve(__dirname, "policies.html"),
       },
     },
     assetsInclude: [

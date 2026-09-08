@@ -64,7 +64,7 @@
   margin-bottom: 3rem;
   font-family: 'Geist Mono', monospace;
   font-size: 0.8rem;
-  color: var(--base-300);
+  color: var(--base-200);
   text-transform: uppercase;
 }
 
@@ -79,7 +79,7 @@
   margin-bottom: 3rem;
   font-family: 'Geist Mono', monospace;
   font-size: 0.85rem;
-  color: var(--base-300);
+  color: var(--base-200);
 }
 
 .custom-hero .hero-title {
@@ -93,7 +93,7 @@
 .custom-hero .hero-subtitle {
   font-family: 'Georgia', serif;
   font-size: clamp(1.2rem, 2vw, 1.6rem);
-  color: var(--base-300);
+  color: var(--base-200);
   font-style: italic;
   line-height: 1.5;
   max-width: 90%;
@@ -367,7 +367,7 @@
 .on-price-title {
   font-family: 'Geist Mono', monospace;
   font-size: 0.85rem;
-  color: var(--base-300);
+  color: var(--base-200);
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -382,7 +382,7 @@
 .commissions-footer-status .status-label {
   font-family: 'Geist Mono', monospace;
   font-size: 0.8rem;
-  color: var(--base-300);
+  color: var(--base-200);
   border: 1px solid rgba(242, 238, 218, 0.15);
   padding: 0.5rem 1rem;
   border-radius: 4px;

@@ -26,8 +26,8 @@
   padding: 2.5rem;
   border-radius: 1rem;
   color: var(--base-100);
-  background-color: var(--base-400);
-  border: 1px solid var(--base-300);
+  background-color: var(--base-300); /* Adjusted for better contrast in dark mode */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Softer border */
   transform-origin: center bottom;
   will-change: transform;
 }

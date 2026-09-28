@@ -48,7 +48,60 @@
         color: rgba(242, 238, 218, 0.95);
         margin-bottom: 0.1rem;
       }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .hero-observatory .hero-studio-title {
+          font-size: clamp(4rem, 15vw, 6rem) !important;
+          line-height: 1 !important;
+          margin-bottom: 1rem !important;
+        }
+        .hero-observatory .hero-footer-copy {
+          align-items: center !important;
+          text-align: center !important;
+        }
+        .hero-observatory .hero-footer-copy p {
+          text-align: center !important;
+        }
+        .hero.hero-observatory .hero-content-bottom {
+          align-items: center !important;
+        }
+        .pendants-detail-callout {
+          align-items: center !important;
+          text-align: center !important;
+        }
+        .pendants-detail-callout .detail-item {
+          text-align: center !important;
+        }
+        .gallery-intro-section, .two-styles-section, .pendant-divider-section {
+          padding: 3rem 1.5rem !important;
+        }
+        .intro-header-row {
+          flex-direction: column !important;
+          padding: 0 0 2.5rem 0 !important;
+          gap: 1.5rem !important;
+        }
+        .intro-header-row h2 {
+          font-size: 2.25rem !important;
+        }
+        .gallery-strip {
+          display: flex !important;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          gap: 1rem;
+          padding-bottom: 1rem;
+        }
+        .gallery-strip > div {
+          flex: 0 0 75%;
+          scroll-snap-align: center;
+        }
+        .two-styles-grid, .hardware-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
     </style>
+
   </head>
   <body>
     <div class="preloader-overlay">
@@ -144,9 +197,9 @@
     </section>
 
     <!-- Gallery / intro section — matches screenshot design -->
-    <section style="background-color: var(--base-400); padding: 3rem 0 0 0;">
+    <section class="gallery-intro-section" style="background-color: var(--base-400); padding: 3rem 0 0 0;">
       <!-- Header row -->
-      <div style="display: flex; align-items: flex-start; gap: 4rem; padding: 0 4rem 2.5rem 4rem; border-bottom: 1px solid rgba(242,238,218,0.12);">
+      <div class="intro-header-row" style="display: flex; align-items: flex-start; gap: 4rem; padding: 0 4rem 2.5rem 4rem; border-bottom: 1px solid rgba(242,238,218,0.12);">
         <!-- Left tag -->
         <div style="flex-shrink: 0; padding-top: 0.35rem;">
           <p style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(242,238,218,0.5); white-space: nowrap;">[ THE RICHEST PART OF THE PROCESS ]</p>
@@ -159,7 +212,7 @@
       </div>
 
       <!-- Image strip -->
-      <div style="display: grid; grid-template-columns: repeat(6, 1fr); width: 100%;">
+      <div class="gallery-strip" style="display: grid; grid-template-columns: repeat(6, 1fr); width: 100%;">
         <div style="aspect-ratio: 3/4; overflow: hidden;">
           <img src="/Web/Pendants/hexagon-star-wood-purple-oval-stone-red-inlays-pendant-subsanctuary.webp" alt="Hexagon star pendant" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
         </div>
@@ -182,7 +235,7 @@
     </section>
 
     <!-- Two Styles section -->
-    <section style="background-color: var(--base-400); padding: 3rem 4rem;">
+    <section class="two-styles-section" style="background-color: var(--base-400); padding: 3rem 4rem;">
 
       <!-- Section marker with line -->
       <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
@@ -193,7 +246,7 @@
       <h2 style="font-family: 'SCHABO', sans-serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 500; text-transform: uppercase; color: var(--base-100); line-height: 0.85; margin: 0 0 0.5rem 0;">TWO STYLES.</h2>
       <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 0.8rem; color: var(--base-200); margin: 0 0 2rem 0; max-width: 480px; line-height: 1.5;">Both ship with a chain of your choosing, and nothing is made until you've approved the design and the materials.</p>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+      <div class="two-styles-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
 
         <!-- Card 1 — Custom Pendant -->
         <div class="style-card" style="background-color: var(--base-300); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column;">
@@ -270,7 +323,7 @@
       <h2 style="font-family: 'SCHABO', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 500; text-transform: uppercase; color: var(--base-100); line-height: 0.85; margin: 0 0 2rem 0;">PICK YOUR CHAIN.</h2>
 
       <!-- Chain options -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <div class="hardware-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
         <div class="chain-option" style="border: 1px solid var(--base-200); border-radius: 4px; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center;">
           <p style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.2rem, 2vw, 1.6rem); text-transform: uppercase; color: var(--base-100); margin: 0; letter-spacing: 0.02em;">SILVER-COATED BOX CHAIN</p>
           <p style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.5rem, 2.5vw, 2rem); color: #f25e3d; margin: 0; white-space: nowrap;">+$30</p>

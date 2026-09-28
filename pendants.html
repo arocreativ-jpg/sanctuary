@@ -86,15 +86,14 @@
         }
         .gallery-strip {
           display: flex !important;
-          overflow-x: auto;
-          scroll-snap-type: x mandatory;
-          -webkit-overflow-scrolling: touch;
-          gap: 1rem;
-          padding-bottom: 1rem;
+          overflow: hidden !important;
         }
         .gallery-strip > div {
-          flex: 0 0 75%;
-          scroll-snap-align: center;
+          flex: 0 0 100%;
+          min-width: 100%;
+        }
+        .gallery-strip > div:not(:first-child) {
+          display: none;
         }
         .two-styles-grid, .hardware-grid {
           grid-template-columns: 1fr !important;

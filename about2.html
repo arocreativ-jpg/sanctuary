@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About 2 | Sub Sanctuary | Premium Woodworking</title>
+    <link rel="icon" href="/global/site_logo.webp" type="image/png" />
+    <meta name="author" content="Sub Sanctuary" />
+
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/interactive-grid.css" />
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/lab.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/observatory.css" />
+    <link rel="stylesheet" href="/css/abstract-cards.css" />
+  </head>
+  <body>
+    <div class="preloader-overlay">
+      <div class="preloader-grid"></div>
+
+      <div class="preloader-animation-wrapper">
+        <p class="preloader-text">Preparing Experience</p>
+        <div class="preloader-ring-frame"></div>
+        <div class="preloader-disc-frame"></div>
+      </div>
+    </div>
+
+    <svg
+      style="visibility: hidden; position: absolute"
+      width="0"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+    >
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="goo"
+          />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+        <filter id="blur-matrix" x="-50%" y="-50%" width="200%" height="200%">
+          <feColorMatrix
+            in="SourceGraphic"
+            type="matrix"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 255 -140"
+          ></feColorMatrix>
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="interactive-grid"></div>
+
+    <div class="transition-grid"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="nav-bg"></div>
+      </div>
+
+      <div class="nav-mobile-header">
+        <p class="nav-logo">Sub Sanctuary</p>
+        <p class="nav-menu-toggle">Menu</p>
+      </div>
+
+      <div class="nav-overlay">
+        <div class="nav-items">
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/about2.html">About 2</a></div>
+          <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
+          <div class="nav-item"><a href="/shop">Shop</a></div>
+          <div class="nav-item"><a href="/engraving">Engraving</a></div>
+          <div class="nav-item"><a href="/pendants">Custom Pendants</a></div>
+          
+          <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
+            <span class="mode-icon">☼</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero hero-observatory">
+      <div class="hero-container">
+        <div class="hero-img-container">
+          <div class="hero-img">
+            <img src="/HERO/about_hero_v3.webp" alt="About Hero Image" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+
+          <div class="hero-img-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="container">
+            <div>
+              <div class="hero-badge" style="display: inline-block;">SUBSANCTUARY</div>
+            </div>
+
+            <div class="hero-content-bottom">
+              <div class="hero-footer-copy">
+                <h1 class="hero-studio-title" data-animate-variant="slide" data-animate-delay="0.6">
+                  STUDIO
+                </h1>
+                <p
+                  class="bodyCopy"
+                  data-animate-variant="slide"
+                  data-animate-delay="0.75"
+                >
+                  Shane Martin<br/>aka Sub Sanctuary
+                </p>
+              </div>
+
+              <div class="hero-callout">
+                <p data-animate-variant="flicker" data-animate-delay="0.85">
+                  HANDCRAFTED GOODS<br /> / EST. 2016
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="makers-mark-section">
+      <div class="container makers-mark-container">
+        <div class="makers-col-left">
+          <div class="makers-label">
+            <p data-animate-variant="flicker" data-animate-on-scroll="true">
+              [ MAKER'S MARK ]
+            </p>
+          </div>
+          <div class="makers-gallery">
+            <div class="makers-img-wrap img-wrap-1">
+              <img src="/about/makers_mark_1.webp" alt="Charred wood texture" loading="lazy" />
+            </div>
+            <div class="makers-img-wrap img-wrap-2">
+              <img src="/about/makers_mark_3.webp" alt="Coastal cliff rock" loading="lazy" />
+            </div>
+            <div class="makers-img-wrap img-wrap-3">
+              <img src="/about/makers_mark_2.webp" alt="Shane Martin sitting on geometric pedestal" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="makers-col-right">
+          <h2 class="makers-title" data-animate-variant="slide" data-animate-on-scroll="true">
+            <span class="makers-brand">SUB SANCTUARY</span> ISN'T JUST A BRAND AND SHANE MARTIN ISN'T JUST THE ARTIST BEHIND IT.
+          </h2>
+          
+          <div class="makers-body">
+            <p class="makers-para" data-animate-variant="slide" data-animate-on-scroll="true">
+              A DESIGNER, FABRICATOR, STUDENT AND CURATOR; ALL INTERWOVEN AND INTRINSICALLY CONNECTED. HE DENOTES THE LANDMARKS OF HIS JOURNEY THROUGH THIS WORLD WITH A DIVERSE AND KINETIC ARRAY OF INSPIRED ARTIFACTS — MELDING HAND, HEART AND MACHINE TO CREATE ITEMS THAT SPEAK THEIR MEANING THROUGH MEDIUM, MOVEMENT AND UTILITY.
+            </p>
+            <p class="makers-para" data-animate-variant="slide" data-animate-on-scroll="true">
+              DRIVEN BY THE UNSEEN FORCES THAT DECIDE WOOD GRAIN CAN APPEAR AS ROCK AND WATER CAN SCULPT EITHER IN NEAR PERFECT SYMMETRY — MET WITH A DAILY DEVOTION TO THE ACT OF CREATING ITSELF — HIS MOTIVES AND INSPIRATION CHANGE DAY BY DAY AND MINUTE BY MINUTE. YET ONE THING REMAINS: AN UNWAVERING DESIRE TO BRING HIMSELF AND HIS FELLOW MAN ALL THAT MUCH CLOSER TO THE LAND AND ITS TEXTURES THAT HOLD OUR SINCEREST MEANING AND MEMORIES IN THIS LIVING WORLD.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pie-transition">
+      <div class="pie-transition-outro-header">
+        <h3>Process</h3>
+      </div>
+
+      <div class="pie-transition-footer">
+        <div class="container">
+          <p class="type-mono">[ Iteration 01 ]</p>
+          <p class="type-mono">__ Work in Progress</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stats-header">
+        <div class="stats-header-copy">
+          <h3>HOW DOES IT WORK?</h3>
+          <p>PROCESS</p>
+        </div>
+      </div>
+
+      <div class="stats-content">
+        <div class="stat-item">
+          <div class="stat-count">
+            <h1>01</h1>
+          </div>
+          <div class="stat-content">
+            <div class="stat-title">
+              <h3>EVERY PIECE STARTS AS A VECTOR. AROUND A HUNDRED DESIGNS IN THE LIBRARY, DRAWN OVER A DECADE.</h3>
+            </div>
+            <div class="stat-info">
+              <p class="type-mono">DESIGN</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-count">
+            <h1>02</h1>
+          </div>
+          <div class="stat-content">
+            <div class="stat-title">
+              <h3>CUT AND ENGRAVED. THE DEPTH AND THE DETAIL HAPPEN HERE.</h3>
+            </div>
+            <div class="stat-info">
+              <p class="type-mono">LASER</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-count">
+            <h1>03</h1>
+          </div>
+          <div class="stat-content">
+            <div class="stat-title">
+              <h3>PIECES SET INTO THE SURFACE, GLUED UP, LOCKED TOGETHER — PARQUETRY.</h3>
+            </div>
+            <div class="stat-info">
+              <p class="type-mono">INLAY</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-count">
+            <h1>04</h1>
+          </div>
+          <div class="stat-content">
+            <div class="stat-title">
+              <h3>SANDED SMOOTH, THEN COATED. SOFT, SMOOTH AND LONG-LASTING — A MICROSCOPIC LAYER THAT FILLS THE GRAIN AND HOLDS UP FOR YEARS.</h3>
+            </div>
+            <div class="stat-info">
+              <p class="type-mono">FINISH</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-count">
+            <h1>05</h1>
+          </div>
+          <div class="stat-content">
+            <div class="stat-title">
+              <h3>HAND SIGNED. NUMBERED IF IT'S A LIMITED EDITION. MAKER'S MARK ENGRAVED ON THE BACK.</h3>
+            </div>
+            <div class="stat-info">
+              <p class="type-mono">SIGN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients">
+      <div class="container">
+        <div class="clients-header">
+          <h2>Client Network</h2>
+        </div>
+        <div class="clients-list"></div>
+      </div>
+    </section>
+
+    <section class="cta abstract-cards-section">
+      <div class="cta-content">
+        <div class="cta-logo">
+          <img src="/index/logo_cta.webp" alt="Sub Sanctuary Logo" />
+        </div>
+
+        <div class="cta-copy" style="max-width: 700px; text-align: center;">
+          <h3 style="color: var(--base-100); margin-bottom: 1rem;">Start a custom commission</h3>
+          <p class="bodyCopy lg">
+            Tell us the space and the tone and we'll take it from there. Or take the current portfolio with you &mdash; everything available right now, with sizes and prices.
+          </p>
+        </div>
+
+        <div class="cta-buttons" style="display: flex; gap: 1rem; margin-top: 2rem;">
+          <a href="/contact" class="hero-btn hero-btn-primary">
+            Request a Quote
+          </a>
+          <a href="/portfolio" class="hero-btn hero-btn-secondary">
+            Download the Portfolio
+          </a>
+        </div>
+      </div>
+
+      <div class="abstract-cards-container">
+        <div class="abstract-card card-1"><div class="card-inner"><img src="/index/cta_img_01.webp" alt="" /></div></div>
+        <div class="abstract-card card-2"><div class="card-inner"><img src="/index/cta_img_02.webp" alt="" /></div></div>
+        <div class="abstract-card card-3"><div class="card-inner"><img src="/index/cta_img_03.webp" alt="" /></div></div>
+        <div class="abstract-card card-4"><div class="card-inner"><img src="/index/highlight_img_02.webp" alt="" /></div></div>
+        <div class="abstract-card card-5"><div class="card-inner"><img src="/index/cta_img_05.webp" alt="" /></div></div>
+        <div class="abstract-card card-6"><div class="card-inner"><img src="/index/cta_img_06.webp" alt="" /></div></div>
+        <div class="abstract-card card-7"><div class="card-inner"><img src="/index/highlight_img_01.webp" alt="" /></div></div>
+        <div class="abstract-card card-8"><div class="card-inner"><img src="/index/cta_img_04.webp" alt="" /></div></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-bg-container"></div>
+
+        <div class="footer-content">
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <h3>Start a Custom Commission</h3>
+
+              <div class="footer-form">
+                <input type="email" placeholder="Email Address" />
+
+                <div class="btn">
+                  <a href="/contact" class="btn"
+                    ><span class="btn-line"></span>Request a Quote</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-content-col">
+              <p class="bodyCopy">
+                Sub Sanctuary is a premium handcrafted woodworking brand. We build pieces that blend artistry with functional design, operating as a digital gallery where craftsmanship is the point.
+              </p>
+
+              <div style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">
+                <p class="bodyCopy">Learn about our shipping, returns, and care guidelines.</p>
+                <a href="/policies" style="color: white; text-decoration: underline; margin-top: 0.5rem; display: inline-block;">View Policies</a>
+              </div>
+
+              <div class="footer-socials">
+                <div class="footer-social">
+                  <a href="/contact">[ Instagram ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Process Videos ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Studio ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/policies">[ Policies ]</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <p>[ Constructed by Sub Sanctuary ]</p>
+              <p>[ Sub Sanctuary / 2026 ]</p>
+            </div>
+
+            <div class="footer-content-col">
+              <h1>Sub Sanctuary&copy;</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        if (sessionStorage.getItem("pageTransition") === "true") {
+          let s = document.createElement("style");
+          s.setAttribute("data-transition", "");
+          s.textContent =
+            ".transition-grid{background-color:var(--base-400);pointer-events:auto;}";
+          (document.head || document.documentElement).appendChild(s);
+        }
+      })();
+    </script>
+
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/preloader.js"></script>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/interactive-grid.js"></script>
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/js/animated-copy.js"></script>
+    <script type="module" src="/js/lab.js"></script>
+    <script type="module" src="/js/particle-visual.js"></script>
+    <script type="module" src="/js/pie-transition.js"></script>
+    <script type="module" src="/js/stats.js"></script>
+    <script type="module" src="/js/clients.js"></script>
+    <script type="module" src="/js/cta.js"></script>
+    <script type="module" src="/js/abstract-cards.js"></script>
+  </body>
+</html>

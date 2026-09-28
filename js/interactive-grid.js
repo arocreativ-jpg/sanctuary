@@ -12,6 +12,8 @@ let gridMouse = {
   y: undefined,
   radius: GRID_BLOCK_SIZE * 2,
 };
+const activeHighlightedBlocks = new Set();
+let rafId = null;
 
 // interactive grid - creates grid and sets up mouse interactions
 function initInteractiveGrid() {
@@ -20,7 +22,6 @@ function initInteractiveGrid() {
 
   resetInteractiveGrid(interactiveGridContainer);
   setupInteractiveGridEvents(interactiveGridContainer);
-  requestAnimationFrame(() => updateGridHighlights());
 }
 
 function resetInteractiveGrid(container) {
@@ -106,10 +107,20 @@ function addGridHighlights() {
 
   if (!closestGridBlock || closestGridDistance > gridMouse.radius) return;
 
-  const currentGridTime = Date.now();
+  function scheduleHighlightUpdate() {
+    if (!rafId && activeHighlightedBlocks.size > 0) {
+      rafId = requestAnimationFrame(updateGridHighlights);
+    }
+  }
 
-  closestGridBlock.element.classList.add("highlight");
-  closestGridBlock.highlightEndTime = currentGridTime + GRID_HIGHLIGHT_DURATION;
+  function addHighlight(block, duration) {
+    block.element.classList.add("highlight");
+    block.highlightEndTime = Date.now() + duration;
+    activeHighlightedBlocks.add(block);
+    scheduleHighlightUpdate();
+  }
+
+  addHighlight(closestGridBlock, GRID_HIGHLIGHT_DURATION);
 
   const gridClusterSize = Math.floor(Math.random() * 1) + 1;
   let currentGridBlock = closestGridBlock;
@@ -134,10 +145,7 @@ function addGridHighlights() {
     const randomGridNeighbor =
       gridNeighbors[Math.floor(Math.random() * gridNeighbors.length)];
 
-    randomGridNeighbor.element.classList.add("highlight");
-    randomGridNeighbor.highlightEndTime =
-      currentGridTime + GRID_HIGHLIGHT_DURATION + i * 10;
-
+    addHighlight(randomGridNeighbor, GRID_HIGHLIGHT_DURATION + i * 10);
     highlightedGridBlocks.push(randomGridNeighbor);
     currentGridBlock = randomGridNeighbor;
   }
@@ -145,16 +153,17 @@ function addGridHighlights() {
 
 function updateGridHighlights() {
   const currentGridTime = Date.now();
+  rafId = null;
 
-  gridBlocks.forEach((gridBlock) => {
-    if (
-      gridBlock.highlightEndTime > 0 &&
-      currentGridTime > gridBlock.highlightEndTime
-    ) {
+  activeHighlightedBlocks.forEach((gridBlock) => {
+    if (currentGridTime > gridBlock.highlightEndTime) {
       gridBlock.element.classList.remove("highlight");
       gridBlock.highlightEndTime = 0;
+      activeHighlightedBlocks.delete(gridBlock);
     }
   });
 
-  requestAnimationFrame(updateGridHighlights);
+  if (activeHighlightedBlocks.size > 0) {
+    rafId = requestAnimationFrame(updateGridHighlights);
+  }
 }

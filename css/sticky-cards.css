@@ -1,0 +1,103 @@
+.sticky-cards-section {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  background-color: var(--base-400); /* dark theme background */
+  z-index: 5;
+}
+
+.sticky-cards {
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+}
+
+.sticky-cards .card {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  width: 55%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  color: var(--base-100);
+  background-color: var(--base-400);
+  border: 1px solid var(--base-300);
+  transform-origin: center bottom;
+  will-change: transform;
+}
+
+.sticky-cards .card .col {
+  flex: 1;
+  height: 100%;
+}
+
+.sticky-cards .card .col:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.sticky-cards .card .col:nth-child(2) {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.sticky-cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sticky-cards .card h1 {
+  text-transform: uppercase;
+  font-family: "SCHABO", sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 400;
+  line-height: 0.9;
+  color: var(--base-100);
+}
+
+.sticky-cards .card p {
+  text-transform: uppercase;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.9rem;
+  color: var(--base-300);
+}
+
+/* Card z-indexing */
+.sticky-cards .card#card-1 { z-index: 5; }
+.sticky-cards .card#card-2 { z-index: 4; }
+.sticky-cards .card#card-3 { z-index: 3; }
+.sticky-cards .card#card-4 { z-index: 2; }
+
+@media (max-width: 1000px) {
+  .sticky-cards .card {
+    width: calc(100% - 4rem);
+    height: 75%;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .sticky-cards .card .col {
+    width: 100%;
+  }
+}
+
+/* Light mode: make cards visible against cream background */
+body.light-mode .sticky-cards .card {
+  background-color: var(--base-300);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .sticky-cards .card p {
+  color: var(--base-200);
+}
+

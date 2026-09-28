@@ -25,6 +25,11 @@ function initLenisScroll() {
   gsap.ticker.lagSmoothing(0);
 
   window.lenis = lenis;
+
+  window.addEventListener("load", () => {
+    ScrollTrigger.sort();
+    ScrollTrigger.refresh();
+  });
 }
 
 export { lenis };

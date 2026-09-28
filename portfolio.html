@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Sub Sanctuary | Premium Woodworking</title>
-    <link rel="icon" href="/global/site_logo.png" type="image/png" />
+    <link rel="icon" href="/global/site_logo.webp" type="image/png" />
     <meta name="author" content="Sub Sanctuary" />
 
     <link rel="stylesheet" href="/globals.css" />
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/preloader.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/expedition.css" />
+    <link rel="stylesheet" href="/css/portfolio-v2.css" />
   </head>
   <body>
     <div class="preloader-overlay">
@@ -66,10 +66,11 @@
         <div class="nav-items">
           <div class="nav-item"><a href="/">Home</a></div>
           <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/about2.html">About 2</a></div>
           <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
           <div class="nav-item"><a href="/shop">Shop</a></div>
           <div class="nav-item"><a href="/engraving">Engraving</a></div>
-          <div class="nav-item"><a href="/contact">Custom Orders</a></div>
+          <div class="nav-item"><a href="/pendants">Custom Pendants</a></div>
           
           <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
             <span class="mode-icon">☼</span>
@@ -78,89 +79,174 @@
       </div>
     </nav>
 
-    <section class="hero hero-portfolio">
-      <div class="hero-container">
-        <div class="hero-img-container">
-          <div class="hero-img">
-            <img src="/index/portfolio_hero.png" alt="Portfolio Hero Image" style="width: 100%; height: 100%; object-fit: cover;" />
+    <div class="portfolio-page-wrapper">
+      
+      <!-- HERO -->
+      <section class="port-block port-hero" data-animate-variant="fade" data-animate-on-scroll="true">
+        <div class="port-hero-img-wrapper">
+          <!-- Using the original portfolio hero image -->
+          <img src="/HERO/portfolio_hero.webp" alt="Portfolio Hero Image" />
+        </div>
+        
+        <div class="port-hero-content">
+          <div class="port-hero-left">
+            <div class="port-hero-badge" data-animate-variant="flicker" data-animate-delay="0.4">SUBSANCTUARY</div>
+            <h1 data-animate-variant="slide" data-animate-delay="0.6">PORTFOLIO</h1>
+            <p data-animate-variant="slide" data-animate-delay="0.7">
+              Gallery Index / Selected Work<br>Sub Sanctuary Archives
+            </p>
           </div>
+          <div class="port-hero-right">
+            <p data-animate-variant="flicker" data-animate-delay="0.8">
+              HANDCRAFTED GOODS<br>/ EST. 2016
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <div class="hero-img-overlay"></div>
-
-          <div class="hero-img-gradient"></div>
+      <!-- SELECTED WORK ARCHIVE -->
+      <section class="port-block archive-wall" data-animate-variant="fade" data-animate-on-scroll="true">
+        
+        <div class="archive-header">
+          <div class="archive-header-left">
+            <p data-animate-variant="flicker">[ 02 ] &nbsp;&nbsp;&nbsp; THE ARCHIVE</p>
+            <h1 data-animate-variant="slide" data-animate-delay="0.1">SELECTED<br>WORK</h1>
+          </div>
+          <div class="archive-header-mid">
+            <p data-animate-variant="slide" data-animate-delay="0.2">
+              Wall art, jewelry, installations and collaborations &mdash; ten years of it.<br>
+              Some pieces are available. Some were made once, for one person,<br>
+              and are here so you can see what's possible.
+            </p>
+          </div>
+          <div class="archive-header-right">
+            <a href="/portfolio" class="archive-view-link" data-animate-variant="slide" data-animate-delay="0.3">
+              [ SEE EVERYTHING <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg> ]
+            </a>
+          </div>
         </div>
 
-        <div class="hero-content">
-          <div class="container">
-            <div class="hero-content-nav">
-              <div class="hero-timer">
-                <p style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; background: transparent; border: 1px solid rgba(242, 238, 218, 0.15); padding: 0.5rem 1rem; width: auto; height: auto;">03 &mdash; PORTFOLIO</p>
+        <div class="archive-grid">
+          
+          <!-- Folder 01 -->
+          <a href="/shop/420-friendly" class="archive-folder" style="transition-delay: 0.1s;">
+            <div class="folder-image-wrapper">
+              <img src="/Web/420/laser-engraved-wood-box-hexagon-geometric-pattern-420-subsanctuary.webp" alt="420 Friendly" />
+            </div>
+            <div class="folder-front">
+              <span class="folder-num">01</span>
+              <h3 class="folder-title">420 FRIENDLY</h3>
+              <div class="folder-category">
+                <span>VIEW GALLERY</span>
+                <svg class="folder-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
               </div>
             </div>
+          </a>
 
-            <div class="hero-content-header">
-              <h1 data-animate-variant="slide" data-animate-delay="0.6">
-                Portfolio
-              </h1>
+          <!-- Folder 02 -->
+          <a href="/shop/custom-commissions" class="archive-folder" style="transition-delay: 0.2s;">
+            <div class="folder-image-wrapper">
+              <img src="/HERO/portfolio_hero.webp" alt="Custom Commissions" />
             </div>
-
-            <div class="hero-content-footer" style="justify-content: flex-end;">
-              <div class="hero-callout portfolio-callout">
-                <p data-animate-variant="flicker" data-animate-delay="0.85" style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--base-200); text-align: left; max-width: 250px; line-height: 1.4;">
-                  GALLERY INDEX / 04 PORTFOLIO ACTIVE<br/>.187
-                </p>
+            <div class="folder-front">
+              <span class="folder-num">02</span>
+              <h3 class="folder-title">CUSTOM COMMISSIONS</h3>
+              <div class="folder-category">
+                <span>VIEW GALLERY</span>
+                <svg class="folder-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </a>
 
-    <section class="expeditions" style="padding-top: 4rem;">
-      <p data-animate-variant="flicker" data-animate-on-scroll="true">
-        Selected Work
-      </p>
-
-      <div class="container" style="padding-top: 0; padding-bottom: 4rem;">
-        <div class="intro-copy">
-          <div class="intro-copy-wrapper">
-            <h3 style="text-transform: none; font-weight: 400; font-family: 'Host Grotesk', sans-serif; font-size: clamp(1.25rem, 1.5vw, 1.5rem); line-height: 1.4; color: var(--base-100);" data-animate-variant="slide" data-animate-on-scroll="true">
-              Wall art, jewelry, installations and collaborations &mdash; ten years of it. Some pieces are available. Some were made once, for one person, and are here so you can see what's possible.
-            </h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="expeditions-list"></div>
-    </section>
-
-    <section class="intro" style="padding: 6rem 0; margin: 4rem 0; border-top: 1px solid var(--base-300); border-bottom: 1px solid var(--base-300);">
-      <div class="container">
-        <div class="intro-copy" style="flex-direction: column;">
-          <div class="intro-header" style="width: 100%; margin-bottom: 4rem;">
-            <h1 data-animate-variant="slide" data-animate-on-scroll="true" style="text-transform: uppercase;">
-              Jewelry
-            </h1>
-          </div>
-
-          <div class="intro-copy-wrapper" style="width: 100%; max-width: 100% /* let it flow naturally */;">
-            <h3 style="font-family: 'SCHABO', sans-serif; text-transform: uppercase; font-size: clamp(2rem, 3.5vw, 3.5rem); line-height: 0.9; letter-spacing: 0.02em;">
-              This is the richest part of the whole process &mdash; hardwood and crystal, laser engraved, inlaid by hand. Wire-wrapped silver work has priced most people out of owning anything like it. Wood is cheaper and laser work is faster, so we can make something genuinely beautiful for less.
-              <br/><br/>
-              Pendants are made to order. A baseline piece is two crystals, two inlays and a silver-plated chain. From there it's a question of wood, stone, depth, detail and chain. Roughly $250 at the base, up to around $500.
-            </h3>
-            
-            <div style="display: flex; justify-content: center; width: 100%; margin-top: 4rem;">
-              <div class="btn">
-                <a href="/contact" class="btn" style="text-transform: uppercase; letter-spacing: 0.1em;"
-                  ><span class="btn-line"></span>Commission a pendant</a
-                >
+          <!-- Folder 03 -->
+          <a href="/shop/home-goods" class="archive-folder" style="transition-delay: 0.3s;">
+            <div class="folder-image-wrapper">
+              <img src="/Web/420/carved-wood-tray-wavy-freeform-edge-420-subsanctuary.webp" alt="Home Goods" />
+            </div>
+            <div class="folder-front">
+              <span class="folder-num">03</span>
+              <h3 class="folder-title">HOME GOODS</h3>
+              <div class="folder-category">
+                <span>VIEW GALLERY</span>
+                <svg class="folder-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
               </div>
             </div>
+          </a>
+
+          <!-- Folder 04 -->
+          <a href="/shop/lamps" class="archive-folder" style="transition-delay: 0.1s;">
+            <div class="folder-image-wrapper">
+              <img src="/expedition/hero.webp" alt="Lamps" />
+            </div>
+            <div class="folder-front">
+              <span class="folder-num">04</span>
+              <h3 class="folder-title">LAMPS</h3>
+              <div class="folder-category">
+                <span>VIEW GALLERY</span>
+                <svg class="folder-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Folder 05 -->
+          <a href="/shop/wall-art" class="archive-folder" style="transition-delay: 0.2s;">
+            <div class="folder-image-wrapper">
+              <img src="/expedition/SubSanctuary Website Content/Pendants/RFVJ1347.webp" alt="Wall Art" />
+            </div>
+            <div class="folder-front">
+              <span class="folder-num">05</span>
+              <h3 class="folder-title">WALL ART</h3>
+              <div class="folder-category">
+                <span>VIEW GALLERY</span>
+                <svg class="folder-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Folder 06 -->
+          <a href="/shop/pendants" class="archive-folder" style="transition-delay: 0.3s;">
+            <div class="folder-image-wrapper">
+              <img src="/expedition/SubSanctuary Website Content/Pendants/Opal.webp" alt="Pendants" />
+            </div>
+            <div class="folder-front">
+              <span class="folder-num">06</span>
+              <h3 class="folder-title">PENDANTS</h3>
+              <div class="folder-category">
+                <span>VIEW GALLERY</span>
+                <svg class="folder-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- JEWELRY SECTION -->
+      <section class="port-block" data-animate-variant="fade" data-animate-on-scroll="true">
+        <div class="port-jewelry-grid">
+          <div class="port-jewelry-left">
+            <h2 data-animate-variant="slide">JEWELRY</h2>
+            <a href="/pendants" class="port-btn-outline" data-animate-variant="slide" data-animate-delay="0.1">
+              COMMISSION A PENDANT
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+          </div>
+          
+          <div class="port-jewelry-mid">
+            <p data-animate-variant="slide" data-animate-delay="0.2">
+              THIS IS THE RICHEST PART OF THE WHOLE PROCESS &mdash; HARDWOOD AND CRYSTAL, LASER ENGRAVED, INLAID BY HAND. WIRE-WRAPPED SILVER WORK HAS PRICED MOST PEOPLE OUT OF OWNING ANYTHING LIKE IT. WOOD IS CHEAPER AND LASER WORK IS FASTER, SO WE CAN MAKE SOMETHING GENUINELY BEAUTIFUL FOR LESS.
+            </p>
+            <p class="muted" data-animate-variant="slide" data-animate-delay="0.3">
+              PENDANTS ARE MADE TO ORDER. A BASELINE PIECE IS TWO CRYSTALS, TWO INLAYS AND A SILVER-PLATED CHAIN. FROM THERE IT'S A QUESTION OF WOOD, STONE, DEPTH, DETAIL AND CHAIN. ROUGHLY $250 AT THE BASE, UP TO AROUND $500.
+            </p>
+          </div>
+
+          <div class="port-jewelry-right" data-animate-variant="fade" data-animate-delay="0.4">
+            <!-- Using existing pendant image from site assets. If not found, uses fallback -->
+            <img src="/Web/300/sub-sanctuary-laser-engraved-crystal-hardwood-pendant-300-3.jpg" onerror="this.src='/global/site_logo.webp'" alt="Jewelry Pendant" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <footer>
       <div class="footer-container">
@@ -218,6 +304,8 @@
       </div>
     </footer>
 
+    </div>
+
     <script>
       (function () {
         if (sessionStorage.getItem("pageTransition") === "true") {
@@ -236,7 +324,26 @@
     <script type="module" src="/js/interactive-grid.js"></script>
     <script type="module" src="/js/transition.js"></script>
     <script type="module" src="/js/home.js"></script>
-    <script type="module" src="/js/expedition.js"></script>
     <script type="module" src="/js/animated-copy.js"></script>
+
+    <!-- Custom Archive Grid Scroll Reveal -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const folders = document.querySelectorAll('.archive-folder');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Add a small delay based on index for a cascade effect if they appear at once
+              setTimeout(() => {
+                entry.target.classList.add('is-visible');
+              }, 50); // The CSS transition-delay handles the rest
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        folders.forEach(f => observer.observe(f));
+      });
+    </script>
   </body>
 </html>

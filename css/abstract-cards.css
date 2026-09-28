@@ -1,0 +1,96 @@
+/* --- ABSTRACT CARDS SECTION --- */
+.cta.abstract-cards-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--base-400);
+  overflow: hidden;
+}
+
+.cta.abstract-cards-section .cta-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
+  top: unset;
+  left: unset;
+  transform: none;
+}
+
+.cta.abstract-cards-section .cta-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+}
+
+.cta.abstract-cards-section .cta-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.abstract-cards-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.abstract-card {
+  position: absolute;
+  pointer-events: auto;
+}
+
+.abstract-card .card-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  will-change: transform;
+}
+
+.abstract-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Card positions matching AbstractCards.jsx */
+.abstract-card.card-1 { height: 15vw; width: 13vw; top: 10%; left: 10%; }
+.abstract-card.card-2 { height: 13vw; width: 10vw; top: 20%; left: 5%; }
+.abstract-card.card-3 { height: 20vw; width: 17vw; top: 70%; left: 0%; }
+.abstract-card.card-4 { height: 13vw; width: 17vw; top: 76%; left: 11%; }
+.abstract-card.card-5 { height: 12vw; width: 10vw; top: 10%; left: 55%; }
+.abstract-card.card-6 { height: 17vw; width: 17vw; top: 20%; right: 1%; }
+.abstract-card.card-7 { height: 19vw; width: 18vw; top: 70%; right: 5%; }
+.abstract-card.card-8 { height: 15vw; width: 14vw; top: 80%; right: 15%; }
+
+@media (max-width: 768px) {
+  /* Make cards smaller and push to top/bottom edges to leave center for text & buttons */
+  .abstract-card.card-1 { height: 24vw; width: 20vw; top: 4%; left: 4%; }
+  .abstract-card.card-2 { height: 18vw; width: 14vw; top: 12%; left: 2%; }
+  .abstract-card.card-3 { height: 26vw; width: 22vw; top: 78%; left: 0%; }
+  .abstract-card.card-4 { height: 20vw; width: 22vw; top: 86%; left: 6%; }
+  .abstract-card.card-5 { height: 18vw; width: 14vw; top: 6%; left: 60%; }
+  .abstract-card.card-6 { height: 24vw; width: 22vw; top: 14%; right: 2%; }
+  .abstract-card.card-7 { height: 26vw; width: 24vw; top: 75%; right: 4%; }
+  .abstract-card.card-8 { height: 20vw; width: 18vw; top: 88%; right: 12%; }
+  
+  .cta.abstract-cards-section .cta-content {
+    padding: 0 1rem;
+  }
+}
+

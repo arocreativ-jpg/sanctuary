@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Pendants | Sub Sanctuary | Hardwood & Crystal</title>
+    <link rel="icon" href="/global/site_logo.webp" type="image/png" />
+    <meta name="description" content="Custom hardwood and crystal pendants, laser engraved and inlaid by hand. Made to order." />
+    <meta name="author" content="Sub Sanctuary" />
+
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/interactive-grid.css" />
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/observatory.css" />
+
+    <style>
+      /* Pendants page — based on observatory hero */
+      .hero.hero-observatory.hero-pendants {
+        position: relative;
+      }
+
+      /* Right-side detail callout */
+      .pendants-detail-callout {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1.25rem;
+        text-align: right;
+        margin-bottom: 0.25rem;
+      }
+
+      .pendants-detail-callout .detail-item {
+        font-family: "Geist Mono", monospace;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        line-height: 1.5;
+        color: rgba(242, 238, 218, 0.75);
+        text-align: right;
+      }
+
+      .pendants-detail-callout .detail-item strong {
+        display: block;
+        color: rgba(242, 238, 218, 0.95);
+        margin-bottom: 0.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preloader-overlay">
+      <div class="preloader-grid"></div>
+      <div class="preloader-animation-wrapper">
+        <p class="preloader-text">Custom Pendants</p>
+        <div class="preloader-ring-frame"></div>
+        <div class="preloader-disc-frame"></div>
+      </div>
+    </div>
+
+    <svg style="visibility: hidden; position: absolute" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="interactive-grid"></div>
+    <div class="transition-grid"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="nav-bg"></div>
+      </div>
+      <div class="nav-mobile-header">
+        <p class="nav-logo">Sub Sanctuary</p>
+        <p class="nav-menu-toggle">Menu</p>
+      </div>
+      <div class="nav-overlay">
+        <div class="nav-items">
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/about2.html">About 2</a></div>
+          <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
+          <div class="nav-item"><a href="/shop">Shop</a></div>
+          <div class="nav-item"><a href="/engraving">Engraving</a></div>
+          <div class="nav-item"><a href="/pendants">Custom Pendants</a></div>
+          <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
+            <span class="mode-icon">☼</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Full-bleed pendant hero — matches About page structure -->
+    <section class="hero hero-observatory hero-pendants">
+      <div class="hero-container">
+        <div class="hero-img-container">
+          <div class="hero-img">
+            <img src="/Web/Pendants/layered-wood-red-wave-swirl-glass-cabochon-pendant-subsanctuary.webp" alt="Custom Hardwood and Crystal Pendant" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div class="hero-img-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="container">
+            <div>
+              <div class="hero-badge">SUBSANCTUARY</div>
+            </div>
+
+            <div class="hero-content-bottom">
+              <div class="hero-footer-copy">
+                <h1 class="hero-studio-title" data-animate-variant="slide" data-animate-delay="0.6">
+                  PENDANTS
+                </h1>
+                <p class="bodyCopy" data-animate-variant="slide" data-animate-delay="0.75">
+                  Made to order. Hardwood &amp; crystal,<br/>laser engraved, inlaid by hand.
+                </p>
+              </div>
+
+              <div class="pendants-detail-callout">
+                <div class="detail-item">
+                  <strong>CHAIN OPTIONS</strong>
+                  TWO CHAIN<br>OPTIONS
+                </div>
+                <div class="detail-item">
+                  <strong>MATERIALS</strong>
+                  HARDWOOD<br>+ CRYSTAL
+                </div>
+                <div class="detail-item">
+                  <strong>PROCESS</strong>
+                  LASER CUT<br>+ HAND INLAID
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery / intro section — matches screenshot design -->
+    <section style="background-color: var(--base-400); padding: 3rem 0 0 0;">
+      <!-- Header row -->
+      <div style="display: flex; align-items: flex-start; gap: 4rem; padding: 0 4rem 2.5rem 4rem; border-bottom: 1px solid rgba(242,238,218,0.12);">
+        <!-- Left tag -->
+        <div style="flex-shrink: 0; padding-top: 0.35rem;">
+          <p style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(242,238,218,0.5); white-space: nowrap;">[ THE RICHEST PART OF THE PROCESS ]</p>
+        </div>
+        <!-- Right copy -->
+        <div>
+          <h2 style="font-family: 'SCHABO', sans-serif; font-size: clamp(2rem, 3.5vw, 3.5rem); font-weight: 500; text-transform: uppercase; color: var(--base-100); line-height: 0.9; margin: 0 0 1rem 0; letter-spacing: 0.02em;">HARDWOOD AND CRYSTAL, LASER ENGRAVED, INLAID BY HAND.</h2>
+          <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 0.8rem; text-transform: uppercase; color: rgba(242,238,218,0.65); line-height: 1.6; letter-spacing: 0.04em; max-width: 700px;">EVERY PENDANT IS BUILT AROUND WOOD YOU CAN NAME AND STONES CUT BY PEOPLE WE KNOW. NOTHING IS STOCKED &mdash; EACH ONE IS COMMISSIONED, APPROVED AND THEN MADE UNIQUE TO YOU.</p>
+        </div>
+      </div>
+
+      <!-- Image strip -->
+      <div style="display: grid; grid-template-columns: repeat(6, 1fr); width: 100%;">
+        <div style="aspect-ratio: 3/4; overflow: hidden;">
+          <img src="/Web/Pendants/hexagon-star-wood-purple-oval-stone-red-inlays-pendant-subsanctuary.webp" alt="Hexagon star pendant" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
+        <div style="aspect-ratio: 3/4; overflow: hidden;">
+          <img src="/Web/Pendants/layered-dark-wood-honey-color-cabochon-silver-oval-stone-pendant-subsanctuary.webp" alt="Dark wood honey cabochon pendant" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
+        <div style="aspect-ratio: 3/4; overflow: hidden;">
+          <img src="/Web/Pendants/eight-point-star-wood-purple-inlays-iridescent-cabochon-pendant-subsanctuary-1.webp" alt="Eight point star pendant" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
+        <div style="aspect-ratio: 3/4; overflow: hidden; outline: 2px solid #00b4ff; outline-offset: -2px;">
+          <img src="/Web/Pendants/layered-wood-abalone-shell-green-malachite-moss-pendant-subsanctuary.webp" alt="Abalone shell moss pendant" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
+        <div style="aspect-ratio: 3/4; overflow: hidden;">
+          <img src="/Web/Pendants/layered-wood-pink-stone-purple-raw-crystal-pendant-subsanctuary-1.webp" alt="Pink stone purple crystal pendant" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
+        <div style="aspect-ratio: 3/4; overflow: hidden;">
+          <img src="/Web/Pendants/butterfly-layered-wood-labradorite-oval-pendant-subsanctuary.webp" alt="Butterfly labradorite pendant" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Two Styles section -->
+    <section style="background-color: var(--base-400); padding: 3rem 4rem;">
+
+      <!-- Section marker with line -->
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+        <p class="section-marker-label" style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--base-200); white-space: nowrap; margin: 0;">01 &mdash; COMMISSION A PENDANT</p>
+        <div class="section-marker-line" style="flex: 1; height: 1px; background: var(--base-200); opacity: 0.4;"></div>
+      </div>
+
+      <h2 style="font-family: 'SCHABO', sans-serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 500; text-transform: uppercase; color: var(--base-100); line-height: 0.85; margin: 0 0 0.5rem 0;">TWO STYLES.</h2>
+      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 0.8rem; color: var(--base-200); margin: 0 0 2rem 0; max-width: 480px; line-height: 1.5;">Both ship with a chain of your choosing, and nothing is made until you've approved the design and the materials.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+
+        <!-- Card 1 — Custom Pendant -->
+        <div class="style-card" style="background-color: var(--base-300); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column;">
+          <div style="height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="/engraving/317c39e769f71da5d98dc9eb22edbadbab3ba7d4.webp" alt="Custom Pendant" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <div style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1;">
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #f25e3d; margin: 0 0 0.3rem 0;">PRODUCT 01</p>
+            <h3 style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); text-transform: uppercase; color: var(--base-100); line-height: 0.9; margin: 0 0 0.25rem 0;">CUSTOM PENDANT</h3>
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.6rem; text-transform: uppercase; color: var(--base-200); margin: 0 0 1rem 0;">PRICING STARTS AT $250+</p>
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--base-200); margin: 0 0 0.6rem 0;">CHOOSE WHOSE DESIGN IT IS</p>
+
+            <!-- Option A -->
+            <div style="border: 1px solid var(--base-200); border-radius: 3px; padding: 0.6rem 0.75rem; margin-bottom: 0.5rem; opacity: 0.85;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                  <span style="width: 8px; height: 8px; border-radius: 50%; background: #f25e3d; display: inline-block; flex-shrink:0;"></span>
+                  <p style="font-family: 'Geist Mono', monospace; font-size: 0.6rem; text-transform: uppercase; color: var(--base-100); margin: 0;">AN ORIGINAL SUBSANCTUARY DESIGN</p>
+                </div>
+                <p style="font-family: 'SCHABO', sans-serif; font-size: 1.1rem; color: #f25e3d; margin: 0; white-space: nowrap;">$350+</p>
+              </div>
+              <p style="font-family: -apple-system, sans-serif; font-size: 0.7rem; color: var(--base-200); margin: 0; line-height: 1.4;">Plus 2–3 hardwood species inlays and 2–3 gemstones. Buyer approves design and material details before actual pendant is crafted.</p>
+            </div>
+
+            <!-- Option B -->
+            <div style="border: 1px solid var(--base-200); border-radius: 3px; padding: 0.6rem 0.75rem; margin-bottom: 1rem; opacity: 0.7;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                  <span style="width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--base-200); display: inline-block; flex-shrink:0;"></span>
+                  <p style="font-family: 'Geist Mono', monospace; font-size: 0.6rem; text-transform: uppercase; color: var(--base-100); margin: 0;">YOUR OWN DESIGN</p>
+                </div>
+                <p style="font-family: 'SCHABO', sans-serif; font-size: 1.1rem; color: #f25e3d; margin: 0; white-space: nowrap;">$250+</p>
+              </div>
+              <p style="font-family: -apple-system, sans-serif; font-size: 0.7rem; color: var(--base-200); margin: 0; line-height: 1.4;">YOU pick wood species, gems and overall size. Upload your file and we handle the refinement.</p>
+            </div>
+
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.55rem; text-transform: uppercase; color: var(--base-200); margin: 0 0 0.2rem 0; opacity: 0.7;">&mdash; BOTH CHAIN OPTIONS AVAILABLE</p>
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.55rem; text-transform: uppercase; color: var(--base-200); margin: 0 0 1rem 0; opacity: 0.7;">&mdash; YOU APPROVE BEFORE IT'S CRAFTED</p>
+            <a href="/contact" style="display:block; text-align:center; border: 1px solid var(--base-200); padding: 0.65rem; font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--base-100); text-decoration: none; border-radius: 2px; margin-top: auto;">START A FULL CUSTOM PENDANT</a>
+          </div>
+        </div>
+
+        <!-- Card 2 — Bespoke Pendant -->
+        <div class="style-card" style="background-color: var(--base-300); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column;">
+          <div style="height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="/engraving/e174ff0119f657168ed49ad49976b9beaf609803.webp" alt="Bespoke Pendant" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <div style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1;">
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #f25e3d; margin: 0 0 0.3rem 0;">PRODUCT 02</p>
+            <h3 style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); text-transform: uppercase; color: var(--base-100); line-height: 0.9; margin: 0 0 0.25rem 0;">BESPOKE PENDANT</h3>
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.6rem; text-transform: uppercase; color: var(--base-200); margin: 0 0 0.5rem 0;">PRICING STARTS AT $500+</p>
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--base-200); margin: 0 0 0.6rem 0;">NO EXPENSES SPARED</p>
+            <p style="font-family: -apple-system, sans-serif; font-size: 0.75rem; color: var(--base-200); line-height: 1.5; margin: 0 0 1rem 0;">Custom bespoke pendant with up to 10 hardwood species inlays and 10 gemstones. Custom SubSanctuary design tailored to your exact style and size input. Fully collaborative/custom — no expenses spared.</p>
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.55rem; text-transform: uppercase; color: var(--base-200); margin: 0 0 0.2rem 0; opacity: 0.7;">&mdash; UP TO 10 HARDWOOD SPECIES INLAYS</p>
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.55rem; text-transform: uppercase; color: var(--base-200); margin: 0 0 0.2rem 0; opacity: 0.7;">&mdash; UP TO 10 GEMSTONES</p>
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.55rem; text-transform: uppercase; color: var(--base-200); margin: 0 0 0.2rem 0; opacity: 0.7;">&mdash; TAILORED TO YOUR STYLE AND SIZE</p>
+            <p style="font-family: 'Geist Mono', monospace; font-size: 0.55rem; text-transform: uppercase; color: var(--base-200); margin: 0 0 1.25rem 0; opacity: 0.7;">&mdash; BOTH CHAIN OPTIONS AVAILABLE</p>
+            <a href="/contact" style="display:block; text-align:center; background: #f25e3d; padding: 0.65rem; font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: #fff; text-decoration: none; border-radius: 2px; margin-top: auto;">BOOK A BESPOKE CONVERSATION</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02 — Pick Your Chain -->
+    <section class="pendant-divider-section" style="background-color: var(--base-400); padding: 3rem 4rem; border-top: 1px solid var(--base-200);">
+
+      <!-- Section marker -->
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+        <p class="section-marker-label" style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--base-200); white-space: nowrap; margin: 0;">02 &mdash; HARDWARE</p>
+        <div class="section-marker-line" style="flex: 1; height: 1px; background: var(--base-200); opacity: 0.4;"></div>
+      </div>
+
+      <h2 style="font-family: 'SCHABO', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 500; text-transform: uppercase; color: var(--base-100); line-height: 0.85; margin: 0 0 2rem 0;">PICK YOUR CHAIN.</h2>
+
+      <!-- Chain options -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div class="chain-option" style="border: 1px solid var(--base-200); border-radius: 4px; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+          <p style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.2rem, 2vw, 1.6rem); text-transform: uppercase; color: var(--base-100); margin: 0; letter-spacing: 0.02em;">SILVER-COATED BOX CHAIN</p>
+          <p style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.5rem, 2.5vw, 2rem); color: #f25e3d; margin: 0; white-space: nowrap;">+$30</p>
+        </div>
+        <div class="chain-option" style="border: 1px solid var(--base-200); border-radius: 4px; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+          <p style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.2rem, 2vw, 1.6rem); text-transform: uppercase; color: var(--base-100); margin: 0; letter-spacing: 0.02em;">STERLING SILVER BOX CHAIN</p>
+          <p style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.5rem, 2.5vw, 2rem); color: #f25e3d; margin: 0; white-space: nowrap;">$75</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 — How a Pendant Gets Made -->
+    <section class="pendant-divider-section" style="background-color: var(--base-400); padding: 3rem 4rem; border-top: 1px solid var(--base-200);">
+
+      <!-- Section marker -->
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0;">
+        <p class="section-marker-label" style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--base-200); white-space: nowrap; margin: 0;">04 &mdash; HOW A PENDANT GETS MADE</p>
+        <div class="section-marker-line" style="flex: 1; height: 1px; background: var(--base-200); opacity: 0.4;"></div>
+      </div>
+
+      <!-- Steps -->
+      <div style="margin-top: 0;">
+
+        <!-- Step 01 -->
+        <div class="process-step-row" style="display: grid; grid-template-columns: 3rem 1fr 1fr; gap: 1rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--base-200);">
+          <p style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; color: #f25e3d; margin: 0;">01</p>
+          <h3 style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.3rem, 2.5vw, 2rem); text-transform: uppercase; color: var(--base-100); margin: 0; line-height: 0.9;">PICK YOUR STYLE</h3>
+          <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.8rem; color: var(--base-200); margin: 0; line-height: 1.5;">Your own vibe, or fully bespoke — plus a chain.</p>
+        </div>
+
+        <!-- Step 02 -->
+        <div class="process-step-row" style="display: grid; grid-template-columns: 3rem 1fr 1fr; gap: 1rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--base-200);">
+          <p style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; color: #f25e3d; margin: 0;">02</p>
+          <h3 style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.3rem, 2.5vw, 2rem); text-transform: uppercase; color: var(--base-100); margin: 0; line-height: 0.9;">SEND WHAT YOU HAVE</h3>
+          <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.8rem; color: var(--base-200); margin: 0; line-height: 1.5;">Your stones, a design file, a sketch, or just a feeling.</p>
+        </div>
+
+        <!-- Step 03 -->
+        <div class="process-step-row" style="display: grid; grid-template-columns: 3rem 1fr 1fr; gap: 1rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--base-200);">
+          <p style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; color: #f25e3d; margin: 0;">03</p>
+          <h3 style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.3rem, 2.5vw, 2rem); text-transform: uppercase; color: var(--base-100); margin: 0; line-height: 0.9;">APPROVE THE DESIGN</h3>
+          <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.8rem; color: var(--base-200); margin: 0; line-height: 1.5;">You approve design and material details before actual pendant is crafted.</p>
+        </div>
+
+        <!-- Step 04 -->
+        <div class="process-step-row" style="display: grid; grid-template-columns: 3rem 1fr 1fr; gap: 1rem; align-items: center; padding: 1.5rem 0;">
+          <p style="font-family: 'Geist Mono', monospace; font-size: 0.65rem; text-transform: uppercase; color: #f25e3d; margin: 0;">04</p>
+          <h3 style="font-family: 'SCHABO', sans-serif; font-size: clamp(1.3rem, 2.5vw, 2rem); text-transform: uppercase; color: var(--base-100); margin: 0; line-height: 0.9;">IT GETS MADE &amp; SHIPPED TO YOU</h3>
+          <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.8rem; color: var(--base-200); margin: 0; line-height: 1.5;">Hardwood inlays and stones set by hand, then finished and shipped to your door.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-bg-container"></div>
+
+        <div class="footer-content">
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <h3>Start a Custom Commission</h3>
+
+              <div class="footer-form">
+                <input type="email" placeholder="Email Address" />
+
+                <div class="btn">
+                  <a href="/contact" class="btn"
+                    ><span class="btn-line"></span>Request a Quote</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-content-col">
+              <p class="bodyCopy">
+                Sub Sanctuary is a premium handcrafted woodworking brand. We build pieces that blend artistry with functional design, operating as a digital gallery where craftsmanship is the point.
+              </p>
+
+              <div style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">
+                <p class="bodyCopy">Learn about our shipping, returns, and care guidelines.</p>
+                <a href="/policies" style="color: white; text-decoration: underline; margin-top: 0.5rem; display: inline-block;">View Policies</a>
+              </div>
+
+              <div class="footer-socials">
+                <div class="footer-social">
+                  <a href="/contact">[ Instagram ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Process Videos ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/contact">[ Studio ]</a>
+                </div>
+                <div class="footer-social">
+                  <a href="/policies">[ Policies ]</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-content-meta">
+            <div class="footer-content-col">
+              <p>[ Constructed by Sub Sanctuary ]</p>
+              <p>[ Sub Sanctuary / 2026 ]</p>
+            </div>
+
+            <div class="footer-content-col">
+              <h1>Sub Sanctuary&copy;</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/interactive-grid.js"></script>
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/js/preloader.js"></script>
+    <script type="module" src="/js/animated-copy.js"></script>
+  </body>
+</html>

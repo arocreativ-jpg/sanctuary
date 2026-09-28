@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product | Sub Sanctuary</title>
-    <link rel="icon" href="/global/site_logo.png" type="image/png" />
+    <link rel="icon" href="/global/site_logo.webp" type="image/png" />
     <link rel="stylesheet" href="/globals.css" />
     <link rel="stylesheet" href="/css/nav.css" />
     <link rel="stylesheet" href="/css/footer.css" />
@@ -25,10 +25,11 @@
         <div class="nav-items">
           <div class="nav-item"><a href="/">Home</a></div>
           <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/about2.html">About 2</a></div>
           <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
           <div class="nav-item"><a href="/shop">Shop</a></div>
           <div class="nav-item"><a href="/engraving">Engraving</a></div>
-          <div class="nav-item"><a href="/contact">Custom Orders</a></div>
+          <div class="nav-item"><a href="/pendants">Custom Pendants</a></div>
           
           <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
             <span class="mode-icon">☼</span>
@@ -51,16 +52,16 @@
           <!-- COLUMN 1: THUMBNAILS -->
           <div class="pdp-thumbnails">
             <div class="thumbnail active" onclick="document.getElementById('mainImage').src = this.children[0].src; document.querySelectorAll('.thumbnail').forEach(t=>t.classList.remove('active')); this.classList.add('active');">
-              <img src="/collections/collection_smokers.jpg" alt="Thumb 1" />
+              <img src="/collections/collection_smokers.webp" alt="Thumb 1" />
             </div>
             <div class="thumbnail" onclick="document.getElementById('mainImage').src = this.children[0].src; document.querySelectorAll('.thumbnail').forEach(t=>t.classList.remove('active')); this.classList.add('active');">
-              <img src="/contact/commission_detail.jpg" alt="Thumb 2" />
+              <img src="/contact/commission_detail.webp" alt="Thumb 2" />
             </div>
             <div class="thumbnail" onclick="document.getElementById('mainImage').src = this.children[0].src; document.querySelectorAll('.thumbnail').forEach(t=>t.classList.remove('active')); this.classList.add('active');">
-              <img src="/contact/custom_hero.jpg" alt="Thumb 3" />
+              <img src="/contact/custom_hero.webp" alt="Thumb 3" />
             </div>
             <div class="thumbnail" onclick="document.getElementById('mainImage').src = this.children[0].src; document.querySelectorAll('.thumbnail').forEach(t=>t.classList.remove('active')); this.classList.add('active');">
-              <img src="/collections/collection_housewares.jpg" alt="Thumb 4" />
+              <img src="/collections/collection_housewares.webp" alt="Thumb 4" />
             </div>
             <div class="thumb-nav">
               <button class="thumb-nav-btn">&larr;</button>
@@ -70,9 +71,10 @@
 
           <!-- COLUMN 2: MAIN IMAGE -->
           <div class="pdp-main-image-col">
-            <div class="pdp-main-image-wrapper">
+            <div class="pdp-main-image-wrapper catalog-item" data-hover-image="/collections/collection_smokers.webp" style="position: relative; cursor: pointer;">
               <div class="product-bg-outline"></div>
-              <img src="/collections/collection_smokers.jpg" alt="Topographic Zippo" id="mainImage" />
+              <img src="/collections/collection_smokers.webp" alt="Topographic Zippo" id="mainImage" />
+              <div class="catalog-item-grid"></div>
             </div>
             <div class="pdp-main-image-meta">
               <p>01 / 05</p>
@@ -155,7 +157,7 @@
             <div class="spec-panel related-collection">
               <div class="panel-header">RELATED COLLECTION &rarr;</div>
               <a href="/collection" class="related-content">
-                <img src="/collections/collection_smokers.jpg" alt="Smokers Lounge">
+                <img src="/collections/collection_smokers.webp" alt="Smokers Lounge">
                 <div class="related-text">
                   <p class="related-title">THE SMOKERS LOUNGE</p>
                   <p class="small-text">Grinders, Zippos, trays and more.</p>
@@ -222,6 +224,7 @@
       </div>
     </footer>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" src="/js/nav.js"></script>
     <script>
       // Simple variant button toggle
@@ -230,6 +233,79 @@
           let siblings = this.parentElement.querySelectorAll('.variant-btn');
           siblings.forEach(s => s.classList.remove('active'));
           this.classList.add('active');
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const catalogItems = document.querySelectorAll(".catalog-item"); 
+        catalogItems.forEach(item => {
+          const grid = item.querySelector(".catalog-item-grid"); 
+          const imageUrl = item.getAttribute("data-hover-image"); 
+          if (!grid) return; 
+          
+          let fadeIn; let fadeOut; 
+          grid.innerHTML = ""; 
+          
+          // Setup Grid CSS
+          grid.style.position = 'absolute';
+          grid.style.top = '0';
+          grid.style.left = '0';
+          grid.style.width = '100%';
+          grid.style.height = '100%';
+          grid.style.display = 'grid';
+          grid.style.gridTemplateColumns = 'repeat(4, 1fr)';
+          grid.style.gridTemplateRows = 'repeat(6, 1fr)';
+          grid.style.pointerEvents = 'none';
+          grid.style.zIndex = '3'; // Above main image
+          grid.style.clipPath = 'polygon(15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%, 0 15%)';
+          
+          for (let i = 0; i < 24; i++) {
+            const cell = document.createElement("div"); 
+            const col = i % 4; 
+            const row = Math.floor(i / 4); 
+            cell.classList.add("grid-cell"); 
+            
+            // "MATCH COLOR TO THE ORIGINAL THEME OF WEBSITE"
+            cell.style.backgroundColor = 'var(--base-500)'; // The original brand orange
+            
+            if (imageUrl) {
+              cell.style.backgroundImage = `url('${imageUrl}')`; 
+              cell.style.backgroundPosition = `${col * 33.33}% ${row * 20}%`; 
+              cell.style.backgroundSize = '400% 600%';
+              cell.style.backgroundBlendMode = 'multiply';
+            }
+            
+            cell.style.opacity = 0;
+            grid.appendChild(cell);
+          }
+          
+          const cells = grid.querySelectorAll(".grid-cell"); 
+          
+          item.addEventListener("mouseenter", () => {
+            if (fadeOut) fadeOut.kill(); 
+            fadeIn = gsap.to(cells, {
+              opacity: 0.8, // Slight transparency so it looks good as an overlay
+              duration: 0.02, 
+              stagger: {
+                each: 0.008, 
+                from: "random"
+              }, 
+              ease: "power1.out"
+            });
+          }); 
+          
+          item.addEventListener("mouseleave", () => {
+            if (fadeIn) fadeIn.kill(); 
+            fadeOut = gsap.to(cells, {
+              opacity: 0, 
+              duration: 0.02, 
+              stagger: {
+                each: 0.008, 
+                from: "random"
+              }, 
+              ease: "power1.in"
+            });
+          });
         });
       });
     </script>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=WDXL+Lubrifont+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
 
 @import url("https://fonts.cdnfonts.com/css/schabo");
 
@@ -17,6 +17,88 @@ body.light-mode {
   --base-400: #f2eeda;
   --base-500: #ee6436;
 }
+
+/* Light mode: fix semi-transparent borders that use hardcoded cream rgba */
+body.light-mode .makers-mark-section {
+  background-color: var(--base-400);
+}
+
+body.light-mode .engraving-section,
+body.light-mode .engraving-list-grid,
+body.light-mode .engraving-list-grid .grid-container,
+body.light-mode .engraving-list-grid .grid-header,
+body.light-mode .engraving-list-grid .grid-col,
+body.light-mode .engraving-list-grid .item-list li,
+body.light-mode .engraving-list-grid .grid-gallery {
+  border-color: rgba(20, 20, 20, 0.15);
+}
+
+body.light-mode .engraving-wrapper .container,
+body.light-mode .style-card {
+  background-color: #d6d2c4 !important; /* Darker cream for better contrast */
+}
+
+body.light-mode .pendant-divider-section {
+  border-top-color: rgba(20, 20, 20, 0.15) !important;
+}
+
+body.light-mode .process-step-row {
+  border-bottom-color: rgba(20, 20, 20, 0.12) !important;
+}
+
+body.light-mode .chain-option {
+  border-color: rgba(20, 20, 20, 0.2) !important;
+}
+
+body.light-mode .makers-label p,
+body.light-mode .makers-para {
+  color: rgba(20, 20, 20, 0.85);
+}
+
+body.light-mode .process-step,
+body.light-mode .process-header p,
+body.light-mode .materials-header p,
+body.light-mode .reuse-loop-quote {
+  border-color: rgba(20, 20, 20, 0.2);
+}
+
+/* ============================================================
+   LIGHT MODE: HERO SECTIONS (text always cream - on top of photos)
+   Applies to: Home, About, Portfolio hero sections
+   ============================================================ */
+body.light-mode .hero h1,
+body.light-mode .hero h2,
+body.light-mode .hero h3,
+body.light-mode .hero p,
+body.light-mode .hero a,
+body.light-mode .hero .hero-badge,
+body.light-mode .hero .hero-studio-title,
+body.light-mode .hero .hero-callout p,
+body.light-mode .hero .hero-footer-copy p,
+body.light-mode .hero .hero-content-header h1,
+body.light-mode .hero .hero-content-footer p,
+body.light-mode .hero-badge {
+  color: #f2eeda !important;
+}
+
+body.light-mode .hero-badge {
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Home hero buttons keep their styles */
+body.light-mode .hero .hero-btn-primary {
+  background-color: #ee6436;
+  color: #f2eeda !important;
+  border-color: #ee6436;
+}
+
+body.light-mode .hero .hero-btn-secondary {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #f2eeda !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 
 * {
   margin: 0;
@@ -95,7 +177,7 @@ p.lg {
 
 p.bodyCopy {
   text-transform: none;
-  font-family: "Host Grotesk", sans-serif;
+  font-family: "Geist Mono", monospace;
   font-weight: 450;
   line-height: 1.1;
 }

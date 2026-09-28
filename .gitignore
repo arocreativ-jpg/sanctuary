@@ -1,5 +1,7 @@
 node_modules/
+dist/
 .DS_Store
 *.psd
 *.MP4
 *.mp4
+assets_backup/

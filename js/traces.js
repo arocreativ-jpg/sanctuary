@@ -3,52 +3,52 @@ import gsap from "gsap";
 const TRACES_DATA = [
   {
     name: "Haven",
-    img: "/traces/trace_img_01.jpg",
+    img: "/traces/trace_img_01.webp",
     tag: "Dome Settlement",
   },
   {
     name: "Longstrider",
-    img: "/traces/trace_img_02.jpg",
+    img: "/traces/trace_img_02.webp",
     tag: "Field Transport",
   },
   {
     name: "Verdant Colonies",
-    img: "/traces/trace_img_03.jpg",
+    img: "/traces/trace_img_03.webp",
     tag: "Eco Habitat",
   },
   {
     name: "Suncross",
-    img: "/traces/trace_img_04.jpg",
+    img: "/traces/trace_img_04.webp",
     tag: "Surface Journey",
   },
   {
     name: "Red Bluffs",
-    img: "/traces/trace_img_05.jpg",
+    img: "/traces/trace_img_05.webp",
     tag: "Highland District",
   },
   {
     name: "Moonshore",
-    img: "/traces/trace_img_06.jpg",
+    img: "/traces/trace_img_06.webp",
     tag: "Polar Settlement",
   },
   {
     name: "Solspire",
-    img: "/traces/trace_img_07.jpg",
+    img: "/traces/trace_img_07.webp",
     tag: "Solar Tower",
   },
   {
     name: "Frostline Basin",
-    img: "/traces/trace_img_08.jpg",
+    img: "/traces/trace_img_08.webp",
     tag: "Glacial Plains",
   },
   {
     name: "Emberhold",
-    img: "/traces/trace_img_09.jpg",
+    img: "/traces/trace_img_09.webp",
     tag: "Volcanic Outpost",
   },
   {
     name: "The Gate",
-    img: "/traces/trace_img_010.jpg",
+    img: "/traces/trace_img_010.webp",
     tag: "Ancient Structure",
   },
 ];

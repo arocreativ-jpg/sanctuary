@@ -1,0 +1,319 @@
+/* workshop-collage.css */
+
+.workshop-collage-section {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--base-400); 
+  overflow: hidden;
+  border-top: 1px solid var(--base-300);
+  transition: background-color 0.3s ease;
+}
+
+/* Technical Drafting Grid Background */
+.workshop-collage-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(var(--base-100) 1px, transparent 1px),
+    linear-gradient(90deg, var(--base-100) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: center;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.04;
+  transition: opacity 0.3s ease;
+}
+
+body.light-mode .workshop-collage-section::before {
+  opacity: 0.08;
+}
+
+/* Subtle crosshairs and large circular mark from reference */
+.workshop-collage-section::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  border: 1px solid var(--base-100);
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+body.light-mode .workshop-collage-section::after {
+  opacity: 0.1;
+}
+
+/* -------------------------------------
+   CENTER CONTENT
+-------------------------------------- */
+.workshop-collage-section .cta-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
+}
+
+.cta-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.cta-index, .cta-tags {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--base-200);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+.cta-tags {
+  text-align: right;
+}
+
+.cta-logo-img {
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 2rem;
+  filter: invert(1);
+  transition: filter 0.3s ease;
+}
+
+body.light-mode .cta-logo-img {
+  filter: invert(0);
+}
+
+.cta-copy h3 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  color: var(--base-100);
+  line-height: 0.85;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.cta-copy p {
+  color: var(--base-200);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Geist Mono', monospace;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.btn-solid-orange, .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.btn-solid-orange {
+  background: var(--orange, #ee6436);
+  color: #121212;
+  border: 1px solid var(--orange, #ee6436);
+}
+.btn-solid-orange:hover {
+  background: transparent;
+  color: var(--orange, #ee6436);
+}
+body.light-mode .btn-solid-orange:hover {
+  color: var(--base-100); /* Dark text on light bg when transparent */
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--base-100);
+  border: 1px solid var(--base-200);
+}
+.btn-outline:hover {
+  border-color: var(--base-100);
+}
+
+.cta-footer-tags {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--base-200);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+/* -------------------------------------
+   IMAGE BLOCKS
+-------------------------------------- */
+.collage-container {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 5;
+  pointer-events: none; 
+}
+
+.image-block {
+  position: absolute;
+  background: var(--base-400);
+  border: 1px solid var(--base-100);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  overflow: hidden;
+  will-change: transform;
+}
+
+body.light-mode .image-block {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border-color: rgba(20,20,20,0.15);
+}
+
+.image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Upper Left - Large Portrait */
+.block-ul {
+  width: 22vw;
+  height: 32vw;
+  top: 8%;
+  left: 7%;
+  transform: rotate(-1deg);
+}
+
+/* Lower Left - Wide Horizontal */
+.block-ll {
+  width: 26vw;
+  height: 14vw;
+  bottom: 8%;
+  left: 4%;
+  transform: rotate(1deg);
+}
+
+/* Upper Right - Large Portrait */
+.block-ur {
+  width: 24vw;
+  height: 30vw;
+  top: 10%;
+  right: 7%;
+  transform: rotate(1deg);
+}
+
+/* Lower Right - Wide Horizontal */
+.block-lr {
+  width: 24vw;
+  height: 14vw;
+  bottom: 12%;
+  right: 5%;
+  transform: rotate(-1deg);
+}
+
+/* -------------------------------------
+   EDGE ANNOTATIONS
+-------------------------------------- */
+.edge-anno {
+  position: absolute;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--base-200);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  opacity: 0.7;
+}
+
+.anno-line {
+  background-color: var(--base-100);
+  opacity: 0.2;
+}
+
+body.light-mode .anno-line {
+  opacity: 0.3;
+}
+
+/* Top Left */
+.anno-01 {
+  top: 15%;
+  left: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.anno-01 .anno-line { width: 3vw; height: 1px; margin: 8px 0; }
+
+/* Bottom Left */
+.anno-02 {
+  bottom: 15%;
+  left: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.anno-02 .anno-line { width: 3vw; height: 1px; margin: 8px 0; }
+
+/* Top Right */
+.anno-03 {
+  top: 15%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.anno-03 .anno-line { width: 3vw; height: 1px; margin: 8px 0; }
+
+/* Bottom Right */
+.anno-04 {
+  bottom: 15%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.anno-04 .anno-line { width: 3vw; height: 1px; margin: 8px 0; }
+
+@media (max-width: 900px) {
+  .collage-container {
+    opacity: 0.15; /* Dim images on mobile to keep text legible */
+  }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sub Sanctuary | Premium Woodworking</title>
-    <link rel="icon" href="/global/site_logo.png" type="image/png" />
+    <link rel="icon" href="/global/site_logo.webp" type="image/png" />
     <meta name="author" content="Sub Sanctuary" />
 
     <link rel="stylesheet" href="/globals.css" />
@@ -13,7 +13,14 @@
     <link rel="stylesheet" href="/css/transition.css" />
     <link rel="stylesheet" href="/css/preloader.css" />
     <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/bento-cta.css" />
+    <link rel="stylesheet" href="/css/workshop-collage.css" />
     <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/sticky-cards.css" />
+    <link rel="stylesheet" href="/css/three-pillars.css" />
+    <link rel="stylesheet" href="/css/three-pillars-editorial.css" />
+    <link rel="stylesheet" href="/css/corridor.css" />
+    <link rel="stylesheet" href="/css/bento.css" />
   </head>
   <body>
     <div class="preloader-overlay">
@@ -65,10 +72,11 @@
         <div class="nav-items">
           <div class="nav-item"><a href="/">Home</a></div>
           <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/about2.html">About 2</a></div>
           <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
           <div class="nav-item"><a href="/shop">Shop</a></div>
           <div class="nav-item"><a href="/engraving">Engraving</a></div>
-          <div class="nav-item"><a href="/contact">Custom Orders</a></div>
+          <div class="nav-item"><a href="/pendants">Custom Pendants</a></div>
           
           <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
             <span class="mode-icon">☼</span>
@@ -81,46 +89,45 @@
       <div class="hero-container">
         <div class="hero-img-container">
           <div class="hero-img">
-            <img src="/index/hero.png" alt="Sub Sanctuary Hero Image" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="/HERO/hero.webp" alt="Sub Sanctuary Hero Image" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-
           <div class="hero-img-overlay"></div>
-
           <div class="hero-img-gradient"></div>
         </div>
 
         <div class="hero-content">
-          <div class="container">
-            <div class="hero-content-nav">
-              <div class="hero-timer">
-                <p>SUB SANCTUARY — PITTSBURGH, PA</p>
-              </div>
+          <div class="container" style="justify-content: space-between;">
+            <div>
+              <div class="hero-badge" style="display: inline-block;">SUBSANCTUARY</div>
             </div>
 
-            <div class="hero-content-header">
-              <h1 data-animate-variant="slide" data-animate-delay="0.6">
-                <span class="hero-line-position">Functional art from hand to machine:</span><span class="hero-line-proof">Cut, engraved,<br class="hero-mobile-break" /> inlaid in wood.</span>
-              </h1>
-            </div>
-
-            <div class="hero-content-footer">
-              <div class="hero-footer-copy">
-                <p
-                  class="bodyCopy"
-                  data-animate-variant="slide"
-                  data-animate-delay="0.75"
-                >
-                  We make functional laser-engraved artwork and products, with a focus in sustainably sourced wood.
-                </p>
+            <div class="hero-content-bottom">
+              <div class="hero-content-header">
+                <h1 data-animate-variant="slide" data-animate-delay="0.6">
+                  <span class="hero-title-main">LASER ENGRAVED ART</span>
+                  <span class="hero-title-sub">[MELDING HAND, HEART & MACHINE]</span>
+                </h1>
               </div>
 
-              <div class="hero-callout">
-                <a href="/shop.html" class="hero-btn hero-btn-primary" data-animate-variant="flicker" data-animate-delay="0.85">
-                  SHOP READY TO SHIP
-                </a>
-                <a href="/contact.html" class="hero-btn hero-btn-secondary" data-animate-variant="flicker" data-animate-delay="1">
-                  CUSTOM ENGRAVING
-                </a>
+              <div class="hero-content-footer">
+                <div class="hero-footer-copy">
+                  <p
+                    class="bodyCopy"
+                    data-animate-variant="slide"
+                    data-animate-delay="0.75"
+                  >
+                    We make functional laser-engraved artwork and products, with a focus in sustainably sourced wood.
+                  </p>
+                </div>
+
+                <div class="hero-callout">
+                  <a href="/shop.html" class="hero-btn hero-btn-primary" data-animate-variant="flicker" data-animate-delay="0.85">
+                    SHOP READY TO SHIP
+                  </a>
+                  <a href="/contact.html" class="hero-btn hero-btn-secondary" style="background-color: #111; color: var(--base-100); border: none;" data-animate-variant="flicker" data-animate-delay="1">
+                    CUSTOM ENGRAVING
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -128,122 +135,206 @@
       </div>
     </section>
 
-    <section class="intro">
-      <div class="container">
-        <div class="stats-container">
-          <div class="stat">
-            <div class="stat-copy">
-              <div class="stats-copy-label"><p>Wood Species Used</p></div>
-              <div class="stats-copy-count"><h3>12</h3></div>
-            </div>
-          </div>
 
-          <div class="stat">
-            <div class="stat-copy">
-              <div class="stats-copy-label"><p>Pieces Crafted</p></div>
-              <div class="stats-copy-count"><h3>64</h3></div>
-            </div>
-          </div>
 
-          <div class="stat">
-            <div class="stat-copy">
-              <div class="stats-copy-label"><p>Gallery Shows</p></div>
-              <div class="stats-copy-count"><h3>23</h3></div>
-            </div>
+    <section class="three-pillars-editorial">
+      <div class="bg-lines">
+        <div class="line-arc"></div>
+      </div>
+      
+      <div class="tpe-container">
+        <!-- Meta Header -->
+        <div class="tpe-meta-top">
+          <div class="meta-left">
+            THREE<br>WAYS<br>TO OWN<br>A PIECE.
           </div>
-
-          <div class="stat">
-            <div class="stat-copy">
-              <div class="stats-copy-label"><p>Current Projects</p></div>
-              <div class="stats-copy-count"><h3>09</h3></div>
-            </div>
+          <div class="meta-right">
+            WOOD<br>IDEAS<br>PEOPLE<br>SPACES.<br>
+            <div class="arrow-line"></div>
           </div>
         </div>
+        
+        <!-- Cards Grid -->
+        <div class="tpe-cards-grid">
+          
+          <!-- Card 1 -->
+          <a href="/shop" class="tpe-card">
+            <div class="tpe-card-img-wrapper">
+              <span class="tpe-card-num">01</span>
+              <span class="tpe-card-tags">LAMPS<br>PENDANTS<br>OBJECTS<br>SMALL BATCH</span>
+              <img src="/lab/935166f00b9d50327b6c84096b0687191d8aab90.webp" alt="Ready to Ship Lamp" onerror="this.src='/global/site_logo.webp'">
+            </div>
+            <div class="tpe-card-content">
+              <div>
+                <h2>READY TO SHIP</h2>
+                <p>Explore finished pieces, ready to ship<br>and bring into your space.</p>
+              </div>
+              <div class="tpe-card-footer">
+                <span class="tpe-cta">BROWSE THE COLLECTION &rarr;</span>
+                <svg class="tpe-mark" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13H5.5L12 6.5z"/></svg>
+              </div>
+            </div>
+          </a>
 
-        <div class="intro-header">
-          <h1 data-animate-variant="slide" data-animate-on-scroll="true">
-            The Technique
-          </h1>
-        </div>
+          <!-- Card 2 -->
+          <a href="/engraving" class="tpe-card">
+            <div class="tpe-card-img-wrapper">
+              <span class="tpe-card-num">02</span>
+              <span class="tpe-card-tags">NAMES<br>PATTERNS<br>LOGOS<br>IDEAS</span>
+              <img src="/lab/ef81c36c140593e2c81212592fa2145cc35d4490%20(2).jpg" alt="Custom Laser Engraving" onerror="this.src='/global/site_logo.webp'">
+            </div>
+            <div class="tpe-card-content">
+              <div>
+                <h2>CUSTOM ENGRAVING</h2>
+                <p>Add your own story. We engrave<br>names, patterns, logos and more.</p>
+              </div>
+              <div class="tpe-card-footer">
+                <span class="tpe-cta">START ENGRAVING &rarr;</span>
+                <svg class="tpe-mark" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13H5.5L12 6.5z"/></svg>
+              </div>
+            </div>
+          </a>
 
-        <div class="intro-copy">
-          <div class="intro-copy-wrapper">
-            <h3>
-              Parquetry. Everything locks together.<br/><br/>
-              Parquetry is when everything fits together within a space or a setting — every piece locking itself into the next. Marquetry is closer to painting with wood. Ancient inlay techniques, melding hand, heart and machine.<br/><br/>
-              The work follows the unseen forces that decide wood grain can appear as rock, and that water can sculpt either in near-perfect symmetry. What sets it apart from other laser-cut art is the depth and detail of the design itself. People comment on the precision before they comment on anything else.
-            </h3>
-          </div>
+          <!-- Card 3 -->
+          <a href="/portfolio" class="tpe-card">
+            <div class="tpe-card-img-wrapper">
+              <span class="tpe-card-num">03</span>
+              <span class="tpe-card-tags">LARGER PIECES<br>INSTALLATIONS<br>BESPOKE WORK<br>COLLABORATIONS</span>
+              <img src="/lab/3e3f23891d2a22951b9cf0742e175974af3a5b76.webp" alt="Commission a Piece" onerror="this.src='/global/site_logo.webp'">
+            </div>
+            <div class="tpe-card-content">
+              <div>
+                <h2>COMMISSION A PIECE</h2>
+                <p>Have something specific in mind?<br>Let's create a piece for your space.</p>
+              </div>
+              <div class="tpe-card-footer">
+                <span class="tpe-cta">REQUEST A COMMISSION &rarr;</span>
+                <svg class="tpe-mark" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13H5.5L12 6.5z"/></svg>
+              </div>
+            </div>
+          </a>
+          
         </div>
       </div>
     </section>
 
-    <section class="three-doors">
-      <div class="container">
-        <div class="doors-grid">
-          <div class="door-card">
-            <div class="door-eyebrow">DOOR 1</div>
-            <h3 class="door-title">Ready to ship</h3>
-            <p class="door-desc bodyCopy">Grinders, coasters, lamps, wallets, trays. Pick a design, pick a tone, it goes out the door.</p>
+    <section class="bento-gallery-section" id="bento-gallery">
+      <div class="bento-header">
+        <h2 data-animate-variant="slide" data-animate-on-scroll="true">VIEW GALLERY</h2>
+      </div>
+
+      <div class="bento-grid">
+        <!-- 1. Lamps (1x2) -->
+        <a href="/portfolio" class="bento-block bento-1" style="transition-delay: 0.1s;">
+          <img src="/global/pendants-new.webp" alt="Featured Work" class="bento-bg-image" onerror="this.src='/global/site_logo.webp'">
+          <div class="bento-overlay"></div>
+          <span class="bento-index">[ 01 ]</span>
+          <div class="bento-content">
+            <h3 class="bento-title">LAMPS</h3>
+            <span class="bento-meta">CUSTOM LIGHTING / WOOD / LASER ENGRAVED</span>
           </div>
-          <div class="door-card">
-            <div class="door-eyebrow">DOOR 2</div>
-            <h3 class="door-title">Custom engraving</h3>
-            <p class="door-desc bodyCopy">Send us a file and a product — or let us source the product. Magnets, dog tags, keychains, band merch. Almost anything laser-engravable is fair game.</p>
+          <div class="bento-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
-          <div class="door-card">
-            <div class="door-eyebrow">DOOR 3</div>
-            <h3 class="door-title">Commission a piece</h3>
-            <p class="door-desc bodyCopy">Wall art and one-of-a-kind work, built to your size, your space, your wood tone. 7-15 days.</p>
+        </a>
+
+        <!-- 2. Explore Text (1x1) -->
+        <a href="/about" class="bento-block bento-2" style="transition-delay: 0.2s;">
+          <span class="bento-index">[ 02 ]</span>
+          <div class="bento-content text-only">
+            <h3>Explore</h3>
+            <p>Custom pieces for modern living spaces and meaningful spaces.</p>
           </div>
-        </div>
+          <div class="bento-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <!-- 3. Engraved Objects (1x1) -->
+        <a href="/shop" class="bento-block bento-3" style="transition-delay: 0.3s;">
+          <img src="/Web/420/laser-engraved-wood-box-star-crescent-moon-leather-strap-420-subsanctuary-2.webp" alt="Engraved Objects" class="bento-bg-image" onerror="this.src='/global/site_logo.webp'">
+          <div class="bento-overlay"></div>
+          <span class="bento-index">[ 03 ]</span>
+          <div class="bento-content">
+            <h3 class="bento-title">ENGRAVED OBJECTS</h3>
+            <span class="bento-meta">TRAYS / BOXES / TABLETOP</span>
+          </div>
+          <div class="bento-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <!-- 4. Process Text (2x1) -->
+        <a href="/engraving" class="bento-block bento-5" style="transition-delay: 0.4s;">
+          <span class="bento-index">[ 04 ]</span>
+          <div class="bento-content text-only">
+            <h3>Process</h3>
+            <p>From raw material to refined objects.</p>
+          </div>
+          <div class="bento-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <!-- 5. Custom Pendants Image (2x1) -->
+        <a href="/pendants" class="bento-block bento-6" style="transition-delay: 0.5s;">
+          <img src="/global/lamps-new.webp" alt="Custom Pendants" class="bento-bg-image" onerror="this.src='/global/site_logo.webp'">
+          <div class="bento-overlay"></div>
+          <span class="bento-index">[ 05 ]</span>
+          <div class="bento-content">
+            <h3 class="bento-title">CUSTOM PENDANTS</h3>
+            <span class="bento-meta">JEWELRY / WOOD / METAL</span>
+          </div>
+          <div class="bento-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      </div>
+      
+      <div style="display: flex; justify-content: center; align-items: center; max-width: 1400px; margin: 1rem auto 0; padding: 0 2rem;">
+        <a href="/portfolio" style="background-color: var(--orange, #d36a3e); color: #121212; padding: 1rem 2.5rem; border-radius: 4px; text-decoration: none; font-family: 'Geist Mono', monospace; font-size: 0.8rem; text-transform: uppercase; display: flex; align-items: center; gap: 1rem;">
+          VIEW FULL GALLERY &rarr;
+        </a>
       </div>
     </section>
 
-    <section class="featured-missions-header">
-      <h1 data-animate-variant="slide" data-animate-on-scroll="true">
-        Selected <br />
-        Work
-      </h1>
-    </section>
-
-    <section class="featured-missions">
-      <div class="featured-missions-list">
-        <a href="/portfolio" class="featured-missions-item">
-          <p>01 / 05</p>
-          <h3>Ready to ship</h3>
-          <div class="featured-mission-item-img">
-            <img src="/index/highlight_img_01.jpg" alt="" />
+    <section class="sticky-cards-section" id="selected-works">
+      <div class="sticky-header" style="position: absolute; top: 15%; left: 0; right: 0; text-align: center; z-index: 10;">
+        <h2 style="font-family: 'Geist Mono', monospace; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--base-200); text-transform: uppercase;">SELECTED WORK</h2>
+      </div>
+      <div class="sticky-cards">
+        <div class="card" id="card-1">
+          <div class="col">
+            <h1>Ready to ship</h1>
           </div>
-          <p>[ View Details ]</p>
-        </a>
-
-        <a href="/engraving" class="featured-missions-item">
-          <p>02 / 05</p>
-          <h3>Custom engraving</h3>
-          <div class="featured-mission-item-img">
-            <img src="/index/highlight_img_02.jpg" alt="" />
+          <div class="col">
+            <img src="/selected%20work/c1c139f807628afe17a8ec26b62f3f7b28744980.jpg" alt="Ready to ship" onerror="this.src='/global/site_logo.webp'" />
           </div>
-          <p>[ View Details ]</p>
-        </a>
-
-        <a href="/contact" class="featured-missions-item">
-          <p>03 / 05</p>
-          <h3>Commission a piece</h3>
-          <div class="featured-mission-item-img">
-            <img src="/index/highlight_img_03.jpg" alt="" />
+        </div>
+        <div class="card" id="card-2">
+          <div class="col">
+            <h1>Custom engraving</h1>
           </div>
-          <p>[ View Details ]</p>
-        </a>
-
-        <a href="/about" class="featured-missions-item">
-          <p>04 / 05</p>
-          <h3>A little loop of reuse</h3>
-          <div class="featured-mission-item-img">
-            <img src="/index/highlight_img_04.jpg" alt="" />
+          <div class="col">
+            <img src="/selected%20work/b6293405ecd288b4e15783666464850a16235389.jpg" alt="Custom engraving" onerror="this.src='/global/site_logo.webp'" />
           </div>
-          <p>[ View Details ]</p>
-        </a>
+        </div>
+        <div class="card" id="card-3">
+          <div class="col">
+            <h1>Commission a piece</h1>
+          </div>
+          <div class="col">
+            <img src="/selected%20work/d076903d720caef81c9e427dafa973d3eaffa325.jpg" alt="Commission a piece" onerror="this.src='/global/site_logo.webp'" />
+          </div>
+        </div>
+        <div class="card" id="card-4">
+          <div class="col">
+            <h1>Design a pendant</h1>
+          </div>
+          <div class="col">
+            <img src="/selected%20work/636a060e9eab945f3a9831b13bc4ac00849fee45.jpg" alt="Design a pendant" onerror="this.src='/global/site_logo.webp'" />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -273,87 +364,50 @@
       </div>
     </section>
 
-    <section class="cta">
-      <div class="cta-content">
-        <div class="cta-logo">
-          <img src="/index/logo_cta.png" alt="" />
-        </div>
-
-        <div class="cta-copy" style="width: 50%; max-width: 800px; text-align: center;">
-          <h3 style="color: var(--base-100); margin-bottom: 1rem;">Start a custom commission</h3>
-          <p class="bodyCopy lg">
-            Tell us the space and the tone and we'll take it from there. Or take the current portfolio with you — everything available right now, with sizes and prices.
-          </p>
-        </div>
-
-        <div class="cta-buttons" style="display: flex; gap: 1rem;">
-          <a href="/contact" class="hero-btn hero-btn-primary">
-            Request a Quote
-          </a>
-          <a href="/portfolio" class="hero-btn hero-btn-secondary">
-            Download the Portfolio
-          </a>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <div class="cta-card cta-card-left">
-          <div class="cta-card-frame">
-            <div class="cta-card-img">
-              <img src="/index/cta_img_01.jpg" alt="" />
+    <section class="bento-cta-section">
+      <div class="bento-cta-grid">
+        
+        <!-- Main Panel -->
+        <div class="bento-panel panel-main">
+          <img src="/Web/c/5d9c8c351c74e65565c079b3774563cc0256fbab.webp" class="bento-img" alt="Custom Commission" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-tags">IDEAS.<br>MATERIALS.<br>FORMS.<br>STORIES.</div>
+            <h2>START A<br>CUSTOM COMMISSION</h2>
+            <p>Tell us the space and the tone and we'll take it from there. Or take the current portfolio with you &mdash; everything available right now, with sizes and prices.</p>
+            <div class="bento-buttons">
+              <a href="/contact" class="btn-solid-orange">REQUEST A QUOTE &rarr;</a>
+              <a href="/portfolio" class="btn-outline">DOWNLOAD THE PORTFOLIO &darr;</a>
             </div>
-            <div class="cta-card-gradient"></div>
           </div>
         </div>
 
-        <div class="cta-card cta-card-right">
-          <div class="cta-card-frame">
-            <div class="cta-card-img">
-              <img src="/index/cta_img_02.jpg" alt="" />
+        <!-- Top Right -->
+        <div class="bento-panel panel-tr">
+          <img src="/Web/c/11d9d5e68d1d7c037df958caf1aee17aa486cd49 (1).webp" class="bento-img" alt="Light and Form" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-label">
+              <span class="num">01</span>
+              <span class="text">LIGHT<br>+ FORM</span>
             </div>
-            <div class="cta-card-gradient"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <div class="cta-card cta-card-left">
-          <div class="cta-card-frame">
-            <div class="cta-card-img">
-              <img src="/index/cta_img_03.jpg" alt="" />
-            </div>
-            <div class="cta-card-gradient"></div>
           </div>
         </div>
 
-        <div class="cta-card cta-card-right">
-          <div class="cta-card-frame">
-            <div class="cta-card-img">
-              <img src="/index/cta_img_04.jpg" alt="" />
+        <!-- Middle Right -->
+        <div class="bento-panel panel-mr">
+          <img src="/Web/c/e174ff0119f657168ed49ad49976b9beaf609803 (1).webp" class="bento-img" alt="Engraving and Detail" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-label">
+              <span class="num">02</span>
+              <span class="text">ENGRAVING<br>+ DETAIL</span>
             </div>
-            <div class="cta-card-gradient"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <div class="cta-card cta-card-left">
-          <div class="cta-card-frame">
-            <div class="cta-card-img">
-              <img src="/index/cta_img_05.jpg" alt="" />
-            </div>
-            <div class="cta-card-gradient"></div>
           </div>
         </div>
 
-        <div class="cta-card cta-card-right">
-          <div class="cta-card-frame">
-            <div class="cta-card-img">
-              <img src="/index/cta_img_06.jpg" alt="" />
-            </div>
-            <div class="cta-card-gradient"></div>
-          </div>
-        </div>
+
+
       </div>
     </section>
 
@@ -436,7 +490,30 @@
     <script type="module" src="/js/interactive-grid.js"></script>
     <script type="module" src="/js/transition.js"></script>
     <script type="module" src="/js/home.js"></script>
-    <script type="module" src="/js/cta.js"></script>
     <script type="module" src="/js/animated-copy.js"></script>
+    <script type="module" src="/js/three-pillars.js"></script>
+    <script type="module" src="/js/three-pillars-editorial.js"></script>
+    <script type="module" src="/js/sticky-cards.js"></script>
+    <script type="module" src="/js/cta.js"></script>
+    <script type="module" src="/js/workshop-collage.js"></script>
+
+    <!-- Custom Scroll Reveal for Bento Blocks -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const blocks = document.querySelectorAll('.bento-block');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add('is-visible');
+              }, 50);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        blocks.forEach(b => observer.observe(b));
+      });
+    </script>
   </body>
 </html>

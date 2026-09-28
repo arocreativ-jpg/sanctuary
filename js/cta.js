@@ -42,7 +42,7 @@ function initCtaCopyAnimation() {
 
   const scrollTriggerSettings = {
     trigger: ".cta",
-    start: "top 25%",
+    start: "top 75%",
     toggleActions: "play reverse play reverse",
   };
 
@@ -99,7 +99,7 @@ function initCtaCardsAnimation() {
 function initCtaLogoAnimation() {
   const scrollTriggerSettings = {
     trigger: ".cta",
-    start: "top 25%",
+    start: "top 75%",
     toggleActions: "play reverse play reverse",
   };
 
@@ -118,7 +118,7 @@ function initCtaButtonAnimation() {
 
   const scrollTriggerSettings = {
     trigger: ".cta",
-    start: "top 25%",
+    start: "top 75%",
     toggleActions: "play reverse play reverse",
   };
 

@@ -1,0 +1,704 @@
+/* portfolio-v2.css */
+
+body {
+  color: var(--base-200);
+}
+
+.portfolio-page-wrapper {
+  padding: 0;
+  max-width: 1800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.port-block {
+  background-color: var(--base-300);
+  border: 1px solid var(--base-200);
+  margin: 0 1rem 2rem 1rem;
+  padding: 3rem 4rem;
+  /* Chamfered corners */
+  clip-path: polygon(
+    16px 0,
+    100% 0,
+    100% calc(100% - 16px),
+    calc(100% - 16px) 100%,
+    0 100%,
+    0 16px
+  );
+}
+
+/* HERO SECTION */
+.port-hero {
+  margin-top: 1rem;
+  padding: 0;
+  position: relative;
+  height: calc(100vh - 3rem); /* Spans the exact full window height */
+  min-height: 600px;
+}
+
+.port-hero-img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 1;
+}
+
+.port-hero-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.port-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem 4rem;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: linear-gradient(to top, rgba(18,18,18,0.9) 0%, rgba(18,18,18,0) 100%);
+}
+
+.port-hero-left h1 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(6rem, 12vw, 10rem);
+  line-height: 0.8;
+  color: #f2eeda;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.port-hero-left .port-hero-badge {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: rgba(242, 238, 218, 0.8);
+  border: 1px solid rgba(242, 238, 218, 0.3);
+  padding: 0.3rem 0.6rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.port-hero-left p, .port-hero-right p {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: rgba(242, 238, 218, 0.65);
+  margin-top: 1rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.port-hero-right {
+  text-align: right;
+}
+
+/* HEADER BAR inside blocks */
+.port-header-bar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+.port-header-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--base-200);
+  text-transform: uppercase;
+}
+
+.port-header-desc {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--base-200);
+  max-width: 450px;
+  text-align: left;
+}
+
+/* SELECTED WORK LIST */
+.port-selected-title {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 0.9;
+  color: var(--base-100);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.port-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 4rem;
+}
+
+.port-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--base-100);
+}
+
+.port-list-item:hover {
+  border-bottom-color: var(--brand-accent, #FF5533);
+}
+
+.port-list-item-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.port-list-num {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--base-200);
+}
+
+.port-list-name {
+  font-family: 'SCHABO', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.port-list-item:hover .port-list-name {
+  transform: translateX(10px);
+  color: var(--brand-accent, #FF5533);
+}
+
+.port-list-arrow {
+  color: var(--brand-accent, #FF5533);
+  transition: transform 0.3s ease;
+}
+
+.port-list-item:hover .port-list-arrow {
+  transform: translate(5px, -5px);
+}
+
+/* JEWELRY SECTION */
+.port-jewelry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.port-jewelry-left h2 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(5rem, 9vw, 8rem);
+  line-height: 0.85;
+  color: var(--base-100);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.port-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--brand-accent, #FF5533);
+  color: var(--brand-accent, #FF5533);
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.port-btn-outline:hover {
+  background-color: var(--brand-accent, #FF5533);
+  color: #121212;
+}
+
+.port-jewelry-mid p {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--base-200);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.port-jewelry-mid p.muted {
+  color: rgba(242, 238, 218, 0.4);
+}
+
+.port-jewelry-right {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border: 1px solid rgba(242, 238, 218, 0.15);
+}
+
+.port-jewelry-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.port-jewelry-right:hover img {
+  transform: scale(1.03);
+}
+
+/* COMMISSION & FOOTER */
+.port-comm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.port-comm-left h2 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(4rem, 8vw, 6.5rem);
+  line-height: 0.85;
+  color: var(--base-100);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.port-comm-left p {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--base-200);
+  text-transform: uppercase;
+  max-width: 400px;
+}
+
+.port-comm-right p {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--base-200);
+  margin-bottom: 2rem;
+}
+
+.port-footer-links {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(242, 238, 218, 0.15);
+}
+
+.port-footer-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  color: var(--base-200);
+  text-decoration: none;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.port-footer-link:hover {
+  color: var(--brand-accent, #FF5533);
+}
+
+.port-comm-form {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+.port-comm-form label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--base-200);
+  text-transform: uppercase;
+}
+.port-comm-form-row {
+  display: flex;
+  gap: 1rem;
+}
+.port-comm-form input {
+  flex-grow: 1;
+  background: transparent;
+  border: 1px solid rgba(242, 238, 218, 0.15);
+  padding: 1rem 1.5rem;
+  color: var(--base-100);
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+}
+.port-comm-form input:focus {
+  outline: none;
+  border-color: var(--brand-accent, #FF5533);
+}
+.port-comm-form button {
+  background-color: var(--brand-accent, #FF5533);
+  color: #121212;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 250px;
+  transition: opacity 0.3s ease;
+}
+.port-comm-form button:hover {
+  opacity: 0.9;
+}
+
+/* BOTTOM FOOTER LINE */
+.port-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgba(242, 238, 218, 0.15);
+  padding-top: 2rem;
+}
+
+.port-footer-meta {
+  display: flex;
+  gap: 4rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--base-200);
+  text-transform: uppercase;
+}
+
+.port-footer-logo {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(3rem, 5vw, 4rem);
+  color: var(--base-100);
+  line-height: 0.8;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .port-jewelry-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .port-jewelry-right {
+    grid-column: 1 / -1;
+  }
+  .port-comm-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .port-block {
+    padding: 2rem 1.5rem;
+    margin: 0 0.5rem 1rem 0.5rem;
+  }
+  .port-list-grid {
+    grid-template-columns: 1fr;
+  }
+  .port-hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+  }
+  .port-header-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .port-jewelry-grid {
+    grid-template-columns: 1fr;
+  }
+  .port-comm-form-row {
+    flex-direction: column;
+  }
+  .port-footer-meta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .port-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+/* =========================================
+   ARCHIVE FOLDERS (SELECTED WORK REDESIGN)
+   ========================================= */
+
+.archive-wall {
+  padding-bottom: 2rem;
+}
+
+.archive-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.archive-header-left p {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--base-200);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.archive-header-left h1 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(5rem, 8vw, 7rem);
+  line-height: 0.85;
+  color: var(--base-100);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.archive-header-mid {
+  max-width: 450px;
+  margin: 0 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.archive-header-mid p {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--base-200);
+}
+
+.archive-header-right {
+  padding-bottom: 0.5rem;
+}
+
+.archive-view-link {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--base-200);
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.archive-view-link:hover {
+  color: var(--brand-accent, #FF5533);
+}
+
+/* GRID SETUP */
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 1rem;
+  margin-top: 2rem;
+  align-items: end;
+  justify-items: center;
+}
+
+.archive-folder {
+  position: relative;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 26vh;
+  max-height: 240px;
+  aspect-ratio: 1 / 1.12; /* Perfectly square-like vertical folder */
+  text-decoration: none;
+  cursor: pointer;
+  /* Initial hidden state for scroll reveal */
+  opacity: 0;
+  transform: translateY(30px);
+  /* The transition handles both the reveal and normalizes for hover */
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+/* Revealed state triggered by JS */
+.archive-folder.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtly imperfect heights for editorial organic feel */
+.archive-folder:nth-child(2) { height: 28vh; max-height: 260px; aspect-ratio: 1 / 1.18; }
+.archive-folder:nth-child(4) { height: 24vh; max-height: 220px; aspect-ratio: 1 / 1.05; }
+.archive-folder:nth-child(7) { height: 27vh; max-height: 250px; aspect-ratio: 1 / 1.15; }
+.archive-folder:nth-child(9) { height: 25vh; max-height: 230px; aspect-ratio: 1 / 1.08; }
+
+/* THE PHOTOGRAPH (Behind the folder) */
+.folder-image-wrapper {
+  position: absolute;
+  bottom: 10px;
+  left: 6%;
+  width: 88%;
+  height: 60%;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1;
+  transform-origin: bottom center;
+  /* Initial subtle shadow so it separates from grid wall */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              height 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.6s ease;
+}
+
+.folder-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: #222;
+}
+
+/* THE FRONT FOLDER FLAP */
+.folder-front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-color: var(--brand-accent, #FF5533);
+  z-index: 2;
+  
+  /* Physical File Tab Shape */
+  clip-path: polygon(
+    0 18px,
+    28% 18px,
+    38% 30px,
+    100% 30px,
+    100% 100%,
+    0 100%
+  );
+  
+  padding: 40px 1rem 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #121212;
+  
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.4)) drop-shadow(0 0px 0px rgba(0,0,0,0));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.folder-front::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.05) 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.folder-num {
+  font-family: 'Geist Mono', monospace;
+  font-size: clamp(0.5rem, 1vw, 0.6rem);
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.folder-title {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.folder-category {
+  font-family: 'Geist Mono', monospace;
+  font-size: clamp(0.35rem, 0.8vw, 0.45rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin: 0;
+  border-top: 1px solid rgba(18,18,18,0.2);
+  padding-top: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folder-arrow {
+  opacity: 0;
+  transform: translate(-10px, 10px);
+  transition: all 0.4s ease;
+}
+
+/* ================================= */
+/* CORE HOVER INTERACTION            */
+/* ================================= */
+
+.archive-folder:hover .folder-image-wrapper {
+  transform: translateY(-50px);
+  height: 90%; 
+  box-shadow: 0 25px 45px rgba(0,0,0,0.9);
+}
+
+.archive-folder:hover .folder-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.archive-folder:hover .folder-front {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 25px 35px rgba(0,0,0,0.7)) drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+.archive-folder:hover .folder-title {
+  color: #000;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.archive-folder:hover .folder-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* RESPONSIVE FOLDERS */
+@media (max-width: 1400px) {
+  .archive-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 1024px) {
+  .archive-grid { grid-template-columns: repeat(3, 1fr); }
+  .archive-header { flex-direction: column; align-items: flex-start; gap: 2rem; }
+  .archive-header-mid { margin: 0; }
+}
+@media (max-width: 768px) {
+  .archive-grid { grid-template-columns: repeat(2, 1fr); }
+  .folder-front { clip-path: polygon(0 20px, 35% 20px, 45% 35px, 100% 35px, 100% 100%, 0 100%); padding-top: 45px; }
+}
+@media (max-width: 480px) {
+  .archive-grid { grid-template-columns: 1fr; }
+}

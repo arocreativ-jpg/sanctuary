@@ -6,19 +6,30 @@
 }
 
 .hero.engraving-hero .hero-container .hero-img-container {
-  background-color: var(--base-500);
+  /* Removed solid background, image is now used in HTML */
 }
 
 .hero.engraving-hero .hero-container .hero-content .container {
   justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 4rem; /* Add padding to lift from the absolute bottom */
 }
 
 .hero.engraving-hero .hero-content-header h1 {
-  color: var(--base-400);
+  color: var(--base-100) !important;
   font-family: 'SCHABO', sans-serif;
-  font-size: clamp(4rem, 8vw, 8rem);
+  font-size: clamp(3rem, 6vw, 6rem); /* Reduced to match the target image proportion */
+  font-weight: 400; /* Ensure correct SCHABO weight */
   text-transform: uppercase;
-  line-height: 0.85;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+/* Override globals.css light-mode hero text colors which force cream (#f2eeda) */
+body.light-mode .hero.engraving-hero h1,
+body.light-mode .hero.engraving-hero p {
+  color: #141414 !important; /* Force dark text on the light background */
 }
 
 .hero.engraving-hero .hero-callout p {
@@ -46,7 +57,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 6rem;
+  padding: 3rem 4rem;
   background-color: var(--base-300);
   clip-path: polygon(
     4rem 0%,
@@ -64,7 +75,7 @@
 .engraving-section {
   display: flex;
   flex-direction: column;
-  padding: 4rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid rgba(242, 238, 218, 0.15);
 }
 
@@ -81,7 +92,7 @@
 .engraving-tags {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .engraving-tags p {
@@ -108,7 +119,7 @@
   color: var(--base-100);
   font-size: clamp(1.25rem, 1.5vw, 1.5rem);
   line-height: 1.4;
-  font-family: 'Host Grotesk', sans-serif;
+  font-family: 'Geist Mono', monospace;
   max-width: 1200px;
   font-weight: 300;
 }
@@ -161,7 +172,7 @@
 }
 
 .engraving-list-grid .grid-col {
-  padding: 3rem 2rem;
+  padding: 1.5rem 2rem;
   border-right: 1px solid rgba(242, 238, 218, 0.15);
   border-bottom: 1px solid rgba(242, 238, 218, 0.15);
 }
@@ -178,7 +189,7 @@
 }
 .engraving-list-grid .title-col h1 {
   font-family: 'SCHABO', sans-serif;
-  font-size: clamp(4rem, 8vw, 8rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   text-transform: uppercase;
   color: var(--base-100);
   line-height: 0.85;
@@ -194,7 +205,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--base-100);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.5;
 }
 .engraving-list-grid .desc-col p.bodyCopy {
@@ -229,12 +240,12 @@
   line-height: 1.5;
 }
 .engraving-list-grid .side-text.top-text {
-  top: 2rem;
-  right: 2rem;
+  top: 1.5rem;
+  right: 1.5rem;
   text-align: right;
 }
 .engraving-list-grid .side-text.bottom-text {
-  bottom: 2rem;
+  bottom: 1.5rem;
   left: -12rem;
   text-align: left;
 }
@@ -249,10 +260,10 @@
   margin: 0;
 }
 .engraving-list-grid .item-list li {
-  padding: 1rem 0;
+  padding: 0.65rem 0;
   border-bottom: 1px solid rgba(242, 238, 218, 0.15);
   font-family: 'Geist Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: flex;
@@ -273,7 +284,9 @@
 .engraving-list-grid .grid-gallery img {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background-color: var(--base-400);
   border-right: 1px solid rgba(242, 238, 218, 0.15);
 }
 .engraving-list-grid .grid-gallery img:last-child {
@@ -293,27 +306,28 @@
 
 /* Promise Section */
 .engraving-promise h3 {
-  font-family: 'WDXL Lubrifont SC', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-family: 'SCHABO', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
   color: var(--base-100);
-  margin-bottom: 2rem;
-  line-height: 1.2;
+  margin-bottom: 1rem;
+  line-height: 0.9;
 }
 
 .engraving-promise p {
   color: var(--base-100);
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-  line-height: 1.4;
-  font-family: 'Host Grotesk', sans-serif;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   max-width: 1200px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Steps Section */
 .engraving-steps .step {
-  padding: 2rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid rgba(242, 238, 218, 0.15);
 }
 
@@ -323,43 +337,92 @@
 
 .engraving-steps .step .step-number {
   font-family: 'Geist Mono', monospace;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   color: var(--base-100);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   opacity: 0.7;
 }
 
 .engraving-steps .step p {
   color: var(--base-100);
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.75rem, 1vw, 1rem);
   line-height: 1.4;
-  font-family: 'Host Grotesk', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   max-width: 1200px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .engraving-steps .step p strong {
-  font-weight: 600;
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 500;
+  color: #f25e3d; /* Orange to match design */
+  line-height: 0.9;
+  display: block;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
 }
 
 /* Addon Sections */
+.engraving-addon-box {
+  background-color: #8c8c7f;
+  padding: 3rem 4rem;
+  border-radius: 4px;
+  max-width: 800px;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.engraving-addon-box .engraving-tags {
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.engraving-addon-box .engraving-tags p {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  color: #e5e5e5;
+}
+
 .engraving-addon h3 {
-  font-family: 'WDXL Lubrifont SC', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-family: 'SCHABO', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
   color: var(--base-100);
   margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 0.9;
+}
+
+.engraving-addon-box h3 {
+  text-align: center;
+  width: 100%;
 }
 
 .engraving-addon p {
   color: var(--base-100);
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-  line-height: 1.4;
-  font-family: 'Host Grotesk', sans-serif;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   max-width: 1200px;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.engraving-addon-box p {
+  color: #e5e5e5;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .engraving-addon .btn {
@@ -383,7 +446,7 @@
   width: 100%;
   border-radius: 0.5rem;
   padding: 1.5rem;
-  background-color: #3a3a3a; /* Dark background like contact page */
+  background-color: var(--base-300); /* Adapts to light/dark */
   color: var(--base-100);
   font-family: "Geist Mono", monospace;
   font-weight: 500;
@@ -392,12 +455,13 @@
 
 .engraving-form .form-item input:focus,
 .engraving-form .form-item textarea:focus {
-  background-color: #444; /* Slightly lighter on focus */
+  background-color: var(--base-300); /* Slightly lighter on focus */
 }
 
 .engraving-form .form-item input::placeholder,
 .engraving-form .form-item textarea::placeholder {
-  color: rgba(242, 238, 218, 0.5); /* Faint beige text */
+  color: var(--base-200);
+  opacity: 0.7;
 }
 
 /* Responsive */
@@ -443,5 +507,254 @@
   }
   .engraving-list-grid .grid-gallery img:nth-child(3n) {
     border-right: none;
+  }
+}
+
+/* Redesigned How It Works - Horizontal Cards */
+.engraving-process-horizontal {
+  padding: 4rem 0 2rem 0;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+}
+
+.editorial-header {
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.process-cards-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.process-card {
+  background-color: var(--base-400); /* Adapts to light/dark */
+  border: 1px solid var(--base-300); /* Adaptable border */
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 280px;
+  /* Chamfered corners (top-left and bottom-right slightly clipped) */
+  clip-path: polygon(
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%,
+    0 12px
+  );
+  /* Smooth base states for interpolation */
+  filter: drop-shadow(0 0px 0px rgba(0, 0, 0, 0)) drop-shadow(0 0px 0px rgba(0, 0, 0, 0));
+  z-index: 1;
+  
+  /* Buttery smooth easing curve */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.4s ease,
+              border-color 0.4s ease;
+              
+  /* Hardware acceleration */
+  will-change: transform, filter;
+  cursor: default;
+}
+
+.process-card:hover {
+  border-color: var(--base-100);
+  background-color: var(--base-300);
+  transform: translateY(-8px) scale(1.03);
+  filter: drop-shadow(0 25px 30px rgba(0, 0, 0, 0.8)) drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+  z-index: 10;
+}
+
+.process-card .card-top {
+  margin-bottom: 2rem;
+}
+
+.process-card .card-number {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--base-200);
+  border-bottom: 1px solid var(--base-300);
+  padding-bottom: 0.25rem;
+  display: inline-block;
+  min-width: 1.5rem;
+}
+
+.process-card .card-body {
+  flex-grow: 1;
+}
+
+.process-card .card-title {
+  font-family: 'SCHABO', sans-serif;
+  color: var(--brand-accent, #FF5533); /* Use existing orange */
+  font-size: 2.75rem;
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.process-card .card-desc {
+  font-family: 'Geist Mono', monospace;
+  color: var(--base-100); /* Warm cream */
+  font-size: 0.75rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.process-card .card-arrow {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 20px;
+  height: 20px;
+  color: var(--brand-accent, #FF5533);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.process-card:hover .card-arrow {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .process-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .process-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .process-cards-row {
+    grid-template-columns: 1fr;
+  }
+  .editorial-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .editorial-header p {
+    text-align: left !important;
+  }
+}
+
+/* Redesigned Editorial 2-Column Sections */
+.editorial-2col {
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.editorial-grid.align-center {
+  align-items: center;
+}
+
+.editorial-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-title {
+  font-family: 'SCHABO', sans-serif;
+  color: var(--base-100);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+.editorial-body {
+  font-family: 'Geist Mono', monospace;
+  color: var(--base-200);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.editorial-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.editorial-form input,
+.editorial-form textarea {
+  background-color: transparent;
+  border: 1px solid var(--base-300);
+  border-radius: 4px;
+  padding: 1.25rem 1rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--base-100);
+  width: 100%;
+}
+
+.editorial-form input::placeholder,
+.editorial-form textarea::placeholder {
+  color: var(--base-200);
+  opacity: 0.6;
+}
+
+.editorial-form input:focus,
+.editorial-form textarea:focus {
+  outline: none;
+  border-color: var(--base-200);
+}
+
+.editorial-submit {
+  background-color: var(--brand-accent, #FF5533);
+  color: #121212;
+  border: none;
+  border-radius: 4px;
+  padding: 1.25rem 1rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.editorial-submit:hover,
+.editorial-link:hover {
+  opacity: 0.9;
+}
+
+.editorial-submit svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 800px) {
+  .editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }

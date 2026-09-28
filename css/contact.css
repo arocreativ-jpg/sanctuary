@@ -26,7 +26,7 @@
 .custom-commissions-page .quote {
   font-family: 'Geist Mono', monospace;
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--base-200);
   line-height: 1.6;
   text-transform: uppercase;
   margin-top: 2rem;
@@ -171,7 +171,7 @@
 
 .commission-intro .img-side-text .small-text {
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--base-200);
   line-height: 1.6;
 }
 
@@ -195,7 +195,8 @@
 .custom-form .form-group label {
   font-family: 'Geist Mono', monospace;
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--base-100);
+  opacity: 0.5;
   text-transform: uppercase;
 }
 
@@ -212,7 +213,7 @@
 .custom-form textarea {
   width: 100%;
   background: transparent;
-  border: 1px solid rgba(242, 238, 218, 0.15);
+  border: 1px solid var(--base-300);
   padding: 1rem 1.25rem;
   color: var(--base-100);
   font-family: 'Geist Mono', monospace;
@@ -228,7 +229,8 @@
 
 .custom-form input::placeholder,
 .custom-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--base-100);
+  opacity: 0.3;
 }
 
 .input-row {
@@ -251,7 +253,7 @@
 .tone-btn,
 .etching-btn {
   background: transparent;
-  border: 1px solid rgba(242, 238, 218, 0.15);
+  border: 1px solid var(--base-300);
   padding: 1rem;
   color: var(--base-100);
   font-family: 'Geist Mono', monospace;
@@ -275,7 +277,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  border-bottom: 1px solid var(--base-300);
   padding-bottom: 2rem;
 }
 
@@ -286,7 +288,7 @@
 }
 
 .file-btn {
-  border: 1px solid rgba(242, 238, 218, 0.3);
+  border: 1px solid var(--base-300);
   padding: 0.75rem 1.5rem;
   font-family: 'Geist Mono', monospace;
   font-size: 0.8rem;
@@ -302,7 +304,8 @@
 .file-status {
   font-family: 'Geist Mono', monospace;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--base-100);
+  opacity: 0.5;
 }
 
 .submit-cta {

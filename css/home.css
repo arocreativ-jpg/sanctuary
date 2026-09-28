@@ -21,24 +21,6 @@
   width: 100%;
   height: 100%;
   background-color: var(--base-300);
-  clip-path: polygon(
-    4rem 0px,
-
-    calc(50% - 17rem) 0px,
-    calc(50% - 15.5rem) 2.75rem,
-    calc(50% + 15.5rem) 2.75rem,
-    calc(50% + 17rem) 0px,
-
-    calc(100% - 4rem) 0px,
-    100% 4rem,
-
-    100% calc(100% - 4rem),
-    calc(100% - 4rem) 100%,
-
-    4rem 100%,
-    0px calc(100% - 4rem),
-    0px 4rem
-  );
 }
 
 .hero .hero-container .hero-img-container .hero-img {
@@ -109,92 +91,74 @@
 }
 
 .hero .hero-container .hero-content .container {
-  padding: 6rem;
+  padding: 6rem 4rem 4rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  height: 100%;
 }
 
-.hero .hero-container .hero-content .container .hero-content-nav {
+.hero-badge {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.25rem 1rem;
+  border-radius: 2rem;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--base-100);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  margin-top: 1rem;
+}
+
+.hero-content-bottom {
   width: 100%;
   display: flex;
-  align-items: flex-end;
-  margin-bottom: auto;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.hero
-  .hero-container
-  .hero-content
-  .container
-  .hero-content-nav
-  div:nth-child(1) {
-  flex: 4;
+.hero-content-bottom .hero-content-header {
+  width: 100%;
+  max-width: none;
 }
 
-.hero
-  .hero-container
-  .hero-content
-  .container
-  .hero-content-nav
-  div:nth-child(2) {
-  flex: 1;
+.hero-content-bottom .hero-content-header h1 {
+  line-height: 0.85;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
-.hero .hero-container .hero-content .container .hero-content-nav .hero-timer {
-  opacity: 0;
-  will-change: opacity;
+.hero-content-bottom .hero-content-header h1 .hero-title-main {
+  display: block;
+  font-size: clamp(3rem, 7.5vw, 6.5rem);
 }
 
-.hero .hero-container .hero-content .container .hero-content-nav .hero-timer p {
-  width: 10rem;
-  height: 2rem;
+.hero-content-bottom .hero-content-header h1 .hero-title-sub {
+  display: block;
+  font-size: clamp(2.5rem, 6.25vw, 5.5rem);
+  white-space: nowrap;
+}
+
+.hero-content-bottom .hero-content-footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.hero-content-bottom .hero-footer-copy {
+  max-width: 24rem;
+}
+
+.hero-content-bottom .hero-footer-copy p {
+  line-height: 1.4;
+}
+
+.hero .hero-container .hero-content .container .hero-callout {
+  display: flex;
+  gap: 1rem;
   align-items: center;
-  background-color: rgba(242, 238, 218, 0.05);
-  border: 1px solid rgba(242, 238, 218, 0.15);
-  border-radius: 0.25rem;
-  backdrop-filter: blur(0.2rem);
-}
-
-.hero .hero-container .hero-content .container .hero-content-footer {
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-}
-
-.hero
-  .hero-container
-  .hero-content
-  .container
-  .hero-content-footer
-  div:nth-child(1) {
-  flex: 4;
-}
-
-.hero
-  .hero-container
-  .hero-content
-  .container
-  .hero-content-footer
-  div:nth-child(2) {
-  flex: 1;
-}
-
-.hero
-  .hero-container
-  .hero-content
-  .container
-  .hero-content-footer
-  .hero-footer-copy
-  p {
-  width: 50%;
-}
-
-.hero-callout {
-  display: flex;
-  gap: 0.5rem;
 }
 
 .hero-btn {
@@ -202,11 +166,11 @@
   white-space: nowrap;
   line-height: 1;
   text-align: center;
-  padding: 0.6rem 1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
-  font-family: "Host Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 0.6rem;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
@@ -215,17 +179,19 @@
 
 .hero-btn:hover {
   opacity: 0.9;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .hero-btn-primary {
   background-color: var(--base-500);
-  color: var(--base-100);
+  color: var(--base-400);
 }
 
 .hero-btn-secondary {
-  background-color: var(--base-300);
+  background-color: rgba(0, 0, 0, 0.6);
   color: var(--base-100);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
 }
 
 /* index - intro section */
@@ -250,16 +216,12 @@
 
 .intro .container .stats-container .stat {
   flex: 1;
-  background-color: var(--base-300);
-  border: 1px solid rgba(242, 238, 218, 0.15);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
 }
 
 .intro .container .stats-container .stat .stat-copy {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 .intro .container .stats-container .stat .stat-copy .stats-copy-label {
@@ -268,6 +230,11 @@
 
 .intro .container .stats-container .stat .stat-copy .stats-copy-label p {
   margin-left: 1rem;
+  text-transform: uppercase;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--base-100);
 }
 
 .intro .container .stats-container .stat .stat-copy .stats-copy-label::before {
@@ -280,6 +247,11 @@
   border-radius: 50%;
   background: var(--base-500);
   display: inline-block;
+}
+
+.intro .container .stats-container .stat .stat-copy .stats-copy-count h3 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.85;
 }
 
 .intro .container .intro-header {
@@ -309,9 +281,11 @@
 
 /* index - three doors section */
 .three-doors {
+  position: relative;
   width: 100%;
   padding: 8rem 0;
   background-color: var(--base-400);
+  z-index: 2;
 }
 
 .three-doors .container {
@@ -328,13 +302,49 @@
 }
 
 .door-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
   background-color: rgba(242, 238, 218, 0.02);
   border: 1px solid rgba(242, 238, 218, 0.1);
   border-radius: 0.5rem;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.door-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.door-card-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.door-card:hover .door-card-bg img {
+  transform: scale(1.05);
+}
+
+.door-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.6) 100%);
+}
+
+.door-card-content {
+  position: relative;
+  z-index: 1;
 }
 
 .door-card:hover {
@@ -366,8 +376,87 @@
   font-size: 1rem;
 }
 
+/* index - gallery section */
+.gallery-section {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--base-400);
+  z-index: 2;
+}
+
+.gallery-section .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-section .gallery-header {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 2rem;
+  flex-shrink: 0;
+}
+
+.gallery-section .gallery-header h1 {
+  font-family: "SCHABO", sans-serif;
+  font-size: clamp(4rem, 8vw, 6rem);
+  color: var(--base-100);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.gallery-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: 100%;
+  min-height: 0;
+}
+
+.gallery-img {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  min-height: 0;
+  border-radius: 0;
+}
+
+.gallery-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-img:hover img {
+  transform: scale(1.03);
+}
+
 @media (max-width: 900px) {
-  .doors-grid {
+  .doors-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -565,10 +654,7 @@
   margin-top: 0.15em;
 }
 
-.hero-content-header h1 {
-  font-size: clamp(2rem, 5vw, 6rem);
-  margin-bottom: 2rem;
-}
+
 
 .hero-mobile-break {
   display: none;

@@ -1,0 +1,434 @@
+/* shop-v2.css - Editorial Shop Overhaul */
+
+body {
+  color: var(--base-200);
+}
+
+/* Base Utility */
+.section-marker {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--base-200);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.display-title {
+  font-family: 'SCHABO', sans-serif;
+  text-transform: uppercase;
+  color: var(--base-100);
+  line-height: 0.85;
+}
+
+.btn-outline {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(242, 238, 218, 0.3);
+  text-decoration: none;
+  color: var(--base-100);
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #121212;
+}
+
+/* ==================================
+   1. SHOP HERO
+================================== */
+.shop-hero-block {
+  padding-top: 6rem;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid var(--base-200);
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
+.hero-split {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left .display-title {
+  font-size: clamp(5rem, 8vw, 8rem);
+  margin-bottom: 1.5rem;
+}
+
+.hero-left .subtitle {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--base-200);
+  margin-bottom: 2rem;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.hero-metadata {
+  display: flex;
+  gap: 1rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--base-200);
+  border-top: 1px solid var(--base-200);
+  border-bottom: 1px solid var(--base-200);
+  padding: 0.75rem 0;
+  max-width: fit-content;
+}
+
+.hero-metadata .slash {
+  color: var(--orange);
+  opacity: 0.5;
+}
+
+.hero-right {
+  flex: 1;
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  border: 1px solid var(--base-200);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.hero-right-meta {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--base-200);
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* ==================================
+   2. READY TO SHIP
+================================== */
+.ready-to-ship-block {
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.rts-panel {
+  display: flex;
+  background-color: var(--base-300);
+  border: 1px solid var(--base-200);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.rts-left {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.rts-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--base-300);
+  text-transform: uppercase;
+}
+
+.rts-header .dot {
+  color: var(--orange);
+}
+
+.rts-left h2 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(4rem, 6vw, 6rem);
+  text-transform: uppercase;
+  color: var(--base-100);
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.rts-desc {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--base-200);
+  line-height: 1.6;
+  max-width: 400px;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.rts-btn {
+  max-width: 250px;
+  border-color: rgba(242, 238, 218, 0.2);
+  margin-top: auto;
+}
+.rts-btn span {
+  color: var(--orange);
+}
+
+.rts-right {
+  flex: 1.2;
+  position: relative;
+  border-left: 1px solid var(--base-200);
+  background: var(--base-400);
+}
+
+.rts-image-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rts-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.rts-metadata {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border-left: 1px solid rgba(242,238,218,0.2);
+  padding-left: 0.75rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--base-300);
+  line-height: 1.8;
+}
+
+/* ==================================
+   3. EXPLORE COLLECTIONS FRAME
+================================== */
+.collections-container {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 4rem;
+}
+
+.collections-frame {
+  border: 1px solid var(--base-200);
+  background-color: var(--base-300);
+  padding: 3rem;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.frame-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.frame-index {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--base-300);
+}
+
+.frame-right-meta {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--base-300);
+  text-align: right;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.frame-title {
+  font-family: 'SCHABO', sans-serif;
+  text-transform: uppercase;
+  color: var(--base-100);
+  line-height: 0.85;
+  font-size: clamp(4rem, 7vw, 7rem);
+  margin: 0 0 3rem 0;
+}
+
+.frame-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(242, 238, 218, 0.1);
+  padding-top: 1.5rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--base-300);
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+/* ==================================
+   4. SHOP THE OBJECTS
+================================== */
+.shop-objects-block {
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.objects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(242, 238, 218, 0.15);
+  padding-bottom: 1.5rem;
+}
+
+.objects-header-left .display-title {
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin: 0;
+}
+
+.objects-header-mid {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--base-300);
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.objects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.object-card {
+  background-color: var(--base-300);
+  border: 1px solid var(--base-200);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+}
+
+.object-card:hover {
+  border-color: var(--base-100);
+}
+
+.object-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-bottom: 1px solid var(--base-200);
+}
+.object-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.object-card:hover .object-img img {
+  opacity: 1;
+}
+
+.object-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.object-num {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--base-300);
+  margin-bottom: 0.5rem;
+}
+
+.object-info h3 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: 2rem;
+  color: var(--base-100);
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+
+.object-cat {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--base-400);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.object-bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(242, 238, 218, 0.1);
+  padding-top: 1rem;
+}
+
+.object-price {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--base-100);
+}
+
+.add-btn {
+  background: transparent;
+  border: 1px solid rgba(242, 238, 218, 0.2);
+  color: var(--base-200);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.add-btn:hover {
+  background: var(--base-100);
+  color: #121212;
+}
+
+@media (max-width: 1024px) {
+  .objects-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-split { flex-direction: column; }
+  .hero-right { width: 100%; height: 30vh; }
+  .rts-panel { flex-direction: column; }
+  .rts-right { border-left: none; border-top: 1px solid rgba(242, 238, 218, 0.15); height: 300px; }
+  .objects-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+@media (max-width: 600px) {
+  .objects-grid { grid-template-columns: 1fr; }
+}

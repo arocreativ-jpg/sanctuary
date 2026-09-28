@@ -125,32 +125,116 @@
 
 /* portfolio - hero section */
 .hero.hero-portfolio {
-  padding: 1.5rem;
+  height: 100svh;
+  padding: 0;
+}
+
+.hero.hero-portfolio h1,
+.hero.hero-portfolio p,
+.hero.hero-portfolio .bodyCopy {
+  color: #f2eeda;
 }
 
 .hero.hero-portfolio .hero-container .hero-img-container {
   clip-path: none;
-  border-radius: 2rem;
+  border-radius: 0;
   overflow: hidden;
+}
+
+.hero.hero-portfolio .hero-container .hero-img-container .hero-img {
+  filter: none;
+}
+
+.hero.hero-portfolio .hero-container .hero-img-container .hero-img-overlay {
+  display: none;
 }
 
 .hero.hero-portfolio .hero-container .hero-img-container .hero-img-gradient {
   background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0) 100%
+    0deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0) 55%
   );
+  z-index: 1;
 }
 
 .hero.hero-portfolio .hero-container .hero-content .container {
-  padding: 4rem;
+  padding: 6rem 4rem 3.5rem 4rem;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  color: #f2eeda;
 }
 
-.hero.hero-portfolio .hero-callout.portfolio-callout {
+.hero.hero-portfolio .hero-content-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.hero.hero-portfolio .hero-studio-title {
+  font-family: "SCHABO", sans-serif;
+  font-size: clamp(3.5rem, 7vw, 5.8rem);
+  line-height: 0.85;
+  margin: 0 0 0.65rem 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #f2eeda;
+}
+
+.hero.hero-portfolio .hero-footer-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero.hero-portfolio .hero-footer-copy p.bodyCopy {
+  font-family: "Geist Mono", monospace;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: #f2eeda;
+  text-transform: none;
+  margin: 0;
+}
+
+.hero.hero-portfolio .hero-callout {
+  display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  justify-content: flex-end;
+  margin-bottom: 0.25rem;
+}
+
+.hero.hero-portfolio .hero-callout p {
+  font-family: "Geist Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(242, 238, 218, 0.85);
+  text-align: right;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .hero.hero-portfolio .hero-container .hero-content .container {
+    padding: 5.5rem 1.5rem 2.5rem 1.5rem;
+  }
+  .hero.hero-portfolio .hero-content-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .hero.hero-portfolio .hero-callout {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .hero.hero-portfolio .hero-callout p {
+    text-align: left;
+  }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop | Sub Sanctuary | Premium Woodworking</title>
-    <link rel="icon" href="/global/site_logo.png" type="image/png" />
+    <link rel="icon" href="/global/site_logo.webp" type="image/png" />
     <meta name="author" content="Sub Sanctuary" />
 
     <link rel="stylesheet" href="/globals.css" />
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/transition.css" />
     <link rel="stylesheet" href="/css/preloader.css" />
     <link rel="stylesheet" href="/css/collections.css" />
-
+    <link rel="stylesheet" href="/css/shop-v2.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -73,10 +73,11 @@
         <div class="nav-items">
           <div class="nav-item"><a href="/">Home</a></div>
           <div class="nav-item"><a href="/about">About</a></div>
+          <div class="nav-item"><a href="/about2.html">About 2</a></div>
           <div class="nav-item"><a href="/portfolio">Portfolio</a></div>
           <div class="nav-item"><a href="/shop">Shop</a></div>
           <div class="nav-item"><a href="/engraving">Engraving</a></div>
-          <div class="nav-item"><a href="/contact">Custom Orders</a></div>
+          <div class="nav-item"><a href="/pendants">Custom Pendants</a></div>
           
           <div class="nav-item" id="light-mode-toggle" style="cursor: pointer; display: flex; align-items: center; padding: 0.5rem; color: var(--base-400); font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.2s ease;">
             <span class="mode-icon">☼</span>
@@ -85,63 +86,76 @@
       </div>
     </nav>
 
-    <section class="shop-intro" style="padding-top: 15vh; position: relative; z-index: 10;">
+    <!-- 1. SHOP HERO -->
+    <section class="shop-hero-block">
       <div class="container">
-        <div class="shop-header">
-          <div class="section-marker">
-            <p>04 &mdash; SHOP</p>
-          </div>
-          <h1 class="display-title">Shop & collections</h1>
-          <p class="subtitle">Four collections, per your VI decision. Smokers Lounge ships as a full collection.</p>
-        </div>
-
-        <div class="ready-to-ship-block" style="margin-top: 4rem; border: 1px solid rgba(242, 238, 218, 0.15); display: flex; border-radius: 4px; overflow: hidden; background-color: rgba(20,20,20,0.5); backdrop-filter: blur(10px);">
-          <div class="ready-left" style="flex: 1; padding: 2rem;">
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(242, 238, 218, 0.15); padding-bottom: 1rem; margin-bottom: 2rem;">
-              <p style="font-family: 'Geist Mono', monospace; font-size: 0.8rem;">READY TO SHIP</p>
-              <p style="font-family: 'Geist Mono', monospace; font-size: 0.8rem; color: var(--base-300);">STOCKED & FINISHED <span style="color: var(--orange);">●</span></p>
+        <div class="hero-split">
+          <div class="hero-left">
+            <div class="section-marker">
+              <p>[ 04 ] &mdash; SHOP</p>
             </div>
-            <h2>Ready to ship</h2>
-            <p class="bodyCopy" style="margin-top: 1.5rem; margin-bottom: 2rem; max-width: 400px; line-height: 1.6;">
-              Stocked pieces, finished and waiting. Every design shown is available on any wood tone we carry — and if you don't see the design you want, we'll make it.
-            </p>
-            <a href="#" class="btn-outline" style="display: inline-flex; justify-content: space-between; align-items: center; width: 100%; max-width: 300px; padding: 1rem; border: 1px solid rgba(242, 238, 218, 0.3); text-decoration: none; color: var(--base-100); font-family: 'Geist Mono', monospace; font-size: 0.85rem; text-transform: uppercase;">
-              <span>SHOP READY TO SHIP</span>
-              <span>→</span>
-            </a>
+            <h1 class="display-title">SHOP &<br>COLLECTIONS</h1>
+            <p class="subtitle">FOUR COLLECTIONS. ONE MATERIAL LANGUAGE.<br>SMOKERS LOUNGE SHIPS AS A FULL COLLECTION.</p>
+            <div class="hero-metadata">
+              <span>WOOD</span><span class="slash">/</span>
+              <span>STONE</span><span class="slash">/</span>
+              <span>METAL</span><span class="slash">/</span>
+              <span>IDEAS</span><span class="slash">/</span>
+              <span>ENGRAVED</span>
+            </div>
           </div>
-          <div class="ready-right" style="flex: 1; position: relative; border-left: 1px solid rgba(242, 238, 218, 0.15);">
-            <img src="/collections/collection_smokers.jpg" alt="Smokers Lounge" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" />
-            <div class="materials-list" style="position: absolute; right: 2rem; top: 2rem; background: rgba(0,0,0,0.6); padding: 1rem; border-left: 1px solid var(--base-100);">
-              <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Geist Mono', monospace; font-size: 0.8rem; color: var(--base-200); line-height: 1.8;">
-                <li>WOOD.</li>
-                <li>STONE.</li>
-                <li>METAL.</li>
-                <li>IDEAS.</li>
-                <li>ENGRAVED.</li>
-              </ul>
+          <div class="hero-right">
+            <div class="hero-image-wrapper">
+              <img src="/Web/300/sub-sanctuary-laser-engraved-mandala-box-300-1.jpg" onerror="this.src='/engraving/313b585238f9f7801ec1da48cf600813c6aa7add%20(1).jpg'" alt="Shop Hero" />
+            </div>
+            <div class="hero-right-meta">
+              <p>OBJECTS<br>FOR A SLOWER<br>AND MORE<br>INTENTIONAL<br>WORLD.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="collections-container" style="position: relative; z-index: 10; margin-top: 6rem; padding-bottom: 5rem;">
+    <!-- 2. READY TO SHIP -->
+    <section class="ready-to-ship-block">
       <div class="container">
-        <div class="collections-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
-          <div class="header-left">
-            <div class="section-marker" style="margin-bottom: 1rem;">
-              <p style="font-family: 'Geist Mono', monospace; font-size: 0.85rem; color: var(--base-300);">01 &mdash; OUR COLLECTIONS</p>
+        <div class="rts-panel">
+          <div class="rts-left">
+            <div class="rts-header">
+              <p>READY TO SHIP</p>
+              <p class="rts-status">STOCKED & FINISHED <span class="dot">●</span></p>
             </div>
-            <h1 class="display-title" style="font-size: clamp(3rem, 5vw, 5rem); text-transform: uppercase; margin: 0; line-height: 0.9;">EXPLORE THE COLLECTIONS</h1>
-          </div>
-          <div class="header-right">
-            <p style="font-family: 'Geist Mono', monospace; font-size: 0.85rem; color: var(--base-300); max-width: 200px; text-transform: uppercase; text-align: left;">
-              DIFFERENT MATERIALS.<br>SAME OBSESSION<br>FOR DETAIL.
+            <h2>READY TO SHIP</h2>
+            <p class="rts-desc">
+              STOCKED PIECES, FINISHED AND WAITING. EVERY DESIGN SHOWN IS AVAILABLE ON ANY WOOD TONE WE CARRY &mdash; AND IF YOU DON'T SEE THE DESIGN YOU WANT, WE'LL MAKE IT.
             </p>
+            <a href="#" class="btn-outline rts-btn">
+              <span>SHOP READY TO SHIP</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="rts-right">
+            <div class="rts-image-wrapper">
+              <img src="/Web/420/engraved-herb-grinders-blue-glass-hand-pipe-420-subsanctuary.webp" onerror="this.src='/global/site_logo.webp'" alt="Ready to Ship" />
+            </div>
+            <div class="rts-metadata">
+              <p>WOOD.<br>STONE.<br>METAL.<br>IDEAS.<br>ENGRAVED.</p>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- 3. EXPLORE COLLECTIONS FRAME -->
+    <section class="collections-container">
+      <div class="container">
+        <div class="collections-frame">
+          <div class="frame-top-bar">
+            <div class="frame-index">[ 01 ] &mdash; OUR COLLECTIONS</div>
+            <div class="frame-right-meta">DIFFERENT MATERIALS.<br>SAME OBSESSION<br>FOR DETAIL.</div>
+          </div>
+
+          <h1 class="display-title frame-title">EXPLORE THE COLLECTIONS</h1>
 
       <div class="collections-slider">
         <ul class="collections"></ul>
@@ -170,9 +184,99 @@
         </div>
       </div>
 
-      <div class="collections-footer">
-        <p>INVENTORY SYNCED <span style="color: var(--orange);">●</span></p>
-        <p>STOREFRONT ACTIVE <span style="color: var(--orange);">●</span></p>
+          <div class="frame-bottom-bar">
+            <div class="frame-bottom-left">01 / 04<br>COLLECTIONS</div>
+            <div class="frame-bottom-right">HANDCRAFTED<br>LASER ENGRAVED</div>
+          </div>
+
+        </div> <!-- end .collections-frame -->
+      </div>
+    </section>
+
+    <!-- 4. SHOP THE OBJECTS -->
+    <section class="shop-objects-block">
+      <div class="container">
+        <div class="objects-header">
+          <div class="objects-header-left">
+            <p class="section-marker">[ 02 ] &mdash; SHOP THE OBJECTS</p>
+            <h2 class="display-title">SHOP THE OBJECTS</h2>
+          </div>
+          <div class="objects-header-mid">
+            <p>Finished pieces, numbered designs<br>and objects made to be used.</p>
+          </div>
+          <div class="objects-header-right">
+            <a href="#" class="btn-outline">
+              <span>VIEW ALL ITEMS</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 10px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="objects-grid">
+          <!-- Item 1 -->
+          <div class="object-card">
+            <div class="object-img">
+              <img src="/Web/420/engraved-herb-grinders-blue-glass-hand-pipe-420-subsanctuary.webp" onerror="this.src='/global/site_logo.webp'" alt="Grinder Collection" />
+            </div>
+            <div class="object-info">
+              <p class="object-num">[ 001 ]</p>
+              <h3>GRINDER COLLECTION</h3>
+              <p class="object-cat">SMOKERS LOUNGE</p>
+              <div class="object-bottom">
+                <span class="object-price">$85.00</span>
+                <button class="add-btn">+</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Item 2 -->
+          <div class="object-card">
+            <div class="object-img">
+              <img src="/Web/420/carved-wood-tray-wavy-freeform-edge-420-subsanctuary.webp" alt="Topo Tray" />
+            </div>
+            <div class="object-info">
+              <p class="object-num">[ 002 ]</p>
+              <h3>TOPO TRAY</h3>
+              <p class="object-cat">HOUSEWARES</p>
+              <div class="object-bottom">
+                <span class="object-price">$120.00</span>
+                <button class="add-btn">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="object-card">
+            <div class="object-img">
+              <img src="/Web/300/sub-sanctuary-laser-engraved-mandala-box-300-1.jpg" onerror="this.src='/Web/420/laser-engraved-wood-box-hexagon-geometric-pattern-420-subsanctuary.webp'" alt="Mandala Box" />
+            </div>
+            <div class="object-info">
+              <p class="object-num">[ 003 ]</p>
+              <h3>MANDALA BOX</h3>
+              <p class="object-cat">LIMITED RUN</p>
+              <div class="object-bottom">
+                <span class="object-price">$95.00</span>
+                <button class="add-btn">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="object-card">
+            <div class="object-img">
+              <img src="/expedition/SubSanctuary Website Content/Pendants/Opal.webp" onerror="this.src='/global/site_logo.webp'" alt="Crystal Pendant" />
+            </div>
+            <div class="object-info">
+              <p class="object-num">[ 004 ]</p>
+              <h3>CRYSTAL PENDANT</h3>
+              <p class="object-cat">CUSTOM JEWELRY</p>
+              <div class="object-bottom">
+                <span class="object-price">$250.00</span>
+                <button class="add-btn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

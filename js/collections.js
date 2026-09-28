@@ -3,31 +3,19 @@ import gsap from "gsap";
 const COLLECTIONS_DATA = [
   {
     name: "The Smokers Lounge",
-    img: "/collections/collection_smokers.jpg",
+    img: "/engraving/8e291ae5c7eb8130952ccb843aefe48c100c23ec.webp",
     tag: "Engraved Zippos & Trays",
     url: "/collection"
   },
   {
     name: "Housewares",
-    img: "/collections/collection_housewares.jpg",
+    img: "/engraving/f4484ce2ca33e9017bc28ce083bcd8069acc448b%20(1).jpg",
     tag: "Boards & Coasters",
     url: "/collection"
   },
   {
-    name: "Accessories",
-    img: "/collections/collection_accessories.jpg",
-    tag: "Wallets & EDC",
-    url: "/collection"
-  },
-  {
-    name: "Wall Art",
-    img: "/collections/collection_wallart.jpg",
-    tag: "Hardwood Carvings",
-    url: "/collection"
-  },
-  {
-    name: "Custom Orders",
-    img: "/collections/collection_custom.jpg",
+    name: "Custom Engraving",
+    img: "/engraving/73e8813702d05b94dfdee2bf2158d2bb1f965a90%20(1).jpg",
     tag: "Your Product Engraved",
     url: "/contact"
   }

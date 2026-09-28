@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+  --tp-bg: #0f0f0f;
+  --tp-fg: #ffffff;
+  --tp-card-1: #b2b2b2;
+  --tp-card-2: #ce2017;
+  --tp-card-3: #2f2f2f;
+}
+
+body.light-mode {
+  --tp-bg: #f2eeda;
+  --tp-fg: #141414;
+  --tp-card-1: #d4cfbc;
+  --tp-card-2: #ce2017;
+  --tp-card-3: #e0dbc8;
+}
+
+.tp-intro {
+  position: relative;
+  width: 100%;
+  height: 60svh;
+  padding: 6rem 2rem;
+  background-color: var(--tp-bg);
+  color: var(--tp-fg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.tp-intro h1 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: 1;
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.tp-sticky {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  padding: 2rem;
+  background-color: var(--tp-bg);
+  color: var(--tp-fg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.tp-sticky-header {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tp-sticky-header h1 {
+  position: relative;
+  text-align: center;
+  will-change: transform, opacity;
+  transform: translateY(40px);
+  opacity: 0;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(3rem, 5.5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.tp-card-container {
+  position: relative;
+  width: 75%;
+  display: flex;
+  perspective: 1000px;
+  transform: translateY(40px);
+  transform-origin: center center;
+  will-change: transform, opacity;
+  z-index: 1;
+}
+
+.tp-card {
+  position: relative;
+  flex: 1;
+  aspect-ratio: 5/7;
+  transform-style: preserve-3d;
+  transform-origin: top;
+  will-change: transform;
+  -webkit-transform-style: preserve-3d;
+}
+
+#tp-card-1,
+#tp-card-2,
+#tp-card-3 {
+  border-radius: 20px;
+}
+
+.tp-card-front,
+.tp-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.tp-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tp-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  transform: rotateY(180deg);
+  padding: 2.5rem 2rem;
+  box-sizing: border-box;
+}
+
+.tp-card-top {
+  width: 100%;
+}
+
+.tp-card-back span {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.tp-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tp-card-back h3 {
+  font-family: 'SCHABO', sans-serif;
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.tp-card-back p {
+  font-family: 'Geist Mono', monospace;
+  font-size: clamp(0.8rem, 0.95vw, 0.9rem);
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0;
+}
+
+#tp-card-1 .tp-card-back {
+  background-color: var(--tp-card-1);
+  color: var(--tp-bg);
+}
+#tp-card-1 .tp-card-back span {
+  color: #ce2017;
+}
+#tp-card-1 .tp-card-back p {
+  color: rgba(15, 15, 15, 0.85);
+}
+
+#tp-card-2 .tp-card-back {
+  background-color: var(--tp-card-2);
+  color: #ffffff;
+}
+#tp-card-2 .tp-card-back span {
+  color: rgba(255, 255, 255, 0.7);
+}
+#tp-card-2 .tp-card-back p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#tp-card-3 .tp-card-back {
+  background-color: var(--tp-card-3);
+  color: #ffffff;
+}
+#tp-card-3 .tp-card-back span {
+  color: #ce2017;
+}
+#tp-card-3 .tp-card-back p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 999px) {
+  .tp-intro {
+    height: 40vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .tp-sticky {
+    height: max-content;
+    padding: 4rem 2rem;
+    flex-direction: column;
+  }
+
+  .tp-sticky-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 4rem;
+  }
+
+  .tp-sticky-header h1 {
+    opacity: 1;
+    transform: none;
+  }
+
+  .tp-card-container {
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    transform: none;
+  }
+
+  .tp-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 20px !important;
+    transform: none !important;
+  }
+
+  #tp-card-1,
+  #tp-card-2,
+  #tp-card-3,
+  .tp-card-back {
+    transform: none;
+  }
+}

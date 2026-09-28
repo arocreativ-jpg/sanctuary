@@ -80,7 +80,7 @@
 @media (max-width: 1000px) {
   .sticky-cards .card {
     width: calc(100% - 3rem);
-    height: 75%;
+    height: 50%;
     flex-direction: column;
     padding: 1.5rem;
     gap: 1rem;
@@ -88,18 +88,12 @@
 
   .sticky-cards .card .col {
     width: 100%;
-    height: auto;
-  }
-  
-  .sticky-cards .card .col:nth-child(1) {
-    flex: 0 0 auto;
-    padding: 0;
-    justify-content: flex-start;
   }
 
-  .sticky-cards .card .col:nth-child(2) {
-    flex: 1;
-    min-height: 0; /* allows the image to shrink correctly inside a flex container */
+  .sticky-cards .card .col:nth-child(1) {
+    flex: 0 0 auto;
+    height: auto;
+    padding: 0;
   }
 }
 

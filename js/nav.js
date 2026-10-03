@@ -12,6 +12,9 @@ function initNavToggle() {
   if (!nav || !navHeader) return;
 
   function toggleMenu(e) {
+    if (e.target.closest('#light-mode-toggle')) {
+      return;
+    }
     if (window.innerWidth <= 1000) {
       e.stopPropagation();
       nav.classList.toggle("nav-open");
@@ -62,6 +65,20 @@ function initLightModeToggle() {
   const toggleBtn = document.getElementById("light-mode-toggle");
   if (!toggleBtn) return;
 
+  // Move toggle to mobile header next to hamburger
+  if (window.innerWidth <= 1000) {
+    const navMenuToggle = document.querySelector(".nav-menu-toggle");
+    if (navMenuToggle) {
+      navMenuToggle.insertBefore(toggleBtn, navMenuToggle.firstChild);
+      // Give it some specific mobile styles directly or let CSS handle it
+      toggleBtn.style.padding = "0";
+      toggleBtn.style.margin = "0";
+      toggleBtn.style.marginRight = "0.75rem";
+      toggleBtn.style.transform = "none";
+      toggleBtn.style.opacity = "1";
+    }
+  }
+
   const modeIcon = toggleBtn.querySelector(".mode-icon");
   if (isLightMode && modeIcon) {
     modeIcon.innerText = "☾";
@@ -69,6 +86,7 @@ function initLightModeToggle() {
 
   toggleBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    e.stopPropagation(); // prevent opening the mobile menu!
     document.body.classList.toggle("light-mode");
     
     const isActive = document.body.classList.contains("light-mode");
@@ -77,7 +95,6 @@ function initLightModeToggle() {
     if (modeIcon) {
       modeIcon.innerText = isActive ? "☾" : "☼";
       
-      // Add a little spin animation on click
       modeIcon.style.transform = "rotate(360deg)";
       setTimeout(() => {
         modeIcon.style.transition = "none";

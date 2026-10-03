@@ -701,8 +701,8 @@ body.light-mode .hero.engraving-hero p {
 
 .editorial-form input,
 .editorial-form textarea {
-  background-color: transparent;
-  border: 1px solid var(--base-300);
+  background-color: var(--base-400);
+  border: 1px solid var(--base-200);
   border-radius: 4px;
   padding: 1.25rem 1rem;
   font-family: 'Geist Mono', monospace;
@@ -713,8 +713,8 @@ body.light-mode .hero.engraving-hero p {
 
 .editorial-form input::placeholder,
 .editorial-form textarea::placeholder {
-  color: var(--base-200);
-  opacity: 0.6;
+  color: var(--base-100);
+  opacity: 0.75;
 }
 
 .editorial-form input:focus,
@@ -756,5 +756,30 @@ body.light-mode .hero.engraving-hero p {
   .editorial-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+.engraving-hero-grid {
+  display: grid; 
+  grid-template-columns: 1fr 1.2fr; 
+  gap: 4rem; 
+  flex: 1; 
+  min-height: 0;
+}
+
+@media (max-width: 800px) {
+  .hero.engraving-hero {
+    height: auto;
+    min-height: 100vh;
+  }
+  .hero-inner-container {
+    padding: 3rem 1.5rem !important;
+  }
+  .engraving-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .engraving-hero-img-col {
+    display: none !important;
   }
 }

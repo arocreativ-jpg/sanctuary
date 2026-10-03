@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/lab.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/observatory.css" />
+    <link rel="stylesheet" href="/css/bento-cta.css" />
     <link rel="stylesheet" href="/css/abstract-cards.css" />
   </head>
   <body>
@@ -261,7 +262,7 @@
       </div>
     </section>
 
-    <section class="clients">
+    <section class="clients" style="display: none;">
       <div class="container">
         <div class="clients-header">
           <h2>Client Network</h2>
@@ -270,38 +271,56 @@
       </div>
     </section>
 
-    <section class="cta abstract-cards-section">
-      <div class="cta-content">
-        <div class="cta-logo">
-          <img src="/index/logo_cta.webp" alt="Sub Sanctuary Logo" />
+    <section class="bento-cta-section">
+      <div class="bento-cta-grid">
+        
+        <!-- Main Panel -->
+        <div class="bento-panel panel-main">
+          <img src="/Web/c/5d9c8c351c74e65565c079b3774563cc0256fbab.webp" class="bento-img" alt="Custom Commission" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-tags">IDEAS.<br>MATERIALS.<br>FORMS.<br>STORIES.</div>
+            <h2>START A<br>CUSTOM COMMISSION</h2>
+            <p>Tell us the space and the tone and we'll take it from there. Or take the current portfolio with you &mdash; everything available right now, with sizes and prices.</p>
+            <div class="bento-buttons">
+              <a href="/contact" class="btn-solid-orange">REQUEST A QUOTE &rarr;</a>
+              <a href="/portfolio" class="btn-outline">DOWNLOAD THE PORTFOLIO &darr;</a>
+            </div>
+          </div>
         </div>
 
-        <div class="cta-copy" style="max-width: 700px; text-align: center;">
-          <h3 style="color: var(--base-100); margin-bottom: 1rem;">Start a custom commission</h3>
-          <p class="bodyCopy lg">
-            Tell us the space and the tone and we'll take it from there. Or take the current portfolio with you &mdash; everything available right now, with sizes and prices.
-          </p>
+        <!-- Top Right -->
+        <div class="bento-panel panel-tr">
+          <img src="/Web/c/11d9d5e68d1d7c037df958caf1aee17aa486cd49_1.webp" class="bento-img" alt="Light and Form" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-label">
+              <span class="num">01</span>
+              <span class="text">LIGHT<br>+ FORM</span>
+            </div>
+            <div class="bento-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
         </div>
 
-        <div class="cta-buttons" style="display: flex; gap: 1rem; margin-top: 2rem;">
-          <a href="/contact" class="hero-btn hero-btn-primary">
-            Request a Quote
-          </a>
-          <a href="/portfolio" class="hero-btn hero-btn-secondary">
-            Download the Portfolio
-          </a>
+        <!-- Middle Right -->
+        <div class="bento-panel panel-mr">
+          <img src="/Web/c/e174ff0119f657168ed49ad49976b9beaf609803_1.webp" class="bento-img" alt="Engraving and Detail" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-label">
+              <span class="num">02</span>
+              <span class="text">ENGRAVING<br>+ DETAIL</span>
+            </div>
+            <div class="bento-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="abstract-cards-container">
-        <div class="abstract-card card-1"><div class="card-inner"><img src="/index/cta_img_01.webp" alt="" /></div></div>
-        <div class="abstract-card card-2"><div class="card-inner"><img src="/index/cta_img_02.webp" alt="" /></div></div>
-        <div class="abstract-card card-3"><div class="card-inner"><img src="/index/cta_img_03.webp" alt="" /></div></div>
-        <div class="abstract-card card-4"><div class="card-inner"><img src="/index/highlight_img_02.webp" alt="" /></div></div>
-        <div class="abstract-card card-5"><div class="card-inner"><img src="/index/cta_img_05.webp" alt="" /></div></div>
-        <div class="abstract-card card-6"><div class="card-inner"><img src="/index/cta_img_06.webp" alt="" /></div></div>
-        <div class="abstract-card card-7"><div class="card-inner"><img src="/index/highlight_img_01.webp" alt="" /></div></div>
-        <div class="abstract-card card-8"><div class="card-inner"><img src="/index/cta_img_04.webp" alt="" /></div></div>
+
+
       </div>
     </section>
 
@@ -380,7 +399,7 @@
 
     <script type="module" src="/js/lenis-scroll.js"></script>
     <script type="module" src="/js/preloader.js"></script>
-    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/nav.js?v=4"></script>
     <script type="module" src="/js/interactive-grid.js"></script>
     <script type="module" src="/js/transition.js"></script>
     <script type="module" src="/js/animated-copy.js"></script>

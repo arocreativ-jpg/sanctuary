@@ -1,72 +1,9 @@
-/* nav */
-nav {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
-  padding: 0 1rem;
-  max-width: 90vw;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+import re
 
-nav .nav-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+with open("css/nav.css", "r") as f:
+    content = f.read()
 
-nav .nav-bg {
-  width: 100%;
-  height: 100%;
-  background-color: var(--base-500);
-  border-radius: 0 0 1.5rem 1.5rem;
-}
-
-nav .nav-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-nav .nav-item a {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: var(--base-400);
-}
-
-nav .nav-mobile-header {
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0.75rem;
-  cursor: pointer;
-  display: none;
-}
-
-nav .nav-mobile-header p {
-  font-weight: 600;
-  color: var(--base-400);
-}
-
-nav .nav-overlay {
-  position: relative;
-  display: flex;
-  z-index: 1;
-}
-
-@media (max-width: 1000px) {
+new_css = """@media (max-width: 1000px) {
   nav {
     top: 2rem;
     width: calc(100% - 4rem);
@@ -102,7 +39,7 @@ nav .nav-overlay {
     box-sizing: border-box;
   }
 
-  nav .nav-logo {
+  nav .nav-mobile-header p {
     font-family: 'Geist Mono', monospace;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -114,9 +51,8 @@ nav .nav-overlay {
   nav .nav-menu-toggle {
     display: flex;
     align-items: center;
+    gap: 0.75rem;
     cursor: pointer;
-    font-size: 0;
-    color: var(--base-400);
   }
 
   nav .nav-menu-toggle::after {
@@ -223,25 +159,40 @@ nav .nav-overlay {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    pointer-events: auto !important;
-    opacity: 1 !important;
-    transform: none !important;
+    padding-top: 1.5rem;
+    margin-top: 0.5rem;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
 
   nav.nav-open .nav-item#light-mode-toggle {
+    transition-delay: 0.4s;
+    transform: translateY(0);
     opacity: 1;
+  }
+  
+  nav .nav-item#light-mode-toggle::after {
+    content: "DARK / LIGHT";
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--base-400);
+    position: absolute;
+    right: 0;
   }
 
   nav .mode-icon {
     font-size: 1.2rem;
     line-height: 1;
     display: block;
-    color: var(--base-400);
   }
-}
+}"""
 
-@media (min-width: 3000px) {
-  nav .nav-item a {
-    padding: 0.5rem 0.25rem;
-  }
-}
+pattern = re.compile(r'@media \(max-width: 1000px\) \{.*?\}(?=\n@media |\Z)', re.DOTALL)
+new_content = pattern.sub(new_css, content)
+
+with open("css/nav.css", "w") as f:
+    f.write(new_content)
+print("Updated nav.css")

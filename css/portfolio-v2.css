@@ -700,5 +700,30 @@ body {
   .folder-front { clip-path: polygon(0 20px, 35% 20px, 45% 35px, 100% 35px, 100% 100%, 0 100%); padding-top: 45px; }
 }
 @media (max-width: 480px) {
-  .archive-grid { grid-template-columns: 1fr; }
+  .archive-grid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .archive-folder,
+  .archive-folder:nth-child(2),
+  .archive-folder:nth-child(4),
+  .archive-folder:nth-child(7),
+  .archive-folder:nth-child(9) {
+    height: auto;
+    max-height: 400px;
+    width: 85vw;
+    max-width: 360px;
+  }
+  
+  .folder-title {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+  
+  .folder-num {
+    font-size: 0.75rem;
+  }
+  
+  .folder-category {
+    font-size: 0.6rem;
+  }
 }

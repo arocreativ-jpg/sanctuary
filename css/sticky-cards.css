@@ -55,6 +55,18 @@
   object-fit: cover;
 }
 
+.sticky-cards .card#card-1 img {
+  transform: rotate(90deg) scale(1.5);
+}
+
+.sticky-cards .card#card-2 img {
+  transform: scale(1.5);
+}
+
+.sticky-cards .card#card-3 img {
+  transform: rotate(90deg);
+}
+
 .sticky-cards .card h1 {
   text-transform: uppercase;
   font-family: "SCHABO", sans-serif;

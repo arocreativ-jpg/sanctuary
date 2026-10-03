@@ -9,13 +9,13 @@ const COLLECTIONS_DATA = [
   },
   {
     name: "Housewares",
-    img: "/engraving/f4484ce2ca33e9017bc28ce083bcd8069acc448b%20(1).jpg",
+    img: "/engraving/f4484ce2ca33e9017bc28ce083bcd8069acc448b%20(1).webp",
     tag: "Boards & Coasters",
     url: "/collection"
   },
   {
     name: "Custom Engraving",
-    img: "/engraving/73e8813702d05b94dfdee2bf2158d2bb1f965a90%20(1).jpg",
+    img: "/engraving/73e8813702d05b94dfdee2bf2158d2bb1f965a90%20(1).webp",
     tag: "Your Product Engraved",
     url: "/contact"
   }

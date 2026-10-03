@@ -1,83 +1,18 @@
-/* nav */
-nav {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
-  padding: 0 1rem;
-  max-width: 90vw;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+import re
 
-nav .nav-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+with open("css/nav.css", "r") as f:
+    content = f.read()
 
-nav .nav-bg {
-  width: 100%;
-  height: 100%;
-  background-color: var(--base-500);
-  border-radius: 0 0 1.5rem 1.5rem;
-}
-
-nav .nav-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-nav .nav-item a {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: var(--base-400);
-}
-
-nav .nav-mobile-header {
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0.75rem;
-  cursor: pointer;
-  display: none;
-}
-
-nav .nav-mobile-header p {
-  font-weight: 600;
-  color: var(--base-400);
-}
-
-nav .nav-overlay {
-  position: relative;
-  display: flex;
-  z-index: 1;
-}
-
-@media (max-width: 1000px) {
+new_css = """@media (max-width: 1000px) {
   nav {
-    top: 2rem;
-    width: calc(100% - 4rem);
+    top: 1rem;
+    width: calc(100% - 2rem);
     max-width: 400px;
     height: auto;
     flex-direction: column;
     padding: 0;
     border-radius: 12px;
-    background: linear-gradient(180deg, rgba(238, 100, 54, 0.95) 0%, rgba(220, 90, 45, 0.98) 100%);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: var(--base-500);
     box-shadow: 0 10px 40px rgba(0,0,0,0.15);
     transition: border-radius 0.4s ease;
   }
@@ -114,24 +49,31 @@ nav .nav-overlay {
   nav .nav-menu-toggle {
     display: flex;
     align-items: center;
-    cursor: pointer;
-    font-size: 0;
+    gap: 0.5rem;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
     color: var(--base-400);
+    cursor: pointer;
   }
 
-  nav .nav-menu-toggle::after {
-    content: "";
+  nav .hamburger-icon {
     display: block;
-    width: 20px;
-    height: 2px;
-    background-color: currentColor;
-    box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-
-  nav.nav-open .nav-menu-toggle::after {
-    box-shadow: none;
-    transform: rotate(45deg);
+  
+  nav .hamburger-icon line {
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  
+  nav.nav-open .hamburger-icon line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  nav.nav-open .hamburger-icon line:nth-child(2) {
+    opacity: 0;
+  }
+  nav.nav-open .hamburger-icon line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   nav .nav-overlay {
@@ -142,9 +84,10 @@ nav .nav-overlay {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    background: transparent;
+    filter: none;
     margin: 0;
     z-index: 1;
-    filter: none;
   }
 
   nav.nav-open .nav-overlay {
@@ -157,7 +100,7 @@ nav .nav-overlay {
 
   nav .nav-items {
     width: 100%;
-    padding: 0 1.5rem 2rem 1.5rem;
+    padding: 0 1.5rem 5rem 1.5rem;
     flex-direction: column;
     align-items: stretch;
     opacity: 0;
@@ -171,7 +114,7 @@ nav .nav-overlay {
 
   nav .nav-item {
     width: 100%;
-    border-bottom: 1px solid rgba(20,20,20,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     transform: translateY(10px);
     opacity: 0;
     transition: transform 0.4s ease, opacity 0.4s ease;
@@ -205,43 +148,56 @@ nav .nav-overlay {
     text-decoration: none;
   }
   
-  nav .nav-item a::after {
-    content: "→";
-    font-family: sans-serif;
-    font-size: 1rem;
+  nav .nav-item a .arrow {
+    font-size: 0.8rem;
     opacity: 0.7;
     transition: transform 0.3s ease;
   }
   
-  nav .nav-item a:hover::after {
+  nav .nav-item a:hover .arrow {
     transform: translateX(4px);
   }
 
-  nav .nav-item#light-mode-toggle {
-    border-bottom: none;
-    position: relative;
+  nav .nav-footer {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    pointer-events: auto !important;
-    opacity: 1 !important;
-    transform: none !important;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: transform 0.4s ease 0s, opacity 0.4s ease 0s;
   }
 
-  nav.nav-open .nav-item#light-mode-toggle {
+  nav.nav-open .nav-footer {
+    transform: translateY(0);
     opacity: 1;
+    transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
   }
 
-  nav .mode-icon {
-    font-size: 1.2rem;
-    line-height: 1;
-    display: block;
+  nav .mode-text {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     color: var(--base-400);
   }
-}
-
-@media (min-width: 3000px) {
-  nav .nav-item a {
-    padding: 0.5rem 0.25rem;
+  
+  nav .mode-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--base-400);
   }
-}
+}"""
+
+pattern = re.compile(r'@media \(max-width: 1000px\) \{.*?\}(?=\n@media |\Z)', re.DOTALL)
+new_content = pattern.sub(new_css, content)
+
+with open("css/nav.css", "w") as f:
+    f.write(new_content)
+    
+print("Updated nav.css")

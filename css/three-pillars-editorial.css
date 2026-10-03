@@ -226,6 +226,11 @@
   fill: var(--orange, #ee6436);
 }
 
+/* Hide slider dots on desktop */
+.tpe-slider-dots {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 1100px) {
   /* Keep 3 columns, just reduce padding and height */
@@ -247,16 +252,24 @@
 
 @media (max-width: 768px) {
   .three-pillars-editorial {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 0 3.5rem 0;
+    overflow: hidden;
+  }
+
+  .tpe-container {
+    max-width: 100%;
+    padding: 0;
   }
 
   .tpe-meta-top {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     gap: 1.5rem;
-    font-size: 0.7rem;
-    margin-bottom: 2.25rem;
+    font-size: 0.72rem;
+    margin-bottom: 1.75rem;
+    padding: 0 1.25rem;
     letter-spacing: 0.08em;
   }
 
@@ -271,18 +284,36 @@
     width: 60px;
   }
 
+  /* Slider Track */
   .tpe-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.25rem;
+    padding: 0 1.25rem 1rem 1.25rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .tpe-cards-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Each Card Slide */
+  .tpe-card {
+    flex: 0 0 85%;
+    max-width: 340px;
+    height: 420px;
+    scroll-snap-align: center;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
   }
 
   .tpe-card:nth-child(1),
   .tpe-card:nth-child(2),
   .tpe-card:nth-child(3) {
-    height: 380px;
-    grid-column: span 1;
-    border-radius: 10px;
-    max-width: 100%;
+    height: 420px;
   }
 
   .tpe-card-img-wrapper {
@@ -310,14 +341,14 @@
 
   .tpe-card-content {
     height: 48%;
-    padding: 1.25rem 1.5rem;
+    padding: 1.25rem 1.35rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   .tpe-card-content h2 {
-    font-size: clamp(1.8rem, 6.5vw, 2.4rem);
+    font-size: clamp(1.8rem, 6.5vw, 2.25rem);
     margin-bottom: 0.4rem;
     line-height: 0.92;
   }
@@ -327,8 +358,9 @@
     line-height: 1.45;
     margin-bottom: 1rem;
     display: block;
-    -webkit-line-clamp: unset;
-    overflow: visible;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .tpe-card-footer {
@@ -349,34 +381,57 @@
     height: 18px;
     opacity: 0.75;
   }
+
+  /* Slider Dots */
+  .tpe-slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+    padding: 0 1.25rem;
+  }
+
+  .tpe-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(242, 238, 218, 0.25);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
+  }
+
+  .tpe-dot.active {
+    width: 24px;
+    background: var(--orange, #ee6436);
+  }
 }
 
 @media (max-width: 480px) {
   .three-pillars-editorial {
-    padding: 4rem 1rem;
+    padding: 3.5rem 0 3rem 0;
   }
 
-  .tpe-cards-grid {
-    gap: 1.75rem;
+  .tpe-card {
+    flex: 0 0 85%;
+    max-width: 310px;
+    height: 390px;
   }
 
   .tpe-card:nth-child(1),
   .tpe-card:nth-child(2),
   .tpe-card:nth-child(3) {
-    height: 350px;
-  }
-
-  .tpe-card-img-wrapper {
-    height: 50%;
+    height: 390px;
   }
 
   .tpe-card-content {
-    height: 50%;
     padding: 1rem 1.15rem;
   }
 
   .tpe-card-content h2 {
-    font-size: clamp(1.6rem, 6.5vw, 2rem);
+    font-size: clamp(1.6rem, 6.2vw, 1.95rem);
   }
 
   .tpe-card-content p {

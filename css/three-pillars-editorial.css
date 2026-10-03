@@ -247,98 +247,151 @@
 
 @media (max-width: 768px) {
   .three-pillars-editorial {
-    padding: 3rem 1rem;
+    padding: 5rem 1.25rem;
   }
-  .tpe-cards-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-  }
-  .tpe-card:nth-child(1), .tpe-card:nth-child(2), .tpe-card:nth-child(3) {
-    height: 200px;
-    grid-column: span 1;
-    border-radius: 6px;
-  }
-  .tpe-card-img-wrapper {
-    height: 48%;
-  }
-  .tpe-card-content {
-    height: 52%;
-    padding: 0.5rem;
-  }
-  .tpe-card-num {
-    top: 0.4rem;
-    left: 0.4rem;
-    font-size: 0.6rem;
-  }
-  .tpe-card-num::after {
-    width: 15px;
-  }
-  .tpe-card-tags {
-    display: none;
-  }
-  .tpe-card-content h2 {
-    font-size: clamp(0.7rem, 2vw, 0.95rem);
-    margin-bottom: 0.3rem;
-    line-height: 0.9;
-  }
-  .tpe-card-content p {
-    font-size: 0.45rem;
-    line-height: 1.2;
-    margin-bottom: 0.3rem;
-    /* Truncate lines if needed */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .tpe-cta {
-    font-size: 0.45rem;
-  }
-  .tpe-mark {
-    display: none;
-  }
+
   .tpe-meta-top {
     flex-direction: row;
-    gap: 1rem;
-    font-size: 0.55rem;
-    margin-bottom: 1.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    font-size: 0.7rem;
+    margin-bottom: 2.25rem;
+    letter-spacing: 0.08em;
   }
+
   .tpe-meta-top .meta-right {
     text-align: right;
     align-items: flex-end;
   }
+
   .tpe-meta-top .meta-right .arrow-line {
-    display: none;
+    display: block;
+    margin-top: 0.35rem;
+    width: 60px;
+  }
+
+  .tpe-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tpe-card:nth-child(1),
+  .tpe-card:nth-child(2),
+  .tpe-card:nth-child(3) {
+    height: 380px;
+    grid-column: span 1;
+    border-radius: 10px;
+    max-width: 100%;
+  }
+
+  .tpe-card-img-wrapper {
+    height: 52%;
+  }
+
+  .tpe-card-num {
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+  }
+
+  .tpe-card-num::after {
+    width: 25px;
+  }
+
+  .tpe-card-tags {
+    display: block;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.6rem;
+    line-height: 1.35;
+    letter-spacing: 0.06em;
+  }
+
+  .tpe-card-content {
+    height: 48%;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tpe-card-content h2 {
+    font-size: clamp(1.8rem, 6.5vw, 2.4rem);
+    margin-bottom: 0.4rem;
+    line-height: 0.92;
+  }
+
+  .tpe-card-content p {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+
+  .tpe-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  .tpe-cta {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+  }
+
+  .tpe-mark {
+    display: block;
+    width: 18px;
+    height: 18px;
+    opacity: 0.75;
   }
 }
 
 @media (max-width: 480px) {
-  .tpe-card:nth-child(1), .tpe-card:nth-child(2), .tpe-card:nth-child(3) {
-    height: 175px;
+  .three-pillars-editorial {
+    padding: 4rem 1rem;
   }
+
+  .tpe-cards-grid {
+    gap: 1.75rem;
+  }
+
+  .tpe-card:nth-child(1),
+  .tpe-card:nth-child(2),
+  .tpe-card:nth-child(3) {
+    height: 350px;
+  }
+
+  .tpe-card-img-wrapper {
+    height: 50%;
+  }
+
   .tpe-card-content {
-    padding: 0.4rem;
+    height: 50%;
+    padding: 1rem 1.15rem;
   }
-  .tpe-card-num {
-    top: 0.3rem;
-    left: 0.3rem;
-    font-size: 0.5rem;
-  }
-  .tpe-card-num::after {
-    width: 10px;
-  }
+
   .tpe-card-content h2 {
-    font-size: clamp(0.55rem, 2vw, 0.75rem);
-    margin-bottom: 0.25rem;
+    font-size: clamp(1.6rem, 6.5vw, 2rem);
   }
+
   .tpe-card-content p {
-    font-size: 0.38rem;
-    line-height: 1.15;
-    margin-bottom: 0.2rem;
-    -webkit-line-clamp: 3;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
   }
+
   .tpe-cta {
-    font-size: 0.38rem;
+    font-size: 0.68rem;
+  }
+
+  .tpe-mark {
+    width: 16px;
+    height: 16px;
   }
 }
 

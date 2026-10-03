@@ -10,17 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = section.querySelectorAll(".tpe-card");
   
   if (cards.length) {
-    // Entrance animation
-    gsap.to(cards, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 75%",
-      },
-      y: 0,
-      opacity: 1,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power3.out"
+    // Entrance animation per card
+    cards.forEach((card) => {
+      gsap.to(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out"
+      });
     });
 
     // Subtle parallax on images inside the cards

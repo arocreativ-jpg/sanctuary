@@ -677,9 +677,34 @@
   }
 
   .hero .hero-container .hero-content .container {
-    padding: 6rem 1rem 4rem 1rem;
+    padding: 6rem 1.25rem 4rem 1.25rem;
     align-items: center;
     text-align: center;
+  }
+
+  .hero-content-bottom {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-content-bottom .hero-content-header {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-content-bottom .hero-content-header h1 {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-content-bottom .hero-content-header h1 .hero-title-main {
+    font-size: clamp(2.5rem, 11vw, 4.5rem);
+  }
+
+  .hero-content-bottom .hero-content-header h1 .hero-title-sub {
+    font-size: clamp(1.3rem, 5.6vw, 2.25rem);
+    white-space: nowrap;
+    letter-spacing: -0.01em;
   }
 
   .hero
@@ -687,27 +712,40 @@
     .hero-content
     .container
     .hero-content-nav
-    div:nth-child(1),
-  .hero
-    .hero-container
-    .hero-content
-    .container
-    .hero-content-footer
     div:nth-child(1) {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .hero
-    .hero-container
-    .hero-content
-    .container
-    .hero-content-footer
-    .hero-footer-copy
-    p {
-    width: 90%;
+  .hero-content-bottom .hero-content-footer,
+  .hero .hero-container .hero-content .container .hero-content-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-content-bottom .hero-footer-copy,
+  .hero .hero-container .hero-content .container .hero-content-footer .hero-footer-copy {
+    max-width: 26rem;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-content-bottom .hero-footer-copy p,
+  .hero .hero-container .hero-content .container .hero-content-footer .hero-footer-copy p {
+    font-family: "Geist Mono", monospace;
+    font-size: clamp(0.825rem, 3.2vw, 0.95rem);
+    line-height: 1.55;
+    letter-spacing: 0.02em;
+    width: 100%;
+    max-width: 22rem;
+    margin: 0 auto;
+    text-align: center;
+    text-wrap: balance;
   }
 
   .hero

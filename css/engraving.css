@@ -758,6 +758,10 @@ body.light-mode .hero.engraving-hero p {
     gap: 2rem;
   }
 }
+.hero.engraving-hero {
+  height: calc(100vh - 60px);
+  min-height: 600px;
+}
 
 .engraving-hero-grid {
   display: grid; 
